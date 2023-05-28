@@ -146,7 +146,7 @@ def findErrorNums(nums):
     return [duplicate, missing]
 nums = [1, 2, 2, 4]
 result = findErrorNums(nums)
-print(result)
+# print(result)
 
 
 
