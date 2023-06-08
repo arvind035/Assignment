@@ -6,9 +6,9 @@ def isPowerOfThree(n):
         n /= 3
     return n == 1
 
-print(isPowerOfThree(27))
-print(isPowerOfThree(0))
-print(isPowerOfThree(-1))
+# print(isPowerOfThree(27))
+# print(isPowerOfThree(0))
+# print(isPowerOfThree(-1))
 
 # Solution-2
 def lastRemaining(n):
@@ -21,8 +21,8 @@ def lastRemaining(n):
             right -= length // 2
     return left
 
-print(lastRemaining(9))
-print(lastRemaining(1))
+# print(lastRemaining(9))
+# print(lastRemaining(1))
 
 # Solution-3
 def subsets(set):
@@ -39,8 +39,9 @@ def subsets(set):
     generateSubsets("", set, 0)
     return result
 
-print(subsets("abc"))
-print(subsets("abcd"))
+# print(subsets("abc"))
+# print(subsets("abcd"))
+
 # Solution-4
 def calculateLength(string):
     if string == "":
@@ -62,8 +63,8 @@ def countContiguousSubstrings(S):
         prev = c
     
     return count
-print(countContiguousSubstrings("abcab"))
-print(countContiguousSubstrings("aba"))
+# print(countContiguousSubstrings("abcab"))
+# print(countContiguousSubstrings("aba"))
 
 # Solution-6
 def towerOfHanoi(N, source, destination, auxiliary):
@@ -82,11 +83,11 @@ def towerOfHanoi(N, source, destination, auxiliary):
 
 N = 2
 total_moves = towerOfHanoi(N, 1, 3, 2)
-print("Total moves:", total_moves)
+# print("Total moves:", total_moves)
 
 N = 3
 total_moves = towerOfHanoi(N, 1, 3, 2)
-print("Total moves:", total_moves)
+# print("Total moves:", total_moves)
 
 # Solution-7
 def permute(str, prefix):
@@ -100,10 +101,10 @@ def permute(str, prefix):
         permute(remaining, prefix + ch)
 
 str = "cd"
-permute(str, "")
+# permute(str, "")
 
 str = "abb"
-permute(str, "")
+# permute(str, "")
 
 # Solution-8
 def count_consonants(string):
@@ -118,9 +119,9 @@ def count_consonants(string):
     return count
 
 string = "abc de"
-print(count_consonants(string))
+# print(count_consonants(string))
 
 string = "geeksforgeeks portal"
-print(count_consonants(string))
+# print(count_consonants(string))
 
 
