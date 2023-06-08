@@ -27,8 +27,8 @@ def factorial(N):
     else:
         return N * factorial(N - 1)
 
-print(factorial(5))
-print(factorial(4))
+# print(factorial(5))
+# print(factorial(4))
 # Using loop
 def factorial(N):
     fact = 1
@@ -36,16 +36,16 @@ def factorial(N):
         fact *= i
     return fact
 
-print(factorial(5))
-print(factorial(4))
+# print(factorial(5))
+# print(factorial(4))
 
 # Solution-4
 def calculate_exponent(N, P):
     result = N ** P
     return result
 
-print(calculate_exponent(5, 2))
-print(calculate_exponent(2, 5))
+# print(calculate_exponent(5, 2))
+# print(calculate_exponent(2, 5))
 
 # Solution-5
 def find_max(arr, start, end):
@@ -57,10 +57,10 @@ def find_max(arr, start, end):
     return max(left_max, right_max)
 
 arr = [1, 4, 3, -5, -4, 8, 6]
-print(find_max(arr, 0, len(arr) - 1))
+# print(find_max(arr, 0, len(arr) - 1))
 
 arr = [1, 4, 45, 6, 10, -8]
-print(find_max(arr, 0, len(arr) - 1))
+# print(find_max(arr, 0, len(arr) - 1))
 
 # Solution-6
 def find_nth_term(a, d, N):
@@ -69,12 +69,12 @@ def find_nth_term(a, d, N):
 a = 2
 d = 1
 N = 5
-print(find_nth_term(a, d, N))
+# print(find_nth_term(a, d, N))
 
 a = 5
 d = 2
 N = 10
-print(find_nth_term(a, d, N))
+# print(find_nth_term(a, d, N))
 
 # Solution-7
 def permute(s):
@@ -95,10 +95,10 @@ def permute(s):
     return result
 
 S = "ABC"
-print(permute(S))
+# print(permute(S))
 
 S = "XY"
-print(permute(S))
+# print(permute(S))
 
 # Solution-8
 def productOfArray(arr):
@@ -108,7 +108,7 @@ def productOfArray(arr):
     return product
 
 arr = [1, 2, 3, 4, 5]
-print(productOfArray(arr))
+# print(productOfArray(arr))
 
 arr = [1, 6, 3]
-print(productOfArray(arr))
+# print(productOfArray(arr))
