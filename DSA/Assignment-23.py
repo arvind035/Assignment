@@ -53,7 +53,7 @@ root.right.right = Node(1)
 root.right.left.left = Node(6)
 root.right.left.right = Node(7)
 
-printLeftView(root)
+# printLeftView(root)
 
 # Solution-3
 from collections import deque
@@ -94,7 +94,7 @@ root.right.left = Node(6)
 root.right.right = Node(7)
 root.right.right.right = Node(8)
 
-printRightView(root)
+# printRightView(root)
 
 # Solution-4
 from collections import deque
