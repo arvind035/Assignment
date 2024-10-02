@@ -1,0 +1,105 @@
+Ques-1: Explain the advantages of Natural Queries in PowerBi with an example?
+
+Ans: Natural Queries in Power BI allow users to ask questions in plain language (like "What were the sales last month?") and get answers through automatically generated visuals, without needing technical knowledge.
+Advantages:
+    User-Friendly: Non-technical users can easily interact with data.
+    Quick Insights: Get answers quickly without complex queries.
+    Improved Accessibility: Makes data accessible to everyone in the organization.
+
+Example:
+A user could type "Show total revenue by region," and Power BI will generate a bar chart displaying revenue distribution across regions automatically.
+
+Ques-2: Explain the advantages of Natural Queries in PowerBi with an example?
+
+Ans: Web Front End (WFE) Cluster in Power BI Service Architecture:
+
+    Role: The WFE cluster manages user authentication and initial requests to the Power BI service.
+    Authentication: It verifies users through Azure Active Directory (AAD).
+    Request Routing: Once authenticated, the WFE routes user requests to the appropriate backend services.
+    Security: Handles secure access, ensuring only authenticated users can interact with the Power BI service.
+    Interface: Provides the user interface for accessing reports, dashboards, and workspaces.
+
+In short, the WFE cluster acts as the gateway for user interaction and security in the Power BI architecture.
+
+
+Ques-3: Explain Back End cluster from Power BI Service Architecture?
+
+Ans: Back End Cluster in Power BI Service Architecture:
+
+    Data Storage and Management: Manages data storage, datasets, reports, and dashboards.
+    Scheduling: Handles data refresh schedules and report generation.
+    User Workspaces: Manages user workspaces and access control.
+    APIs: Provides access to APIs for embedding, automation, and data interactions.
+    Collaboration: Facilitates sharing, collaboration, and security of reports.
+    Processing: Manages data model processing and query execution.
+
+In short, the Back End cluster handles the core functionalities of data processing, storage, and report management in Power BI.
+
+
+Ques-4: Explain Back End cluster from Power BI Service Architecture?
+
+Ans : ASP.NET Component in Power BI Service Architecture:
+    Hosting Environment: Provides the framework to host the Power BI web application.
+    Session Management: Manages user sessions and interactions with the service.
+    Request Handling: Routes and processes HTTP requests from users.
+    Authentication Integration: Integrates with Azure Active Directory (AAD) for user authentication.
+    UI Rendering: Delivers the user interface, handling dashboards and report rendering.
+
+In short, ASP.NET handles the web interface, request processing, and session management in Power BI Service.
+
+
+Ques-5: Compare Microsoft Excel and PowerBi Desktop on the following features:
+Data import
+Data transformation
+Modeling
+Reporting
+Server Deployment
+Convert Models
+Cost
+
+Ans: 
+Comparison of Microsoft Excel and Power BI Desktop
+
+Feature	            	Microsoft Excel
+Data Import	    	Imports data from various sources but limited to flat files, databases, and web queries.
+Data Transformation	Basic transformation capabilities with functions and formulas.
+Modeling		Limited modeling capabilities; primarily uses worksheets.
+Reporting		Basic charting and visualization tools; manual report creation.
+Server Deployment	Limited to sharing files; requires manual distribution.
+Convert Models		Does not support direct conversion of data models.
+Cost			Part of Microsoft Office; licensing can vary.
+
+
+Feature	            	Power BI Desktop
+Data Import	    	Supports a wide range of data sources, including databases, online services, and direct connections.
+Data Transformation	Advanced transformation using Power Query with more options and user-friendly interface.
+Modeling		Strong data modeling capabilities with relationships, measures, and calculated columns.
+Reporting		Advanced reporting features with interactive dashboards, visuals, and drill-through capabilities.
+Server Deployment	Seamless deployment to Power BI Service for sharing and collaboration.
+Convert Models		Allows easy conversion and enhancement of models for reporting.
+Cost			Free for Desktop; additional costs for Power BI Pro or Premium features.
+
+
+Ques-5: List 20 data sources supported by Power Bi desktop.
+
+Ans:
+Excel
+CSV Files
+SQL Server
+MySQL
+PostgreSQL
+Oracle Database
+Azure SQL Database
+Azure Blob Storage
+Azure Data Lake
+SharePoint Online List
+Web Pages
+OData Feed
+Google Analytics
+Salesforce
+Microsoft Access
+SAP Business Warehouse
+SAP HANA
+Microsoft Dynamics 365
+R Script
+Python Script
