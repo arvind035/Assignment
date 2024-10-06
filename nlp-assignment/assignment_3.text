@@ -1,0 +1,87 @@
+Answers
+
+1. Explain the basic architecture of RNN cell.
+
+    Ans-1:
+        RNN (Recurrent Neural Network) cells have a simple architecture that includes:
+            An input layer that receives data at each time step.
+            A hidden layer that maintains a hidden state to capture information from previous time steps.
+            A loop connecting the hidden state to itself, allowing information to persist across time steps.
+            An output layer that generates predictions based on the current hidden state.
+        This architecture enables RNNs to handle sequential data effectively, making them suitable for tasks like language modeling and time series prediction.
+
+2. Explain Backpropagation through time (BPTT).
+
+    Ans-2:
+        Backpropagation through time (BPTT) is an extension of the standard backpropagation algorithm used for training RNNs.
+        In BPTT:
+            The RNN is unrolled through time, creating a feedforward network for each time step.
+            Gradients are computed for each time step and propagated backward through the unrolled network to update weights.
+            This process captures dependencies across different time steps, enabling effective learning from sequential data.
+
+3. Explain Vanishing and exploding gradients.
+
+    Ans-3:
+        Vanishing Gradients: Occurs when gradients become very small during backpropagation, leading to minimal updates of weights. This problem makes it difficult for RNNs to learn long-range dependencies.
+        Exploding Gradients: Occurs when gradients grow excessively large, causing unstable updates and divergence during training. This can lead to NaN values and training failure.
+        Both issues are critical in training deep networks and are mitigated using techniques like gradient clipping and advanced architectures like LSTMs and GRUs.
+
+4. Explain Long Short-Term Memory (LSTM).
+
+    Ans-4:
+        LSTMs are a type of RNN designed to overcome the vanishing gradient problem.
+        They incorporate memory cells and three types of gates (input, output, and forget gates) to regulate the flow of information.
+        This architecture allows LSTMs to maintain long-range dependencies, making them effective for tasks like speech recognition, language modeling, and time series forecasting.
+
+5. Explain Gated Recurrent Unit (GRU).
+
+    Ans-5:
+        GRUs are a simplified version of LSTMs that combine the input and forget gates into a single update gate, reducing complexity.
+        They use two gates: the update gate and the reset gate.
+        GRUs maintain the ability to capture long-range dependencies while being computationally more efficient, making them suitable for various sequential tasks.
+
+6. Explain Peephole LSTM.
+
+    Ans-6:
+        Peephole LSTMs enhance the standard LSTM by allowing the gates to access the memory cell directly.
+        This modification helps in better learning of timing relationships and dependencies within the data.
+        Peephole connections can improve performance on certain tasks where precise timing is crucial, such as speech recognition and handwriting prediction.
+
+7. Bidirectional RNNs.
+
+    Ans-7:
+        Bidirectional RNNs consist of two RNNs: one processes the input sequence in a forward direction, while the other processes it backward.
+        This architecture captures both past and future context, providing richer information for each time step.
+        Bidirectional RNNs are useful in tasks like machine translation and sentiment analysis, where context from both directions enhances understanding.
+
+8. Explain the gates of LSTM with equations.
+
+    Ans-8:
+        LSTM gates are defined by the following equations:
+            Forget Gate:
+            ft=σ(Wf⋅[ht−1,xt]+bf)ft​=σ(Wf​⋅[ht−1​,xt​]+bf​)
+            Input Gate:
+            it=σ(Wi⋅[ht−1,xt]+bi)it​=σ(Wi​⋅[ht−1​,xt​]+bi​)
+            Cell State Update:
+            C~t=tanh⁡(WC⋅[ht−1,xt]+bC)C~t​=tanh(WC​⋅[ht−1​,xt​]+bC​)
+            Cell State:
+            Ct=ft∗Ct−1+it∗C~tCt​=ft​∗Ct−1​+it​∗C~t​
+            Output Gate:
+            ot=σ(Wo⋅[ht−1,xt]+bo)ot​=σ(Wo​⋅[ht−1​,xt​]+bo​)
+            Hidden State:
+            ht=ot∗tanh⁡(Ct)ht​=ot​∗tanh(Ct​)
+        Here, σσ represents the sigmoid function, WW are weight matrices, and bb are bias vectors.
+
+9. Explain BiLSTM.
+
+    Ans-9:
+        Bidirectional LSTM (BiLSTM) combines LSTMs with bidirectional processing.
+        It consists of two LSTMs: one processing the input sequence forward and another backward.
+        This structure allows BiLSTMs to capture context from both past and future, improving performance in tasks such as named entity recognition and language translation.
+
+10. Explain BiGRU.
+
+    Ans-10:
+        Bidirectional GRU (BiGRU) is similar to BiLSTM but utilizes GRUs instead of LSTMs.
+        It consists of two GRUs processing the input sequence in both directions.
+        BiGRUs maintain the advantages of GRUs—simplicity and efficiency—while benefiting from the bidirectional context, making them suitable for various sequential modeling tasks.

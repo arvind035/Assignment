@@ -1,0 +1,49 @@
+Answers
+
+1. Can you think of a few applications for a sequence-to-sequence RNN? What about a sequence-to-vector RNN? And a vector-to-sequence RNN?
+
+    Ans-1:
+        Sequence-to-sequence RNN:
+            Applications: Language translation, speech recognition, text summarization, and chatbot responses.
+        Sequence-to-vector RNN:
+            Applications: Sentiment analysis, document classification, and feature extraction from time-series data.
+        Vector-to-sequence RNN:
+            Applications: Text generation from structured data, music composition, and generating responses in dialogue systems.
+
+2. Why do people use encoder–decoder RNNs rather than plain sequence-to-sequence RNNs for automatic translation?
+
+    Ans-2:
+        Improved Context Handling: Encoder-decoder architectures allow separate encoding of input sequences and decoding of output sequences, capturing context more effectively.
+        Attention Mechanism: They can incorporate attention mechanisms, focusing on relevant parts of the input sequence during decoding, enhancing translation quality.
+        Handling Variable Lengths: Encoder-decoder structures better manage variable-length input and output sequences, which is crucial for natural language processing tasks.
+
+3. How could you combine a convolutional neural network with an RNN to classify videos?
+
+    Ans-3:
+        CNN for Feature Extraction: Use a CNN to extract spatial features from individual frames of the video.
+        RNN for Temporal Dynamics: Feed the extracted features into an RNN (like LSTM or GRU) to capture temporal dynamics and dependencies across frames.
+        Final Classification: Combine the output from the RNN to classify the entire video based on learned features over time, making it effective for action recognition or video summarization.
+
+4. What are the advantages of building an RNN using dynamic_rnn() rather than static_rnn()?
+
+    Ans-4:
+        Variable Sequence Lengths: dynamic_rnn() handles variable-length sequences without padding, making it more efficient in memory usage.
+        Better Performance: It can optimize computations for sequences of different lengths, resulting in faster training and execution.
+        Easier to Debug: Offers a more flexible computation graph that can be modified during runtime, aiding in debugging and experimentation.
+
+5. How can you deal with variable-length input sequences? What about variable-length output sequences?
+
+    Ans-5:
+        Variable-Length Input Sequences:
+            Use padding to make all sequences the same length, or utilize dynamic_rnn() to handle sequences of different lengths directly.
+            Implement masking to ignore padded values during loss calculations.
+        Variable-Length Output Sequences:
+            Use techniques like teacher forcing during training to handle varying output lengths.
+            Incorporate an attention mechanism to dynamically focus on relevant input parts when generating output.
+
+6. What is a common way to distribute training and execution of a deep RNN across multiple GPUs?
+
+    Ans-6:
+        Data Parallelism: Split the training data across multiple GPUs, where each GPU computes gradients on its subset and aggregates the updates.
+        Model Parallelism: Divide the RNN architecture itself across different GPUs, allowing different parts of the model to run in parallel, especially useful for large models.
+        Framework Support: Use deep learning frameworks like TensorFlow or PyTorch that offer built-in support for multi-GPU training, simplifying the distribution process.

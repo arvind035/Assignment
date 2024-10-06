@@ -1,0 +1,58 @@
+Answers
+
+1. Explain the architecture of BERT.
+
+    Ans-1:
+        BERT (Bidirectional Encoder Representations from Transformers) consists of multiple transformer layers, primarily focusing on the encoder part of the transformer architecture.
+        The key features include:
+            Bidirectional Attention: Unlike traditional left-to-right models, BERT considers the context from both directions (left and right) for each token.
+            Multiple Layers: It typically has 12 or more transformer layers, enabling it to capture complex patterns.
+            Embedding Layers: Input text is tokenized into subwords, which are then converted into embeddings that include positional encodings to retain information about the order of tokens.
+
+2. Explain Masked Language Modeling (MLM).
+
+    Ans-2:
+        Masked Language Modeling is a training objective used in BERT where a certain percentage of the input tokens are masked (replaced with a [MASK] token) randomly.
+        The model is then trained to predict the masked tokens based on their context, enabling it to learn bidirectional representations. This approach allows the model to develop a deeper understanding of the language.
+
+3. Explain Next Sentence Prediction (NSP).
+
+    Ans-3:
+        Next Sentence Prediction is another task in BERT's pretraining phase, where the model receives pairs of sentences and must predict if the second sentence is a continuation of the first.
+        This helps BERT learn relationships between sentences, which is essential for tasks like question answering and natural language inference.
+
+4. What is Matthews evaluation?
+
+    Ans-4:
+        Matthews evaluation is a metric used to assess the performance of binary classifications, especially in cases with class imbalance.
+        It is based on the Matthews Correlation Coefficient (MCC) and takes into account true positives, true negatives, false positives, and false negatives to provide a balanced measure of performance.
+
+5. What is Matthews Correlation Coefficient (MCC)?
+
+    Ans-5:
+        The Matthews Correlation Coefficient is a performance metric for binary classification that calculates the correlation between the observed and predicted binary classifications.
+        MCC values range from -1 (total disagreement) to +1 (perfect prediction), with 0 indicating random guessing. It provides a more informative measure than accuracy, especially for imbalanced datasets.
+
+6. Explain Semantic Role Labeling.
+
+    Ans-6:
+        Semantic Role Labeling (SRL) is a process in natural language processing that involves identifying the roles that words or phrases play in the context of a sentence.
+        It assigns labels to the constituents of a sentence based on their semantic roles (e.g., who did what to whom) and is useful for understanding sentence structure and meaning.
+
+7. Why does fine-tuning a BERT model take less time than pretraining?
+
+    Ans-7:
+        Fine-tuning a BERT model takes less time than pretraining because it starts with a pretrained model that already contains general knowledge from the vast corpus it was trained on.
+        During fine-tuning, the model is adjusted for specific tasks or datasets, which requires fewer iterations and less computational power compared to the extensive training needed to learn the language representation from scratch.
+
+8. Recognizing Textual Entailment (RTE).
+
+    Ans-8:
+        Recognizing Textual Entailment is a task in natural language processing that involves determining whether a given hypothesis logically follows from a premise.
+        It is crucial for applications such as information retrieval, question answering, and paraphrase detection, and BERT has been shown to excel at this task due to its context-aware embeddings.
+
+9. Explain the decoder stack of GPT models.
+
+    Ans-9:
+        The decoder stack of GPT (Generative Pretrained Transformer) models consists of multiple transformer decoder layers that focus on generating text.
+        Each layer has masked self-attention mechanisms to prevent attending to future tokens, enabling autoregressive generation. This architecture allows GPT to generate coherent and contextually relevant text based on the preceding input.

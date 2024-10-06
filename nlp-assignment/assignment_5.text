@@ -1,0 +1,63 @@
+Answers
+
+1. What are Sequence-to-sequence models?
+
+    Ans-1:
+        Sequence-to-sequence (seq2seq) models are a type of neural network architecture used primarily for tasks where the input and output are sequences, such as machine translation and text summarization.
+        They consist of two main components: an encoder that processes the input sequence and a decoder that generates the output sequence based on the encoder's context.
+        The architecture allows for variable-length inputs and outputs, making it suitable for a variety of applications .
+
+2. What are the Problems with Vanilla RNNs?
+
+    Ans-2:
+        Vanishing Gradients: Difficulty in learning long-range dependencies due to gradients diminishing over time, leading to ineffective training.
+        Exploding Gradients: Opposite issue where gradients grow exponentially, causing instability during training.
+        Limited Memory: Vanilla RNNs struggle to remember information from earlier time steps, making them unsuitable for tasks requiring long context .
+
+3. What is Gradient clipping?
+
+    Ans-3:
+        Gradient clipping is a technique used to prevent exploding gradients by setting a threshold value. If gradients exceed this threshold during backpropagation, they are scaled down to a manageable size.
+        This technique helps stabilize training in deep networks, particularly RNNs, ensuring convergence and preventing numerical issues .
+
+4. Explain the Attention mechanism
+
+    Ans-4:
+        The attention mechanism allows models to focus on specific parts of the input sequence when generating each element of the output sequence.
+        It computes a weighted sum of the encoder's hidden states based on relevance to the current decoder step, improving context utilization and handling longer sequences effectively .
+
+5. Explain Conditional Random Fields (CRFs)
+
+    Ans-5:
+        CRFs are a type of statistical modeling method used for structured prediction, particularly in tasks like sequence labeling and parsing.
+        They model the conditional probability of a set of output variables given a set of input variables, incorporating context information to improve prediction accuracy. CRFs are particularly effective in NLP tasks like named entity recognition .
+
+6. Explain self-attention
+
+    Ans-6:
+        Self-attention is a mechanism within a single sequence that allows each element to attend to every other element, effectively capturing relationships and dependencies within the sequence.
+        It enhances the model's understanding of context by evaluating how different parts of the input relate to one another, widely used in Transformer architectures .
+
+7. What is Bahdanau Attention?
+
+    Ans-7:
+        Bahdanau Attention, also known as additive attention, was introduced to address limitations of traditional attention mechanisms by allowing alignment of the encoder and decoder states.
+        It uses a feed-forward neural network to learn the alignment scores between the encoder hidden states and the decoder’s current state, effectively improving performance in machine translation tasks .
+
+8. What is a Language Model?
+
+    Ans-8:
+        A language model is a statistical model that predicts the likelihood of a sequence of words or tokens in a language. It assigns probabilities to sequences, allowing for text generation, completion, and classification tasks.
+        Language models are crucial for various NLP applications, including speech recognition and machine translation .
+
+9. What is Multi-Head Attention?
+
+    Ans-9:
+        Multi-Head Attention is an extension of the attention mechanism that allows the model to jointly attend to information from different representation subspaces at different positions.
+        It consists of multiple attention heads, each learning to focus on different parts of the input sequence, which enhances the model's ability to capture complex relationships .
+
+10. What is Bilingual Evaluation Understudy (BLEU)?
+
+    Ans-10:
+        BLEU is a metric used to evaluate the quality of machine-generated translations against one or more reference translations.
+        It measures the precision of n-grams in the generated text that matches the reference texts while applying a brevity penalty to account for shorter translations .

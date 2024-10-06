@@ -1,0 +1,81 @@
+Answers
+
+1. What are Corpora?
+
+    Ans-1:
+        Corpora (singular: corpus) are large collections of texts used for linguistic analysis and natural language processing (NLP).
+        They serve as the foundational datasets for training and evaluating language models, enabling researchers and developers to study language patterns, structures, and semantics.
+        Corpora can be structured (like annotated data) or unstructured (raw text) and can vary in size and genre, from literary works to social media posts.
+
+2. What are Tokens?
+
+    Ans-2:
+        Tokens are individual elements or units extracted from text during the tokenization process, which can include words, phrases, or symbols.
+        For example, the sentence "I love AI!" can be tokenized into ["I", "love", "AI", "!"].
+        Tokenization is essential in NLP as it transforms raw text into a format suitable for analysis and modeling.
+
+3. What are Unigrams, Bigrams, Trigrams?
+
+    Ans-3:
+        Unigrams: Single words or tokens (e.g., "AI").
+        Bigrams: Pairs of consecutive words (e.g., "I love", "love AI").
+        Trigrams: Triplets of consecutive words (e.g., "I love AI").
+        These n-grams help capture contextual relationships in text and are useful in various NLP tasks such as language modeling and text classification.
+
+4. How to generate n-grams from text?
+
+    Ans-4:
+        N-grams can be generated using programming libraries like NLTK or scikit-learn in Python.
+        Steps typically involve:
+            Tokenizing the text into words.
+            Using a sliding window approach to create n-grams.
+            Storing the n-grams in a list or dictionary for further analysis.
+        Example code using NLTK:
+
+        python
+
+        from nltk import ngrams
+        text = "I love AI"
+        n_grams = list(ngrams(text.split(), 2))  # For bigrams
+
+5. Explain Lemmatization
+
+    Ans-5:
+        Lemmatization is the process of reducing a word to its base or root form (lemma), considering its context.
+        It involves understanding the meaning and part of speech of a word to return a valid dictionary form (e.g., "running" to "run").
+        Lemmatization improves the accuracy of NLP models by ensuring words with the same meaning are treated identically.
+
+6. Explain Stemming
+
+    Ans-6:
+        Stemming is the technique of reducing words to their root form by removing prefixes and suffixes (e.g., "running" to "run").
+        Unlike lemmatization, stemming does not consider the context or validity of the root word, often resulting in non-words (e.g., "fishing" to "fish").
+        Stemming is faster than lemmatization and can be used for tasks where precise word forms are less critical.
+
+7. Explain Part-of-Speech (POS) Tagging
+
+    Ans-7:
+        POS tagging is the process of assigning grammatical tags to each word in a sentence, indicating its role (e.g., noun, verb, adjective).
+        It helps in understanding the syntactic structure of sentences and is crucial for various NLP tasks like parsing, machine translation, and information retrieval.
+        Tools like NLTK and spaCy provide functionalities for POS tagging.
+
+8. Explain Chunking or Shallow Parsing
+
+    Ans-8:
+        Chunking, or shallow parsing, involves dividing a sentence into syntactically correlated parts, called chunks (e.g., noun phrases).
+        Unlike full parsing, which represents the complete grammatical structure, chunking focuses on identifying key components for analysis.
+        This method simplifies the representation of text while retaining essential information for NLP applications.
+
+9. Explain Noun Phrase (NP) Chunking
+
+    Ans-9:
+        Noun Phrase chunking is a specific type of chunking that identifies noun phrases within a sentence, typically consisting of a noun and its modifiers (e.g., "the big dog").
+        It helps in extracting meaningful information from text and is often used in tasks such as information extraction and question answering.
+        NP chunking can be implemented using regular expressions or NLP libraries.
+
+10. Explain Named Entity Recognition (NER)
+
+    Ans-10:
+        Named Entity Recognition (NER) is the task of identifying and classifying named entities in text into predefined categories such as people, organizations, locations, dates, and more.
+        NER is crucial for extracting structured information from unstructured text, enabling applications like information retrieval, question answering, and knowledge graph construction.
+        Libraries like spaCy and NLTK provide built-in NER functionalities.

@@ -1,0 +1,73 @@
+Answers
+
+1. What are Vanilla Autoencoders?
+
+    Ans-1:
+        Vanilla autoencoders are a type of neural network used for unsupervised learning. They consist of two main parts: an encoder that compresses the input into a lower-dimensional representation and a decoder that reconstructs the original input from this representation.
+        The primary goal is to minimize the difference between the input and the output (reconstruction error), often using mean squared error as the loss function.
+
+2. What are Sparse Autoencoders?
+
+    Ans-2:
+        Sparse autoencoders are designed to learn a sparse representation of the input data, meaning only a small number of neurons in the hidden layer are activated at any given time.
+        This is achieved by adding a sparsity constraint to the loss function, encouraging the model to discover important features in the data, which helps in tasks like feature extraction and dimensionality reduction.
+
+3. What are Denoising Autoencoders?
+
+    Ans-3:
+        Denoising autoencoders are a variant that learns to reconstruct the original input from a corrupted version.
+        The training process involves adding noise to the input data and then training the autoencoder to recover the original, clean data, making it robust to noise and improving generalization.
+
+4. What are Convolutional Autoencoders?
+
+    Ans-4:
+        Convolutional autoencoders use convolutional layers in their architecture, making them particularly effective for image data.
+        They consist of convolutional layers for the encoder and decoder, allowing the model to capture spatial hierarchies in images while compressing the data.
+
+5. What are Stacked Autoencoders?
+
+    Ans-5:
+        Stacked autoencoders are composed of multiple layers of autoencoders where the output of one layer serves as the input to the next.
+        This hierarchical structure allows the model to learn more complex representations and features from the data, enhancing its ability to capture intricate patterns.
+
+6. Explain how to generate sentences using LSTM Autoencoders.
+
+    Ans-6:
+        LSTM autoencoders can generate sentences by training an LSTM-based encoder to process input sequences (e.g., sentences) into fixed-size context vectors, and an LSTM decoder to reconstruct the output sequence from this vector.
+        During generation, the decoder starts with the context vector and predicts the next word iteratively until a stop token is reached.
+
+7. Explain Extractive Summarization.
+
+    Ans-7:
+        Extractive summarization involves selecting and extracting significant sentences or phrases from the original text to create a summary.
+        It retains the original wording and structure of the sentences, focusing on identifying the most informative parts of the text using techniques like ranking algorithms or clustering.
+
+8. Explain Abstractive Summarization.
+
+    Ans-8:
+        Abstractive summarization generates new sentences that paraphrase the main ideas of the source text rather than simply extracting segments.
+        It employs models like sequence-to-sequence architectures to produce coherent summaries that may not directly correspond to the original sentences, enhancing the richness of the summary.
+
+9. Explain Beam Search.
+
+    Ans-9:
+        Beam search is a search algorithm used in sequence generation tasks, which keeps track of a fixed number of best candidates (the beam width) at each step.
+        This approach balances exploration and exploitation, allowing models to generate sequences more effectively than greedy algorithms by considering multiple possible sequences simultaneously.
+
+10. Explain Length Normalization.
+
+    Ans-10:
+        Length normalization adjusts the scoring of generated sequences based on their lengths to prevent models from favoring shorter sequences.
+        It ensures that longer and more informative sentences are not penalized disproportionately compared to shorter sentences in tasks like machine translation and summarization.
+
+11. Explain Coverage Normalization.
+
+    Ans-11:
+        Coverage normalization addresses the issue of repeated phrases in generated text by keeping track of how much of the input has been covered by the generated output.
+        This technique ensures that all parts of the input are represented in the output, enhancing the diversity and quality of generated sequences.
+
+12. Explain ROUGE Metric Evaluation.
+
+    Ans-12:
+        ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used to evaluate the quality of summaries by comparing them to reference summaries.
+        It measures the overlap of n-grams, word sequences, and word pairs, providing insights into recall, precision, and F1 score, commonly used in natural language processing tasks like summarization.
