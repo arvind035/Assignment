@@ -1,0 +1,72 @@
+1. What is the function of a summation junction of a neuron? What is threshold activation function?
+
+    Summation Junction: The summation junction sums all the weighted inputs in a neuron.
+    Threshold Activation Function: The threshold activation function decides if the neuron should fire based on whether the sum of inputs crosses a certain threshold.
+
+2. What is a step function? What is the difference of step function with threshold function?
+
+    Step Function: A binary activation function where the output is either 0 or 1 based on input crossing a threshold.
+    Difference with Threshold Function: Both are similar, but the threshold function is often used with more complex activation rules, whereas the step function is a simple binary response.
+
+3. Explain the McCulloch–Pitts model of neuron.
+
+    A simple model of a neuron that computes a weighted sum of inputs, compares it to a threshold, and outputs 1 if the threshold is exceeded, otherwise 0.
+
+4. Explain the ADALINE network model.
+
+    ADALINE (Adaptive Linear Neuron): A neural network model where the output is a linear combination of inputs with weight updates made through the least mean squares (LMS) learning rule. It is different from a perceptron because it computes continuous outputs.
+
+5. What is the constraint of a simple perceptron? Why it may fail with a real-world data set?
+
+    Constraint: A perceptron can only solve linearly separable problems.
+    Failure Reason: It cannot learn more complex non-linear relationships in real-world datasets.
+
+6. What is linearly inseparable problem? What is the role of the hidden layer?
+
+    Linearly Inseparable Problem: A problem where data points cannot be separated by a straight line.
+    Role of Hidden Layer: Hidden layers allow neural networks to learn non-linear decision boundaries by adding complexity to the model.
+
+7. Explain XOR problem in case of a simple perceptron.
+
+    The XOR problem is a classic example of a linearly inseparable problem. A simple perceptron fails to solve it because XOR cannot be separated using a single linear boundary.
+
+8. Design a multi-layer perceptron to implement A XOR B.
+
+    A multi-layer perceptron (MLP) with an input layer, a hidden layer, and an output layer can solve the XOR problem by learning non-linear patterns with multiple neurons and non-linear activation functions.
+
+9. Explain the single-layer feed forward architecture of ANN.
+
+    A single-layer feed forward ANN consists of one layer of input nodes connected directly to output nodes. It cannot solve non-linear problems but works well for simple linear classification tasks.
+
+10. Explain the competitive network architecture of ANN.
+
+    In a competitive network, neurons compete to be activated, with only one neuron (or a few) "winning" based on input similarity. This architecture is often used in clustering tasks like Self-Organizing Maps (SOMs).
+
+11. Consider a multi-layer feed forward neural network. Enumerate and explain steps in the backpropagation algorithm used to train the network.
+
+    Steps in Backpropagation:
+        Forward Pass: Inputs pass through the network to generate output.
+        Compute Loss: Calculate the error (loss) between the predicted output and actual target.
+        Backward Pass: Gradients of the error with respect to the weights are calculated.
+        Weight Update: Update the weights using the gradients and learning rate to minimize error.
+
+12. What are the advantages and disadvantages of neural networks?
+
+    Advantages:
+        Can model complex non-linear relationships.
+        Suitable for large datasets.
+        Adaptive to new data and features.
+    Disadvantages:
+        Require large amounts of data and computational resources.
+        Prone to overfitting.
+        Difficult to interpret and explain.
+
+13. Write short notes on any two of the following:
+
+1. Biological Neuron:
+
+    The basic building block of the brain's neural networks, receiving signals through dendrites and transmitting electrical impulses via the axon when the sum of inputs exceeds a threshold.
+
+2. ReLU Function:
+
+    A widely-used activation function in neural networks, which outputs the input directly if it's positive, otherwise it outputs zero. It helps avoid the vanishing gradient problem.
