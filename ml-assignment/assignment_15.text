@@ -1,0 +1,120 @@
+1. Recognize the differences between supervised, semi-supervised, and unsupervised learning.
+
+    Supervised Learning: Involves training a model on labeled data, where the input-output pairs are known. The goal is to learn a mapping from inputs to outputs.
+    Semi-Supervised Learning: Combines labeled and unlabeled data for training. This is useful when acquiring labeled data is expensive or time-consuming.
+    Unsupervised Learning: Involves training a model on data without labeled outputs. The goal is to find underlying patterns or groupings in the data, such as clustering or association.
+
+2. Describe in detail any five examples of classification problems.
+
+    Email Spam Detection: Classifying emails as spam or not spam based on features like subject line and sender.
+    Image Recognition: Identifying objects in images, such as classifying images of animals into categories (e.g., cat, dog).
+    Medical Diagnosis: Classifying patients as having a certain disease based on symptoms and medical history.
+    Credit Scoring: Determining whether a loan applicant is likely to default based on their financial history and credit score.
+    Sentiment Analysis: Classifying text (like reviews) as positive, negative, or neutral based on the content.
+
+3. Describe each phase of the classification process in detail.
+
+    Data Collection: Gathering relevant data to build the classification model.
+    Data Preprocessing: Cleaning and transforming data, including handling missing values, normalizing, and feature extraction.
+    Model Selection: Choosing an appropriate classification algorithm (e.g., SVM, kNN, decision trees).
+    Training: Feeding the labeled data to the model to learn the mapping from features to labels.
+    Evaluation: Testing the model on unseen data to assess its accuracy, precision, recall, and other metrics.
+    Deployment: Implementing the model in a production environment for real-world use.
+
+4. Go through the SVM model in depth using various scenarios.
+
+    Binary Classification: SVM finds the optimal hyperplane that separates two classes with maximum margin.
+    Non-linear Classification: Using kernel tricks (like RBF kernel) to project data into higher dimensions for better separation.
+    Multi-class Classification: Extending SVM to multi-class problems using strategies like one-vs-one or one-vs-all.
+    Outlier Detection: SVM can also be adapted for anomaly detection by fitting a hyperplane that separates normal data from outliers.
+
+5. What are some of the benefits and drawbacks of SVM?
+
+    Benefits:
+        Effective in high-dimensional spaces.
+        Robust against overfitting with appropriate kernel selection.
+        Works well with clear margin of separation.
+    Drawbacks:
+        Computationally intensive for large datasets.
+        Less effective on datasets with overlapping classes.
+        Difficult to choose the right kernel and tune hyperparameters.
+
+6. Go over the kNN model in depth.
+
+    Concept: k-Nearest Neighbors (kNN) is a non-parametric classification algorithm that classifies instances based on the majority class among the k-nearest neighbors in the feature space.
+    Distance Metric: Commonly uses Euclidean distance to measure the similarity between points.
+    Choice of k: The value of k affects model complexity and sensitivity; small k may lead to noise, while large k may smooth out distinctions.
+
+7. Discuss the kNN algorithm's error rate and validation error.
+
+    Error Rate: The proportion of incorrect predictions made by the kNN algorithm on the training or testing set.
+    Validation Error: The error rate assessed on a validation set, providing an estimate of model performance on unseen data. Cross-validation can help in estimating this error reliably.
+
+8. For kNN, talk about how to measure the difference between the test and training results.
+
+    Metrics: Use metrics like accuracy, precision, recall, and F1-score to compare model performance on training versus test datasets.
+    Overfitting Check: A significant difference in performance (high accuracy on training but low on testing) may indicate overfitting.
+
+9. Create the kNN algorithm.
+
+    Basic Steps:
+        Load training data.
+        For each test instance:
+            Calculate distances to all training instances.
+            Select the k nearest neighbors.
+            Assign the class based on majority voting among neighbors.
+
+10. What is a decision tree, exactly? What are the various kinds of nodes? Explain all in depth.
+
+    Definition: A decision tree is a flowchart-like structure used for classification and regression, consisting of nodes that represent features, branches that represent decision rules, and leaf nodes that represent outcomes.
+    Types of Nodes:
+        Decision Nodes: Represent features that are tested for splitting the data.
+        Leaf Nodes: Terminal nodes that represent the final output (class label).
+        Root Node: The topmost decision node, representing the best feature to split the data initially.
+
+11. Describe the different ways to scan a decision tree.
+
+    Pre-order Traversal: Visit the root node, then the left subtree, and finally the right subtree.
+    In-order Traversal: Visit the left subtree, then the root node, and finally the right subtree.
+    Post-order Traversal: Visit the left subtree, the right subtree, and finally the root node.
+
+12. Describe in depth the decision tree algorithm.
+
+    Algorithm Steps:
+        Select Best Feature: Use metrics like Gini impurity or entropy to determine the feature that best separates the data.
+        Split Data: Divide the dataset based on the selected feature.
+        Recursion: Repeat the process for each subset until stopping criteria are met (e.g., all instances belong to one class or maximum depth is reached).
+        Prediction: For a new instance, traverse the tree according to its feature values until reaching a leaf node, which provides the prediction.
+
+13. In a decision tree, what is inductive bias? What would you do to stop overfitting?
+
+    Inductive Bias: The assumptions made by the decision tree algorithm that favor certain types of solutions over others, such as preferring simpler trees.
+    Stopping Overfitting: Techniques include pruning (removing branches that have little importance), limiting tree depth, or using minimum samples per leaf.
+
+14. Explain advantages and disadvantages of using a decision tree.
+
+    Advantages:
+        Easy to understand and interpret.
+        Handles both categorical and numerical data.
+        Requires little data preprocessing.
+    Disadvantages:
+        Prone to overfitting.
+        Can be unstable with small changes in data.
+        Biased towards features with more levels.
+
+15. Describe in depth the problems that are suitable for decision tree learning.
+
+    Suitable Problems:
+        Classification tasks with clear categorical outcomes.
+        Problems with nonlinear relationships between features and outputs.
+        Tasks that require interpretability, such as medical diagnosis or customer segmentation.
+
+16. Describe in depth the random forest model. What distinguishes a random forest?
+
+    Random Forest Model: An ensemble method that constructs a multitude of decision trees during training and outputs the mode of their predictions for classification or the mean prediction for regression.
+    Distinction: Random forests reduce overfitting and improve accuracy by averaging multiple trees, thus providing more robust predictions than a single decision tree.
+
+17. In a random forest, talk about OOB error and variable importance.
+
+    OOB Error: Out-of-Bag error is an internal validation metric used to assess the model’s performance by utilizing samples not included in the bootstrap sample for each tree, providing a measure of generalization without a separate validation set.
+    Variable Importance: Random forests can measure the contribution of each feature to the prediction by assessing how much the prediction error increases when the feature is permuted, thus providing insights into feature relevance.

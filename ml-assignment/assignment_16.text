@@ -1,0 +1,74 @@
+1. In a linear equation, what is the difference between a dependent variable and an independent variable?
+
+    Dependent Variable: The variable being predicted or explained; it depends on the value of the independent variable.
+    Independent Variable: The variable that is manipulated or changed; it influences the dependent variable.
+
+2. What is the concept of simple linear regression? Give a specific example.
+
+    Concept: Simple linear regression models the relationship between one independent variable and one dependent variable by fitting a linear equation.
+    Example: Predicting a person's weight (dependent variable) based on their height (independent variable).
+
+3. In a linear regression, define the slope.
+
+    Definition: The slope represents the change in the dependent variable for a one-unit change in the independent variable, indicating the strength and direction of the relationship.
+
+4. Determine the graph's slope, where the lower point on the line is represented as (3, 2) and the higher point is represented as (2, 2).
+
+    Calculation:
+        Slope m=y2−y1x2−x1=2−22−3=0−1=0m=x2​−x1​y2​−y1​​=2−32−2​=−10​=0
+        Result: The slope is 0, indicating a horizontal line.
+
+5. In linear regression, what are the conditions for a positive slope?
+
+    Conditions:
+        As the independent variable increases, the dependent variable also increases.
+        There is a direct relationship between the two variables, leading to a positive correlation.
+
+6. In linear regression, what are the conditions for a negative slope?
+
+    Conditions:
+        As the independent variable increases, the dependent variable decreases.
+        There is an inverse relationship between the two variables, leading to a negative correlation.
+
+7. What is multiple linear regression and how does it work?
+
+    Definition: Multiple linear regression involves predicting a dependent variable using multiple independent variables.
+    Working: It fits a linear equation to the observed data by minimizing the sum of squared differences between predicted and actual values.
+
+8. In multiple linear regression, define the number of squares due to error.
+
+    Definition: The number of squares due to error (also known as residual sum of squares) quantifies the total deviation of the predicted values from the actual values, indicating the error in the model.
+
+9. In multiple linear regression, define the number of squares due to regression.
+
+    Definition: The number of squares due to regression (also known as explained sum of squares) measures the total variation in the dependent variable that can be explained by the independent variables in the model.
+
+10. In a regression equation, what is multicollinearity?
+
+    Definition: Multicollinearity refers to a situation in multiple regression where two or more independent variables are highly correlated, making it difficult to determine the individual effect of each variable on the dependent variable.
+
+11. What is heteroskedasticity, and what does it mean?
+
+    Definition: Heteroskedasticity occurs when the variability of the errors in a regression model is not constant across all levels of the independent variable, potentially leading to inefficient estimates and biased statistical tests.
+
+12. Describe the concept of ridge regression.
+
+    Definition: Ridge regression is a technique used to address multicollinearity by adding a penalty term to the loss function, which shrinks the coefficients of the regression model, leading to more stable estimates.
+
+13. Describe the concept of lasso regression.
+
+    Definition: Lasso regression (Least Absolute Shrinkage and Selection Operator) adds a penalty based on the absolute value of the coefficients to the loss function, which can shrink some coefficients to zero, effectively performing variable selection.
+
+14. What is polynomial regression and how does it work?
+
+    Definition: Polynomial regression is a form of regression analysis where the relationship between the independent variable and the dependent variable is modeled as an nth degree polynomial.
+    Working: It allows for a curved line fit by adding polynomial terms (e.g., x2,x3x2,x3) to the regression model, capturing more complex relationships.
+
+15. Describe the basis function.
+
+    Definition: A basis function is a function used to transform the input data into a different space to better capture the relationships between variables, often used in polynomial regression and other types of regression models.
+
+16. Describe how logistic regression works.
+
+    Definition: Logistic regression is used for binary classification problems. It models the probability of a binary outcome using a logistic function.
+    Working: It calculates the log-odds of the dependent variable as a linear combination of independent variables and then applies the logistic function to transform the output into a probability between 0 and 1.

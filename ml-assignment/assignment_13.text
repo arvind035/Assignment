@@ -1,0 +1,67 @@
+1. Provide an example of the concepts of Prior, Posterior, and Likelihood.
+
+    Prior: Probability of event A before new evidence, e.g., P(A)=0.6P(A)=0.6.
+    Posterior: Updated probability of event A after considering new evidence B, calculated as P(A∣B)=P(B∣A)⋅P(A)P(B)P(A∣B)=P(B)P(B∣A)⋅P(A)​.
+    Likelihood: Probability of observing evidence B given event A, e.g., P(B∣A)=0.8P(B∣A)=0.8.
+
+2. What role does Bayes' theorem play in the concept learning principle?
+
+    Role: Bayes' theorem provides a mathematical framework for updating the probability of hypotheses based on observed evidence, facilitating effective learning from data.
+
+3. Offer an example of how the Naïve Bayes classifier is used in real life.
+
+    Example: Email filtering where the Naïve Bayes classifier assesses the probability of an email being spam based on the presence of certain keywords, classifying it accordingly.
+
+4. Can the Naïve Bayes classifier be used on continuous numeric data? If so, how can you go about doing it?
+
+    Yes: Continuous data can be handled by assuming a distribution (commonly Gaussian) for each feature and estimating parameters (mean and variance) to calculate probabilities.
+
+5. What are Bayesian Belief Networks, and how do they work? What are their applications? Are they capable of resolving a wide range of issues?
+
+    Definition: Bayesian Belief Networks are directed acyclic graphs representing a set of variables and their conditional dependencies via edges.
+    How They Work: They use joint probability distributions to model relationships and infer probabilities of outcomes.
+    Applications: Medical diagnosis, risk management, and decision-making processes.
+    Issues Resolved: They effectively handle uncertainty, enabling complex reasoning under uncertainty.
+
+6. Passengers are checked in an airport screening system... What are the chances that an alarm would be triggered when an individual is actually an intruder?
+
+    Calculation:
+        P(A=1∣I=1)=0.98P(A=1∣I=1)=0.98 (probability alarm triggers for intruder)
+        Therefore, the probability that the alarm triggers when an individual is an intruder is 98%.
+
+7. An antibiotic resistance test... Calculate the likelihood that a person who tests positive is actually immune (random variable D).
+
+    Calculation:
+        Given P(D∣T)=P(T∣D)⋅P(D)P(T)P(D∣T)=P(T)P(T∣D)⋅P(D)​:
+            P(T∣D)=0.95P(T∣D)=0.95 (true positive)
+            P(T∣¬D)=0.01P(T∣¬D)=0.01 (false positive)
+            P(D)=0.02P(D)=0.02 (prevalence of resistance)
+            Calculate P(T)P(T) using total probability.
+        The likelihood that a person who tests positive is actually immune is about 0.66 or 66%.
+
+8. In order to prepare for the test...
+
+    What is the likelihood that the student can solve the exam problem?
+        Calculation: P(S∣A)=0.9⋅0.3+0.2⋅0.2+0.6⋅0.5=0.39P(S∣A)=0.9⋅0.3+0.2⋅0.2+0.6⋅0.5=0.39.
+    Given the student's solution, what is the likelihood that the problem was of form A?
+        Calculation: Use Bayes' theorem: P(A∣S)=P(S∣A)⋅P(A)P(S)P(A∣S)=P(S)P(S∣A)⋅P(A)​, resulting in approximately 0.69.
+
+9. A bank installs a CCTV system...
+
+    How many customers come into the bank on a daily basis (10 hours)?
+        Calculation: In 10 hours (600 minutes) with a 5% chance per 5 minutes, expected customers = 600×0.05=30600×0.05=30.
+    On a daily basis, how many fake photographs and missed photographs are there?
+        Fake photographs: 0.1×30=30.1×30=3
+        Missed photographs: 0.01×30=0.30.01×30=0.3
+    Explain likelihood that there is a customer if there is a photograph?
+        Calculation: Use Bayes’ theorem: P(C∣P)=P(P∣C)⋅P(C)P(P)P(C∣P)=P(P)P(P∣C)⋅P(C)​.
+
+10. Create the conditional probability table associated with the node Won Toss...
+
+    Table:
+        | Won Toss | A | B | C |
+        |----------|---|---|---|
+        | Yes | 0.3| 0.2| 0.5|
+        | No | 0.7| 0.8| 0.5|
+
+This table represents the probabilities of winning given each type of problem form (A, B, C) in a Bayesian context.

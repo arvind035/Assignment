@@ -1,0 +1,74 @@
+1. What is the difference between supervised and unsupervised learning? Give some examples to illustrate your point.
+
+    Supervised Learning: Involves training a model on labeled data, meaning the input data is paired with the correct output.
+        Examples:
+            Spam Detection: Classifying emails as "spam" or "not spam."
+            Sentiment Analysis: Determining the sentiment of a text (positive, negative, neutral).
+
+    Unsupervised Learning: Involves training a model on unlabeled data, where the model attempts to find patterns without explicit instructions on what to predict.
+        Examples:
+            Customer Segmentation: Grouping customers based on purchasing behavior.
+            Anomaly Detection: Identifying unusual data points in a dataset.
+
+2. Mention a few unsupervised learning applications.
+
+    Market Basket Analysis: Discovering associations between products purchased together.
+    Image Compression: Reducing the amount of data in images by clustering similar pixels.
+    Recommendation Systems: Grouping similar items to suggest to users (e.g., movies, books).
+    Topic Modeling: Identifying topics present in a collection of documents.
+
+3. What are the three main types of clustering methods? Briefly describe the characteristics of each.
+
+    Partitioning Methods: Divides data into non-overlapping subsets (e.g., k-means).
+        Characteristics: Requires the number of clusters to be specified beforehand; works well for spherical cluster shapes.
+
+    Hierarchical Methods: Creates a tree of clusters (dendrograms).
+        Characteristics: Can be agglomerative (bottom-up) or divisive (top-down); does not require the number of clusters to be predetermined.
+
+    Density-Based Methods: Forms clusters based on the density of data points (e.g., DBSCAN).
+        Characteristics: Can identify clusters of arbitrary shape and is good at filtering out noise/outliers.
+
+4. Explain how the k-means algorithm determines the consistency of clustering.
+
+    Consistency is assessed through metrics like:
+        Within-cluster Sum of Squares (WCSS): Measures the compactness of the clusters; lower values indicate better clustering.
+        Silhouette Score: Evaluates how similar an object is to its own cluster compared to other clusters; ranges from -1 to 1, where values closer to 1 indicate better clustering.
+
+5. With a simple illustration, explain the key difference between the k-means and k-medoids algorithms.
+
+    k-means:
+        Centroid-based: Uses the mean of all points in a cluster to represent the center.
+        Illustration: If you have points A, B, and C in a cluster, the centroid would be at the average position of A, B, and C.
+
+    k-medoids:
+        Medoid-based: Uses the most centrally located point (medoid) in a cluster as the center.
+        Illustration: For points A, B, and C, if A is the point closest to the average position, A would be the medoid, regardless of its value.
+
+6. What is a dendrogram, and how does it work? Explain how to do it.
+
+    Definition: A dendrogram is a tree-like diagram that shows the arrangement of the clusters formed by hierarchical clustering.
+    How it works:
+        The y-axis represents the distance between clusters, while the x-axis lists the observations.
+        Creating a Dendrogram: Start with each point as its own cluster, calculate distances between clusters, and merge the closest pairs iteratively until a single cluster remains.
+
+7. What exactly is SSE? What role does it play in the k-means algorithm?
+
+    SSE (Sum of Squared Errors): Measures the total variance within the clusters by summing the squared distances between each point and its assigned cluster centroid.
+    Role in k-means: Minimizing SSE is the primary goal of the k-means algorithm, as it helps to form tight, compact clusters.
+
+8. With a step-by-step algorithm, explain the k-means procedure.
+
+    Initialize: Choose kk initial centroids randomly from the data points.
+    Assignment Step: Assign each data point to the nearest centroid based on distance (e.g., Euclidean distance).
+    Update Step: Calculate the new centroids as the mean of all points assigned to each centroid.
+    Repeat: Continue the assignment and update steps until centroids no longer change significantly or a maximum number of iterations is reached.
+
+9. In the sense of hierarchical clustering, define the terms single link and complete link.
+
+    Single Link: Defines the distance between two clusters as the shortest distance between points in the clusters (minimum linkage).
+    Complete Link: Defines the distance between two clusters as the longest distance between points in the clusters (maximum linkage).
+
+10. How does the apriori concept aid in the reduction of measurement overhead in a business basket analysis? Give an example to demonstrate your point.
+
+    Apriori Algorithm: Reduces measurement overhead by using the concept of itemsets to prune the search space for frequent itemsets. It identifies which items are frequently bought together, helping retailers focus on high-value associations without exhaustively checking every possible combination.
+    Example: In a grocery store, if the algorithm finds that customers who buy bread also frequently buy butter, it can recommend butter to customers purchasing bread, thus improving cross-selling efficiency.

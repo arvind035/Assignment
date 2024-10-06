@@ -1,0 +1,49 @@
+1. What are the key reasons for reducing the dimensionality of a dataset? What are the major disadvantages?
+
+    Key Reasons:
+        Improved Performance: Reduces computational cost and speeds up algorithms.
+        Mitigating Overfitting: Decreases the risk of overfitting by simplifying the model.
+        Visualization: Enables better data visualization and interpretation.
+        Noise Reduction: Helps eliminate irrelevant features that can obscure the data.
+
+    Major Disadvantages:
+        Information Loss: Risk of losing important information or features.
+        Complexity in Interpretation: Reduced dimensions can make it harder to interpret results.
+        Increased Complexity: Some techniques can be computationally expensive or complex to implement.
+
+2. What is the dimensionality curse?
+
+    Dimensionality Curse: Refers to the phenomenon where the feature space becomes increasingly sparse as the number of dimensions increases, making it difficult to find meaningful patterns and leading to model overfitting and increased computational demands.
+
+3. Tell if it's possible to reverse the process of reducing the dimensionality of a dataset? If so, how can you go about doing it? If not, what is the reason?
+
+    Reversibility:
+        Possible in Some Cases: If the technique used is reversible, such as PCA (Principal Component Analysis), the original data can be approximated.
+        Limitations: However, in general, exact recovery is not possible due to information loss during the dimensionality reduction process.
+
+4. Can PCA be utilized to reduce the dimensionality of a nonlinear dataset with a lot of variables?
+
+    PCA Limitations: PCA is a linear method and may not effectively reduce dimensionality for nonlinear datasets. For nonlinear data, kernel PCA or other nonlinear techniques (like t-SNE) may be more suitable.
+
+5. Assume you're running PCA on a 1,000-dimensional dataset with a 95 percent explained variance ratio. What is the number of dimensions that the resulting dataset would have?
+
+    Number of Dimensions: The exact number of dimensions retained depends on the data structure, but typically, you would select a number of components that capture 95% of the variance, which might be around 20-30 dimensions, depending on the dataset.
+
+6. Will you use vanilla PCA, incremental PCA, randomized PCA, or kernel PCA in which situations?
+
+    Vanilla PCA: Best for smaller datasets where the entire dataset can fit into memory.
+    Incremental PCA: Suitable for large datasets that cannot fit into memory all at once, allowing for batch processing.
+    Randomized PCA: Efficient for high-dimensional datasets where speed is prioritized over exact precision.
+    Kernel PCA: Used for nonlinear data where linear PCA would be ineffective, applying kernel functions to map data into higher-dimensional spaces.
+
+7. How do you assess a dimensionality reduction algorithm's success on your dataset?
+
+    Assessment Metrics:
+        Reconstruction Error: Measure the difference between original and reconstructed data.
+        Explained Variance Ratio: Check how much variance is retained in the reduced dimensions.
+        Model Performance: Evaluate the performance of downstream models trained on reduced data.
+        Visualization: Use visual methods (e.g., scatter plots) to assess how well the data structure is preserved.
+
+8. Is it logical to use two different dimensionality reduction algorithms in a chain?
+
+    Yes, Logical: Using two different dimensionality reduction algorithms in sequence can be beneficial. For example, applying PCA first to reduce dimensionality and then t-SNE to visualize the data in 2D or 3D can yield better insights while preserving important features.

@@ -1,0 +1,37 @@
+1. What is the estimated depth of a Decision Tree trained (unrestricted) on a one million instance training set?
+
+    Estimated Depth: The depth can potentially reach up to 20-30 levels, depending on the number of features and the criteria used for splitting. However, in practice, depth is often limited to avoid overfitting.
+
+2. Is the Gini impurity of a node usually lower or higher than that of its parent? Is it always lower/greater, or is it usually lower/greater?
+
+    Gini Impurity: The Gini impurity of a node is usually lower than that of its parent node after a successful split. However, it is not always guaranteed, as poorly chosen splits may not decrease impurity.
+
+3. Explain if it’s a good idea to reduce max depth if a Decision Tree is overfitting the training set?
+
+    Reducing Max Depth: Yes, reducing the max depth is a good idea to combat overfitting. It simplifies the model, preventing it from learning noise in the training data and improving generalization to unseen data.
+
+4. Explain if it’s a good idea to try scaling the input features if a Decision Tree underfits the training set?
+
+    Scaling Input Features: No, scaling input features is not necessary for Decision Trees. They are invariant to feature scaling, as splits are based on thresholds rather than distances.
+
+5. How much time will it take to train another Decision Tree on a training set of 10 million instances if it takes an hour to train a Decision Tree on a training set with 1 million instances?
+
+    Training Time Estimation: Training time may not scale linearly. However, if it does, you might estimate around 10 hours. But in practice, factors such as data complexity and model parameters also play significant roles.
+
+6. Will setting presort=True speed up training if your training set has 100,000 instances?
+
+    Effect of Presort: Setting presort=True can speed up training for smaller datasets (like 100,000 instances). However, for larger datasets, it's often more efficient to sort dynamically, as presorting can become computationally expensive.
+
+7. Follow these steps to train and fine-tune a Decision Tree for the moons dataset:
+
+    a. Use make_moons(n_samples=10000, noise=0.4) to create the dataset.
+    b. Split the dataset using train_test_split().
+    c. Utilize GridSearchCV to find hyperparameters for DecisionTreeClassifier, particularly testing different values for max leaf nodes.
+    d. Train the model on the full training set with the best hyperparameters and evaluate, aiming for an accuracy of 85-87%.
+
+8. Follow these steps to grow a forest:
+
+    a. Create 1,000 random subsets of 100 instances using ShuffleSplit.
+    b. Train a DecisionTree on each subset with optimal hyperparameters, expecting around 80% accuracy on the test set due to the smaller training sizes.
+    c. Generate predictions from all 1,000 trees and apply the majority vote using SciPy’s mode().
+    d. Evaluate the majority-vote predictions on the test set, likely achieving a 0.5-1.5% increase in accuracy over the first model, indicating the creation of a Random Forest classifier.

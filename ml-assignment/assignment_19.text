@@ -1,0 +1,103 @@
+1. A set of one-dimensional data points is given to you: 5, 10, 15, 20, 25, 30, 35. Assume that k = 2 and that the first set of random centroid is 15, 32, and that the second set is 12, 30.
+a) Using the k-means method, create two clusters for each set of centroid described above.
+
+    Centroids: 15 and 32:
+        Cluster 1 (C1, around centroid 15): {5, 10, 15}
+        Cluster 2 (C2, around centroid 32): {20, 25, 30, 35}
+
+    Centroids: 12 and 30:
+        Cluster 1 (C1, around centroid 12): {5, 10}
+        Cluster 2 (C2, around centroid 30): {15, 20, 25, 30, 35}
+
+b) For each set of centroid values, calculate the SSE.
+
+    For Centroids 15 and 32:
+        SSE:
+            C1: (5−15)2+(10−15)2+(15−15)2=100+25+0=125(5−15)2+(10−15)2+(15−15)2=100+25+0=125
+            C2: (20−32)2+(25−32)2+(30−32)2+(35−32)2=144+49+4+9=206(20−32)2+(25−32)2+(30−32)2+(35−32)2=144+49+4+9=206
+            Total SSE = 125 + 206 = 331
+
+    For Centroids 12 and 30:
+        SSE:
+            C1: (5−12)2+(10−12)2=49+4=53(5−12)2+(10−12)2=49+4=53
+            C2: (15−30)2+(20−30)2+(25−30)2+(30−30)2+(35−30)2=225+100+25+0+25=375(15−30)2+(20−30)2+(25−30)2+(30−30)2+(35−30)2=225+100+25+0+25=375
+            Total SSE = 53 + 375 = 428
+
+2. Describe how the Market Basket Research makes use of association analysis concepts.
+
+    Market Basket Analysis: Identifies the purchasing behavior of customers by analyzing transaction data to discover associations between items bought together.
+    Applications: Retailers use this analysis to optimize product placement, cross-selling strategies, and promotional offers based on frequently co-purchased items (e.g., milk and bread).
+
+3. Give an example of the Apriori algorithm for learning association rules.
+
+    Example:
+        Transactions:
+            {Bread, Milk}
+            {Bread, Diaper, Beer, Eggs}
+            {Milk, Diaper, Beer, Cola}
+            {Bread, Milk, Diaper, Beer}
+            {Bread, Milk, Cola}
+        Frequent Itemsets:
+            Calculate support for pairs:
+                {Bread, Milk}: 4/5
+                {Diaper, Beer}: 3/5
+            Rule: If a customer buys Bread, they are likely to buy Milk.
+
+4. In hierarchical clustering, how is the distance between clusters measured? Explain how this metric is used to decide when to end the iteration.
+
+    Distance Measurement: Common methods include single-link (minimum distance), complete-link (maximum distance), and average distance between all pairs of points in the clusters.
+    Deciding Iteration End: The iteration continues until all points are merged into a single cluster or until a predefined threshold distance is reached, where clusters are no longer merged if the distance exceeds this threshold.
+
+5. In the k-means algorithm, how do you recompute the cluster centroids?
+
+    Recomputing Centroids: After assigning data points to clusters, calculate the new centroid for each cluster by taking the mean of all data points within that cluster.
+        Formula: For a cluster CC:
+        New Centroid=1∣C∣∑x∈CxNew Centroid=∣C∣1​∑x∈C​x
+
+6. At the start of the clustering exercise, discuss one method for determining the required number of clusters.
+
+    Elbow Method: Plot the SSE against the number of clusters. As the number of clusters increases, the SSE decreases. The "elbow" point on the graph indicates a suitable number of clusters, where adding more clusters yields diminishing returns on SSE reduction.
+
+7. Discuss the k-means algorithm's advantages and disadvantages.
+
+    Advantages:
+        Simple to implement and interpret.
+        Efficient for large datasets.
+        Works well with spherical clusters.
+
+    Disadvantages:
+        Requires the number of clusters to be specified in advance.
+        Sensitive to initial centroid placement (can lead to different results).
+        Not effective for non-spherical cluster shapes.
+
+8. Draw a diagram to demonstrate the principle of clustering.
+
+    Diagram (Text Description): Imagine a 2D scatter plot with different colors representing different clusters. Points close together form a cluster, while points farther apart belong to different clusters. The centroids of each cluster can be marked as larger dots.
+
+9. During your study, you discovered seven findings, which are listed in the data points below. Using the K-means algorithm, you want to build three clusters from these observations. The clusters C1, C2, and C3 have the following findings after the first iteration:
+
+    C1: (2,2), (4,4), (6,6)
+    C2: (0,4), (4,0)
+    C3: (5,5), (9,9)
+
+What would the cluster centroids be if you were to run a second iteration? What would this clustering's SSE be?
+
+    Centroid Calculation for C1, C2, C3:
+        C1: Centroid = (2+4+63,2+4+63)=(4,4)(32+4+6​,32+4+6​)=(4,4)
+        C2: Centroid = (0+42,4+02)=(2,2)(20+4​,24+0​)=(2,2)
+        C3: Centroid = (5+92,5+92)=(7,7)(25+9​,25+9​)=(7,7)
+
+    SSE Calculation:
+        C1:
+            SSE = (2−4)2+(2−4)2+(6−4)2=4+4+4=12(2−4)2+(2−4)2+(6−4)2=4+4+4=12
+        C2:
+            SSE = (0−2)2+(4−2)2=4+4=8(0−2)2+(4−2)2=4+4=8
+        C3:
+            SSE = (5−7)2+(9−7)2=4+4=8(5−7)2+(9−7)2=4+4=8
+        Total SSE = 12 + 8 + 8 = 28
+
+10. In a software project, the team is attempting to determine if software flaws discovered during testing are identical. Based on the text analytics of the defect details, they decided to build 5 clusters of related defects. Any new defect formed after the 5 clusters of defects have been identified must be listed as one of the forms identified by clustering. A simple diagram can be used to explain this process. Assume you have 20 defect data points that are clustered into 5 clusters and you used the k-means algorithm.
+
+    Diagram (Text Description): Imagine a 2D scatter plot showing 20 points. Each point represents a defect, colored based on its assigned cluster (1 to 5). A label can indicate "New Defect," which will be classified into one of the existing clusters based on proximity to centroids.
+
+

@@ -1,0 +1,57 @@
+1. What is your definition of clustering? What are a few clustering algorithms you might think of?
+
+    Definition of Clustering: Clustering is an unsupervised machine learning technique used to group similar data points into clusters based on their features, where points in the same cluster are more similar to each other than to those in other clusters.
+    Clustering Algorithms:
+        K-Means: Partitions data into K clusters by minimizing variance within clusters.
+        Hierarchical Clustering: Creates a tree-like structure (dendrogram) to represent nested clusters.
+        DBSCAN (Density-Based Spatial Clustering of Applications with Noise): Groups points that are closely packed together while marking outliers as noise.
+
+2. What are some of the most popular clustering algorithm applications?
+
+    Customer Segmentation: Grouping customers based on purchasing behavior for targeted marketing.
+    Image Segmentation: Dividing an image into regions for object detection or recognition.
+    Anomaly Detection: Identifying unusual patterns or outliers in datasets (e.g., fraud detection).
+
+3. When using K-Means, describe two strategies for selecting the appropriate number of clusters.
+
+    Elbow Method: Plot the sum of squared errors (SSE) against the number of clusters and look for the "elbow" point where the rate of decrease sharply changes, indicating a suitable K.
+    Silhouette Score: Calculate the silhouette coefficient for different values of K; a higher score indicates better-defined clusters.
+
+4. What is mark propagation and how does it work? Why would you do it, and how would you do it?
+
+    Mark Propagation: A semi-supervised learning technique where labels (marks) from a small set of labeled data points are spread to neighboring unlabeled points based on their similarity.
+    How it Works: Marks are assigned based on the structure of the data, often using methods like graph-based approaches where nodes represent data points, and edges represent similarities.
+    Purpose: To leverage labeled data to improve the classification of unlabeled data in scenarios where labeling is expensive or time-consuming.
+    Implementation: Can be implemented using graph algorithms (e.g., random walks) or propagation rules based on distance metrics.
+
+5. Provide two examples of clustering algorithms that can handle large datasets. And two that look for high-density areas?
+
+    Large Datasets:
+        K-Means: Efficient for large datasets due to its linear time complexity with respect to the number of samples.
+        MiniBatch K-Means: A variant of K-Means that uses small batches to update centroids, making it suitable for streaming data.
+    High-Density Areas:
+        DBSCAN: Identifies dense regions and can discover clusters of arbitrary shape while filtering out noise.
+        OPTICS (Ordering Points To Identify the Clustering Structure): Similar to DBSCAN but handles varying densities and produces a reachability plot.
+
+6. Can you think of a scenario in which constructive learning will be advantageous? How can you go about putting it into action?
+
+    Scenario: Constructive learning is advantageous in environments where labeled data is scarce, such as medical diagnoses based on rare conditions.
+    Implementation:
+        Start with a small labeled dataset and iteratively add the most informative unlabeled samples using active learning.
+        Use clustering techniques to identify representative examples for labeling, which will enhance model training over time.
+
+7. How do you tell the difference between anomaly and novelty detection?
+
+    Anomaly Detection: Involves identifying rare items or events in the training data that differ significantly from the majority of the dataset. It assumes that the model is trained on data that includes normal and abnormal cases.
+    Novelty Detection: Focuses on identifying new or unknown patterns in data when the model is trained only on normal data. It is used when the training data does not contain any anomalies.
+
+8. What is a Gaussian mixture, and how does it work? What are some of the things you can do about it?
+
+    Gaussian Mixture Model (GMM): A probabilistic model that assumes that the data is generated from a mixture of several Gaussian distributions with unknown parameters.
+    How it Works: GMM uses the Expectation-Maximization (EM) algorithm to estimate the parameters of the Gaussian components and determine the likelihood of each data point belonging to each cluster.
+    Applications: Can be used for clustering, density estimation, and generating synthetic data.
+
+9. When using a Gaussian mixture model, can you name two techniques for determining the correct number of clusters?
+
+    Bayesian Information Criterion (BIC): A model selection criterion that penalizes the likelihood based on the number of parameters; a lower BIC value indicates a better model.
+    Akaike Information Criterion (AIC): Similar to BIC but with a different penalty mechanism; it also helps in model selection by considering both goodness of fit and model complexity.

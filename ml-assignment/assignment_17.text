@@ -1,0 +1,101 @@
+1. Using a graph to illustrate slope and intercept, define basic linear regression.
+
+    Definition: Basic linear regression models the relationship between an independent variable XX and a dependent variable YY using the linear equation Y=a+bXY=a+bX.
+    Graph Illustration:
+        The slope (b) indicates how much YY changes for a unit change in XX.
+        The intercept (a) is the value of YY when X=0X=0.
+
+2. In a graph, explain the terms rise, run, and slope.
+
+    Rise: The vertical change between two points on the graph (change in YY).
+    Run: The horizontal change between the same two points (change in XX).
+    Slope: Calculated as slope=riserunslope=runrise​ (change in YY over change in XX).
+
+3. Use a graph to demonstrate slope, linear positive slope, and linear negative slope, as well as the different conditions that contribute to the slope.
+
+    Linear Positive Slope: As XX increases, YY increases.
+    Linear Negative Slope: As XX increases, YY decreases.
+    Graph Illustration:
+
+4. Use a graph to demonstrate curve linear negative slope and curve linear positive slope.
+
+    Curvilinear Positive Slope: Increases at an increasing rate.
+    Curvilinear Negative Slope: Decreases at a decreasing rate.
+    Graph Illustration:
+
+5. Use a graph to show the maximum and low points of curves.
+
+    Maximum Point: The highest point on the curve (local maximum).
+    Minimum Point: The lowest point on the curve (local minimum).
+    Graph Illustration:
+
+6. Use the formulas for aa and bb to explain ordinary least squares.
+
+    Formulas:
+        Slope bb: b=N(∑XY)−(∑X)(∑Y)N(∑X2)−(∑X)2b=N(∑X2)−(∑X)2N(∑XY)−(∑X)(∑Y)​
+        Intercept aa: a=∑Y−b∑XNa=N∑Y−b∑X​
+    Explanation: Ordinary least squares minimizes the sum of the squared differences between observed and predicted values.
+
+7. Provide a step-by-step explanation of the OLS algorithm.
+
+    Step 1: Define the linear model Y=a+bXY=a+bX.
+    Step 2: Collect data points (Xi,Yi)(Xi​,Yi​).
+    Step 3: Calculate aa and bb using the formulas above.
+    Step 4: Fit the line to minimize the residuals (differences).
+    Step 5: Validate the model's predictions against actual values.
+
+8. What is the regression's standard error? To represent the same, make a graph.
+
+    Definition: The standard error of regression measures the accuracy of predictions made with a regression line. It quantifies the dispersion of the observed values around the regression line.
+    Graph Illustration:
+
+9. Provide an example of multiple linear regression.
+
+    Example: Predicting house prices based on multiple factors like size (square footage), number of bedrooms, and location. The model would look like:
+    Price=a+b1×Size+b2×Bedrooms+b3×LocationPrice=a+b1​×Size+b2​×Bedrooms+b3​×Location
+
+10. Describe the regression analysis assumptions and the BLUE principle.
+
+    Assumptions:
+        Linearity: The relationship is linear.
+        Independence: Observations are independent.
+        Homoscedasticity: Constant variance of errors.
+        Normality: Errors are normally distributed.
+    BLUE Principle: Best Linear Unbiased Estimator; states that under certain conditions, OLS provides the best linear unbiased estimates of the parameters.
+
+11. Describe two major issues with regression analysis.
+
+    Multicollinearity: High correlation among independent variables can distort results.
+    Heteroskedasticity: Non-constant variance of error terms can affect the reliability of statistical tests.
+
+12. How can the linear regression model's accuracy be improved?
+
+    Feature Engineering: Add interaction terms or polynomial features.
+    Regularization: Use techniques like Ridge or Lasso regression to handle overfitting.
+
+13. Using an example, describe the polynomial regression model in detail.
+
+    Example: Predicting the trajectory of a ball thrown in the air can be modeled using a polynomial equation such as:
+    Y=a+bX+cX2Y=a+bX+cX2
+    Detail: Polynomial regression allows capturing non-linear relationships by including higher-degree terms of the independent variable.
+
+14. Provide a detailed explanation of logistic regression.
+
+    Definition: Logistic regression is used for binary classification problems, predicting the probability that a given input belongs to a certain class.
+    Working: It uses the logistic function to model the relationship between the independent variables and the binary dependent variable.
+
+15. What are the logistic regression assumptions?
+
+    Assumptions:
+        Binary outcome variable.
+        Independence of observations.
+        No multicollinearity among predictors.
+        Linear relationship between the independent variables and the log-odds of the dependent variable.
+
+16. Go through the details of maximum likelihood estimation.
+
+    Definition: Maximum Likelihood Estimation (MLE) is a method used to estimate the parameters of a statistical model. It finds the parameter values that maximize the likelihood function, making the observed data most probable.
+    Process:
+        Define the likelihood function based on the chosen model.
+        Take the logarithm of the likelihood function.
+        Differentiate to find the maximum point and solve for parameters.
