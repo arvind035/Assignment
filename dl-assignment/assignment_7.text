@@ -1,0 +1,52 @@
+1. Applications for sequence-to-sequence, sequence-to-vector, and vector-to-sequence RNNs:
+
+    Ans-1:
+        Sequence-to-sequence: Language translation, text summarization, chatbots.
+        Sequence-to-vector: Sentiment analysis, text classification.
+        Vector-to-sequence: Image captioning, music generation.
+
+2. Input and output dimensions of an RNN layer:
+
+    Ans-2:
+        Input dimensions: (batch size, time steps, features), representing samples, sequence length, and features per time step.
+        Output dimensions: If return_sequences=True, the output has the same shape as the input; otherwise, it outputs (batch size, units) for the final time step.
+
+3. When to use return_sequences=True in deep RNNs:
+
+    Ans-3:
+        For sequence-to-sequence RNNs, all layers except the last should have return_sequences=True.
+        For sequence-to-vector RNNs, only the final layer should have return_sequences=False.
+
+4. RNN architecture for forecasting a daily univariate time series:
+
+    Ans-4: A sequence-to-sequence RNN with one output per time step can forecast future time steps.
+
+5. Main difficulties when training RNNs and handling them:
+
+    Ans-5:
+        Vanishing/exploding gradients: Use LSTM/GRU cells, batch normalization, or gradient clipping.
+        Long-term dependencies: Use LSTMs, GRUs, or attention mechanisms.
+        Computational efficiency: Implement truncated backpropagation through time (TBPTT).
+
+6. Sketch of LSTM cell architecture:
+
+    Ans-6: An LSTM consists of:
+        Forget gate: Decides what information to discard from the cell state.
+        Input gate: Determines what new information to add.
+        Output gate: Controls what is output from the cell.
+
+7. Why use 1D convolutional layers in an RNN?
+
+    Ans-7: To capture local patterns across time steps, improving performance in sequential tasks like speech recognition or time-series forecasting.
+
+8. Neural network architecture for video classification:
+
+    Ans-8: Use a 3D CNN combined with RNNs (LSTMs/GRUs) to capture spatial-temporal information.
+
+9. Train a classification model for the SketchRNN dataset:
+
+    Ans-9:
+        Load the dataset from TensorFlow Datasets.
+        Preprocess input data into sequences of strokes.
+        Use a sequence-to-sequence RNN (e.g., LSTM) for classification.
+        Evaluate the model on a test set to achieve optimal accuracy.

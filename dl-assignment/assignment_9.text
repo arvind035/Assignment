@@ -1,0 +1,55 @@
+1. Main tasks that autoencoders are used for:
+
+    Ans-1:
+        Dimensionality reduction (similar to PCA but nonlinear).
+        Denoising data by learning to reconstruct clean inputs from noisy ones.
+        Anomaly detection by flagging inputs that cannot be well-reconstructed.
+        Feature extraction to learn meaningful representations of data.
+        Image generation or data synthesis.
+
+2. Using autoencoders for semi-supervised learning with plenty of unlabeled data:
+
+    Ans-2:
+        Train an autoencoder on the unlabeled data to learn latent representations.
+        Use the encoded latent features as inputs for a classifier trained on the few labeled instances.
+        This way, the autoencoder helps leverage the structure in the unlabeled data for better generalization.
+
+3. If an autoencoder perfectly reconstructs inputs, is it a good autoencoder?
+
+    Ans-3:
+        No, perfect reconstruction may indicate the model learned to copy the input, failing to capture meaningful patterns.
+        To evaluate, look at latent space representation, reconstruction error, and whether it generalizes well to unseen data.
+
+4. Undercomplete vs. Overcomplete autoencoders and risks:
+
+    Ans-4:
+        Undercomplete autoencoder: Fewer neurons in the bottleneck layer than the input, forcing it to learn compact representations.
+            Risk: Too few neurons might result in loss of important information.
+        Overcomplete autoencoder: More neurons in the bottleneck layer.
+            Risk: Overfitting, where the model learns to copy inputs rather than extract useful features.
+
+5. Tying weights in a stacked autoencoder:
+
+    Ans-5:
+        Weight tying involves sharing encoder and decoder weights (decoder is the transpose of the encoder).
+        It helps reduce the number of parameters, enforcing symmetry and improving generalization.
+
+6. What is a generative model? Name a generative autoencoder:
+
+    Ans-6:
+        A generative model learns the distribution of the data to generate new samples.
+        Example: Variational Autoencoder (VAE) is a type of generative autoencoder.
+
+7. What is a GAN? Tasks where GANs shine:
+
+    Ans-7:
+        GAN (Generative Adversarial Network) consists of a generator and discriminator trained adversarially.
+        Shines in image generation, style transfer, data augmentation, and super-resolution tasks.
+
+8. Main difficulties when training GANs:
+
+    Ans-8:
+        Mode collapse: Generator produces limited variation.
+        Unstable training: Balancing generator and discriminator can be hard.
+        Vanishing gradients when the discriminator is too strong.
+        Requires extensive hyperparameter tuning.

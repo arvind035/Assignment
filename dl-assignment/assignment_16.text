@@ -1,0 +1,60 @@
+1. Explain the Activation Functions in Your Own Language
+
+a) Sigmoid
+
+    Ans-1: Sigmoid squashes inputs to a range between 0 and 1, making it useful for binary classification. However, it suffers from vanishing gradients for extreme input values.
+
+b) Tanh
+
+    Ans-2: Tanh maps inputs to a range of -1 to 1, which centers the data better than sigmoid. It also faces the vanishing gradient problem but generally performs better in hidden layers.
+
+c) ReLU (Rectified Linear Unit)
+
+    Ans-3: ReLU outputs the input directly if positive; otherwise, it returns zero. This function helps with faster convergence but can cause "dying ReLU" issues where neurons become inactive.
+
+d) ELU (Exponential Linear Unit)
+
+    Ans-4: ELU allows for negative values, smoothing out the function when inputs are less than zero. This can help reduce bias shifts and improve learning speed.
+
+e) Leaky ReLU
+
+    Ans-5: Leaky ReLU allows a small, non-zero gradient when inputs are negative, helping to prevent dead neurons, unlike standard ReLU.
+
+f) Swish
+
+    Ans-6: Swish is defined as x⋅sigmoid(x)x⋅sigmoid(x). It is smooth and non-monotonic, often leading to better performance in deep networks compared to ReLU and its variants.
+
+2. What Happens When You Increase or Decrease the Optimizer Learning Rate?
+
+    Ans-7:
+        Increase: Faster convergence but risks overshooting the minimum, leading to divergence.
+        Decrease: Slower convergence, which may lead to getting stuck in local minima, but can result in a more stable training process.
+
+3. What Happens When You Increase the Number of Internal Hidden Neurons?
+
+    Ans-8: Increasing hidden neurons allows the network to learn more complex patterns, enhancing performance on training data. However, it may lead to overfitting, where the model performs poorly on unseen data.
+
+4. What Happens When You Increase the Size of Batch Computation?
+
+    Ans-9:
+        Larger batches can lead to faster training due to more efficient computations. However, they can require more memory and may lead to poorer generalization. Smaller batches provide noisier gradient estimates, which can help escape local minima.
+
+5. Why Do We Adopt Regularization to Avoid Overfitting?
+
+    Ans-10: Regularization techniques, like L1/L2 regularization or dropout, penalize complex models to encourage simpler ones, preventing the model from memorizing the training data and improving its ability to generalize to new data.
+
+6. What Are Loss and Cost Functions in Deep Learning?
+
+    Ans-11:
+        Loss Function: Measures the error for a single training instance.
+        Cost Function: Average of the loss function over all training instances. Both guide the training process by providing feedback on model performance.
+
+7. What Do You Mean by Underfitting in Neural Networks?
+
+    Ans-12: Underfitting occurs when a model is too simple to capture the underlying patterns of the data, resulting in poor performance on both training and validation datasets.
+
+8. Why Do We Use Dropout in Neural Networks?
+
+    Ans-13: Dropout randomly disables a fraction of neurons during training, preventing co-adaptation and encouraging the network to learn more robust features, which reduces overfitting.
+
+

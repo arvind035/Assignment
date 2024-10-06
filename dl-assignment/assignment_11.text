@@ -1,0 +1,111 @@
+1. Write the Python code to implement a single neuron.
+
+    Ans-1:
+    import numpy as np
+    
+    class SingleNeuron:
+        def __init__(self, input_size):
+            self.weights = np.random.rand(input_size)
+            self.bias = np.random.rand()
+
+        def forward(self, inputs):
+            return np.dot(inputs, self.weights) + self.bias
+
+2. Write the Python code to implement ReLU.
+
+    Ans-2:
+    def relu(x):
+        return np.maximum(0, x)
+
+3. Write the Python code for a dense layer in terms of matrix multiplication.
+
+    Ans-3:
+    class DenseLayer:
+        def __init__(self, input_size, output_size):
+            self.weights = np.random.rand(input_size, output_size)
+            self.bias = np.random.rand(output_size)
+
+        def forward(self, inputs):
+            return np.dot(inputs, self.weights) + self.bias
+
+4. Write the Python code for a dense layer in plain Python (that is, with list comprehensions and functionality built into Python).
+
+    Ans-4:
+    class DenseLayerPlain:
+        def __init__(self, input_size, output_size):
+            self.weights = [[np.random.rand() for _ in range(output_size)] for _ in range(input_size)]
+            self.bias = [np.random.rand() for _ in range(output_size)]
+
+        def forward(self, inputs):
+            return [sum(inputs[i] * self.weights[i][j] for i in range(len(inputs))) + self.bias[j]
+                    for j in range(len(self.bias))]
+
+5. What is the “hidden size” of a layer?
+
+    Ans-5:
+        The hidden size refers to the number of neurons in a hidden layer of a neural network, determining the capacity of the model to learn complex patterns.
+
+6. What does the t method do in PyTorch?
+
+    Ans-6:
+        The .t() method in PyTorch transposes a 2D tensor (flips it over its diagonal), switching the row and column indices.
+
+7. Why is matrix multiplication written in plain Python very slow?
+
+    Ans-7:
+        Matrix multiplication in plain Python is slow because it lacks optimized low-level operations and vectorization, making it less efficient than using libraries like NumPy, which leverage C/C++ optimizations.
+
+8. In matmul, why is ac == br?
+
+    Ans-8:
+        In matrix multiplication, for two matrices A (size m x n) and B (size n x p), the condition ac == br arises because the inner dimensions must match; that is, the number of columns in A (n) must equal the number of rows in B (n) to yield a valid product.
+
+9. In Jupyter Notebook, how do you measure the time taken for a single cell to execute?
+
+    Ans-9:
+        Use the magic command %time for a single statement or %timeit for more accurate timing over multiple executions.
+
+    %time my_function()
+
+10. What is elementwise arithmetic?
+
+    Ans-10:
+        Elementwise arithmetic refers to operations performed on corresponding elements of arrays or tensors, allowing for operations like addition, subtraction, multiplication, and division to be applied directly.
+
+11. Write the PyTorch code to test whether every element of a is greater than the corresponding element of b.
+
+    Ans-11:
+    import torch
+
+    a = torch.tensor([1, 2, 3])
+    b = torch.tensor([0, 2, 1])
+    result = (a > b).all()
+
+12. What is a rank-0 tensor? How do you convert it to a plain Python data type?
+
+    Ans-12:
+        A rank-0 tensor (or scalar) has no dimensions and holds a single value. Convert it to a plain Python data type using the .item() method.
+        
+    rank_0_tensor = torch.tensor(5)
+    python_value = rank_0_tensor.item()
+
+13. How does elementwise arithmetic help us speed up matmul?
+
+    Ans-13:
+        Elementwise arithmetic allows for operations to be performed in parallel across array elements, reducing the computational time compared to iterative approaches used in traditional matrix multiplication.
+
+14. What are the broadcasting rules?
+
+    Ans-14:
+        Broadcasting rules allow operations on tensors of different shapes by:
+        Aligning dimensions from the right.
+        Expanding the dimensions of smaller tensors to match larger ones when possible.
+        Allowing dimensions of size 1 to be stretched to match the larger tensor’s size.
+
+15. What is expand_as? Show an example of how it can be used to match the results of broadcasting.
+
+    Ans-15:
+        The expand_as method in PyTorch expands the dimensions of a tensor to match another tensor’s shape.
+a = torch.tensor([[1], [2], [3]])  # shape (3, 1)
+b = torch.tensor([[4, 5, 6]])       # shape (1, 3)
+c = a.expand_as(b)                  # shape (3, 3)

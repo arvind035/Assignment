@@ -1,0 +1,51 @@
+1. What does a SavedModel contain? How do you inspect its content?
+
+    Ans-1:
+        A SavedModel contains the model’s architecture, weights, and metadata (signatures for inputs/outputs).
+        To inspect, use the command: saved_model_cli show --dir /path/to/saved_model --all.
+
+2. When should you use TF Serving? What are its main features? What are some tools you can use to deploy it?
+
+    Ans-2:
+        Use TF Serving to serve ML models in production with high performance and scalability.
+        Main features include gRPC/REST API support, batching, and dynamic model loading.
+        Deploy using tools like Docker, Kubernetes, or Cloud AI Platform.
+
+3. How do you deploy a model across multiple TF Serving instances?
+
+    Ans-3:
+        Use Kubernetes or TensorFlow Serving on Docker across multiple instances for load balancing.
+        Employ horizontal scaling using a load balancer to manage traffic across servers.
+
+4. When should you use the gRPC API rather than the REST API to query a model served by TF Serving?
+
+    Ans-4:
+        Use gRPC when you need faster, more efficient communication, particularly in high-performance or streaming applications.
+        Use REST API when simplicity and compatibility are more important than performance.
+
+5. What are the different ways TFLite reduces a model’s size to make it run on a mobile or embedded device?
+
+    Ans-5:
+        Quantization (e.g., 8-bit integer quantization).
+        Pruning (removing unnecessary weights).
+        Weight clustering (grouping similar weights).
+
+6. What is quantization-aware training, and why would you need it?
+
+    Ans-6:
+        Quantization-aware training simulates quantization effects during training, improving model accuracy after quantization.
+        It’s used when post-training quantization results in significant accuracy loss, particularly in low-bit models.
+
+7. What are model parallelism and data parallelism? Why is the latter generally recommended?
+
+    Ans-7:
+        Model parallelism splits the model across devices, while data parallelism runs multiple copies of the model across devices with different batches of data.
+        Data parallelism is generally recommended because it is simpler to implement and scales better.
+
+8. When training a model across multiple servers, what distribution strategies can you use? How do you choose which one to use?
+
+    Ans-8:
+        You can use strategies like MirroredStrategy, ParameterServerStrategy, or TPUStrategy.
+        Choose based on your hardware setup: use MirroredStrategy for single machine, ParameterServerStrategy for distributed training, and TPUStrategy for TPU-based models.
+
+

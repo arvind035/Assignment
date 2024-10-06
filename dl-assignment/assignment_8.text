@@ -1,0 +1,55 @@
+1. Pros and cons of using a stateful RNN versus a stateless RNN:
+
+    Ans-1:
+        Pros of Stateful RNN:
+            Maintains hidden states across batches, useful for long sequences.
+            Better at modeling time dependencies in continuous data.
+        Cons of Stateful RNN:
+            Complex to manage batch sizes and resets.
+            Increased memory and computation overhead.
+        Pros of Stateless RNN:
+            Simpler to implement and manage.
+            No need to worry about state resets.
+        Cons of Stateless RNN:
+            Does not capture long-term dependencies.
+            Resets hidden states after every batch.
+
+2. Why use Encoder–Decoder RNNs rather than plain sequence-to-sequence RNNs for automatic translation?
+
+    Ans-2:
+        Encodes context into a fixed-size vector, allowing flexible input/output sequence lengths.
+        Handles variable-length sequences better than plain sequence-to-sequence RNNs.
+        More suitable for tasks like translation where output length can vary significantly from input.
+
+3. Dealing with variable-length input and output sequences:
+
+    Ans-3:
+        Use padding for variable-length input sequences, followed by masking to ignore padding during training.
+        For variable-length output, employ teacher forcing or dynamic unrolling during decoding.
+        Alternatively, use attention mechanisms to dynamically handle both input and output lengths.
+
+4. What is beam search and why use it?
+
+    Ans-4:
+        Beam search is a heuristic search algorithm used for decoding sequences by keeping the top k best sequences at each step.
+        It improves translation quality by exploring multiple paths rather than selecting the most likely token at each step (like greedy search).
+        Tools like TensorFlow and PyTorch support beam search implementation.
+
+5. What is an attention mechanism and how does it help?
+
+    Ans-5:
+        Attention allows the model to focus on relevant parts of the input for each output step.
+        It improves translation and other tasks by enabling the model to handle long-range dependencies better and avoid bottlenecks in fixed-size context vectors.
+
+6. Most important layer in Transformer architecture and its purpose:
+
+    Ans-6:
+        Self-attention layer is the core of the Transformer.
+        Its purpose is to allow each token to attend to all others, capturing relationships across the sequence without relying on sequential processing like RNNs.
+
+7. When to use sampled softmax?
+
+    Ans-7:
+        Use sampled softmax when dealing with large vocabularies to speed up training.
+        It approximates the softmax over a subset of the output vocabulary, reducing computational cost.
+        Commonly used in tasks like language modeling.

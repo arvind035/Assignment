@@ -1,0 +1,48 @@
+1. Why would you want to use the Data API?
+
+    Ans-1: The Data API enables efficient loading and preprocessing of large datasets, allowing parallelism, shuffling, batching, and prefetching. It streamlines input pipelines, improving performance.
+
+2. What are the benefits of splitting a large dataset into multiple files?
+
+    Ans-2:
+        Facilitates parallel reading and processing.
+        Reduces memory overhead.
+        Enhances fault tolerance by preventing complete data loss due to file corruption.
+
+3. During training, how can you tell that your input pipeline is the bottleneck? What can you do to fix it?
+
+    Ans-3:
+        Symptom: GPU/TPU utilization is low while CPU utilization is high.
+        Fix: Implement data prefetching, parallel reads, caching, or reduce preprocessing complexity.
+
+4. Can you save any binary data to a TFRecord file, or only serialized protocol buffers?
+
+    Ans-4: You can save any binary data, but typically TFRecords store serialized protocol buffers.
+
+5. Why would you go through the hassle of converting all your data to the Example protobuf format? Why not use your own protobuf definition?
+
+    Ans-5:
+        Advantages: Example protobuf is optimized for TensorFlow, integrates seamlessly, and is well-supported.
+        Custom Protobuf Issues: May require additional overhead to convert and manage during training.
+
+6. When using TFRecords, when would you want to activate compression? Why not do it systematically?
+
+    Ans-6:
+        Activate Compression: When handling large datasets where storage is limited.
+        Avoid Systematically: Compression can add computational overhead during reading, slowing down training.
+
+7. Data can be preprocessed directly when writing the data files, or within the tf.data pipeline, or in preprocessing layers within your model, or using TF Transform. Can you list a few pros and cons of each option?
+
+    Ans-7:
+        Preprocessing when writing data files:
+            Pros: Reduced runtime overhead during training.
+            Cons: Hard to modify once written.
+        Within tf.data pipeline:
+            Pros: Flexible, on-the-fly preprocessing.
+            Cons: Can become a bottleneck if not optimized.
+        Preprocessing in model layers:
+            Pros: Simplifies the input pipeline.
+            Cons: Adds computation during model inference, slowing predictions.
+        Using TF Transform:
+            Pros: Allows complex preprocessing with a consistent setup for both training and serving.
+            Cons: Higher setup complexity.

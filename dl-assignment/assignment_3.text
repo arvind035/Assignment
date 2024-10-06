@@ -1,0 +1,61 @@
+1. Is it OK to initialize all the weights to the same value as long as that value is selected randomly using He initialization?
+
+    Ans-1: No, initializing all weights to the same value (even if random) would cause symmetry, preventing different neurons from learning distinct features. He initialization should be random for each weight.
+
+2. Is it OK to initialize the bias terms to 0?
+
+    Ans-2: Yes, it's fine to initialize bias terms to 0, as biases are not involved in symmetry breaking like weights. Their role is just to shift the activation function output.
+
+3. Name three advantages of the SELU activation function over ReLU.
+
+    Ans-3:
+        Self-Normalization: SELU ensures that neuron activations are normalized during training.
+        Non-zero Mean: Unlike ReLU, SELU produces outputs with both positive and negative values.
+        No Dead Neurons: SELU doesn’t suffer from the dying ReLU problem, where neurons stop learning due to zero gradients.
+
+4. In which cases would you want to use each of the following activation functions: SELU, leaky ReLU (and its variants), ReLU, tanh, logistic, and softmax?
+
+    Ans-4:
+        SELU: For deep neural networks requiring self-normalization.
+        Leaky ReLU (and variants): When facing the dying ReLU problem or for deep networks to allow small negative gradients.
+        ReLU: Most common for general-purpose hidden layers due to simplicity and efficiency.
+        Tanh: Used in hidden layers when inputs are centered at 0; good for binary classification.
+        Logistic (Sigmoid): Often used in the output layer for binary classification tasks.
+        Softmax: For multi-class classification in the output layer to produce probabilities.
+
+5. What may happen if you set the momentum hyperparameter too close to 1 (e.g., 0.99999) when using an SGD optimizer?
+
+    Ans-5: Setting momentum too close to 1 can lead to very large updates, causing the optimizer to overshoot the optimal solution, making training unstable.
+
+6. Name three ways you can produce a sparse model.
+
+    Ans-6:
+        L1 Regularization: Encourages weights to be zero, leading to sparsity.
+        Pruning: Remove unimportant weights after training.
+        Sparse activation functions: Use functions like ReLU which deactivate neurons, making many outputs zero.
+
+7. Does dropout slow down training? Does it slow down inference (i.e., making predictions on new instances)? What about MC Dropout?
+
+    Ans-7:
+        Dropout during training: Slows training because the network needs to compute with varying subsets of neurons.
+        Dropout during inference: It does not slow down inference, as dropout is typically disabled.
+        MC Dropout: Can slow down inference, as it applies dropout multiple times to estimate uncertainty.
+
+8. Practice training a deep neural network on the CIFAR10 image dataset:
+
+    a. Build a DNN with 20 hidden layers of 100 neurons each (that’s too many, but it’s the point of this exercise). Use He initialization and the ELU activation function.
+        Build a Sequential model in Keras with keras.layers.Dense layers, initializing weights with He initialization and using ELU as the activation function.
+
+    b. Using Nadam optimization and early stopping, train the network on the CIFAR10 dataset.
+        Load the dataset with keras.datasets.cifar10.load_data(), compile with Nadam optimizer, and apply early stopping during training to prevent overfitting.
+
+    c. Add Batch Normalization and compare the learning curves:
+        Batch Normalization can speed up convergence and improve model performance by reducing internal covariate shift.
+
+    d. Replace Batch Normalization with SELU and self-normalize the network:
+        Ensure inputs are standardized, use LeCun normal initialization, and stack dense layers to ensure proper self-normalization.
+
+    e. Regularize the model with alpha dropout and compare with MC Dropout:
+        Alpha Dropout preserves mean and variance, making it suitable for SELU networks. MC Dropout can improve test-time uncertainty estimation without retraining.
+
+

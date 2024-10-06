@@ -1,0 +1,50 @@
+1. Is it okay to initialize all the weights to the same value as long as that value is selected randomly using He initialization?
+
+    Ans-1:
+        No, initializing all weights to the same value (even randomly) can cause symmetry issues. Each neuron would learn the same features during training, negating the benefits of multiple neurons. Instead, He initialization suggests initializing weights to small random values drawn from a specific distribution to break symmetry.
+
+2. Is it okay to initialize the bias terms to 0?
+
+    Ans-2:
+        Yes, initializing bias terms to 0 is common practice. Bias terms are typically set to zero because they help shift the activation function, and this does not lead to symmetry issues as it does with weights.
+
+3. Name three advantages of the ELU activation function over ReLU.
+
+    Ans-3:
+        Advantages of ELU:
+            Non-zero Mean: ELU has a non-zero mean for activations, which can speed up learning and improve convergence.
+            Negative Values: ELU can output negative values, allowing the model to learn more complex functions and reducing the likelihood of dying ReLU issues.
+            Smoother Gradient: ELU provides a smoother gradient for negative inputs, which can improve the overall training dynamics.
+
+4. In which cases would you want to use each of the following activation functions: ELU, leaky ReLU (and its variants), ReLU, tanh, logistic, and softmax?
+
+    Ans-4:
+        Use Cases:
+            ELU: When you need a non-linear activation that can help mitigate the vanishing gradient problem while providing a non-zero mean.
+            Leaky ReLU: In situations where you want to prevent dying ReLU problems by allowing a small, non-zero gradient for negative inputs.
+            ReLU: For hidden layers in most cases due to its simplicity and effectiveness in preventing vanishing gradients.
+            Tanh: When outputs need to be centered around zero, as it outputs values between -1 and 1.
+            Logistic (Sigmoid): For binary classification problems where outputs are probabilities between 0 and 1.
+            Softmax: In the output layer for multi-class classification problems, as it provides a probability distribution over multiple classes.
+
+5. What may happen if you set the momentum hyperparameter too close to 1 (e.g., 0.99999) when using a MomentumOptimizer?
+
+    Ans-5:
+        Setting momentum too close to 1 can lead to:
+            Slow Convergence: The optimizer may take smaller steps, resulting in slower convergence to the minimum.
+            Oscillations: It may also cause oscillations or overshooting in the parameter updates, making it harder for the optimizer to settle into a minimum.
+
+6. Name three ways you can produce a sparse model.
+
+    Ans-6:
+        Ways to Produce Sparse Models:
+            Regularization Techniques: Apply L1 regularization to encourage sparsity by penalizing the absolute values of weights.
+            Dropout: Introduce dropout during training, which randomly disables a fraction of neurons, leading to a more sparse representation.
+            Sparse Activations: Use activation functions that naturally lead to sparsity, such as ReLU or variations like leaky ReLU.
+
+7. Does dropout slow down training? Does it slow down inference (i.e., making predictions on new instances)?
+
+    Ans-7:
+        Training: Yes, dropout can slow down training since it reduces the effective number of neurons available during each iteration, leading to longer training times.
+        Inference: No, dropout does not slow down inference. During inference, all neurons are active, and dropout is typically turned off, allowing the model to use all learned parameters.
+

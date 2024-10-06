@@ -1,0 +1,82 @@
+1. Why is it generally preferable to use a Logistic Regression classifier rather than a classical Perceptron? How can you tweak a Perceptron to make it equivalent to a Logistic Regression classifier?
+
+    Ans-1:
+        Preferable Use of Logistic Regression:
+            Logistic Regression provides probabilistic outputs, allowing for better interpretation of results.
+            It handles non-linear decision boundaries via the logistic function.
+            It uses gradient descent for optimization, leading to better convergence properties.
+        Tweaking a Perceptron:
+            You can modify the activation function of the Perceptron to the logistic (sigmoid) function, which transforms the output into a probability score.
+
+2. Why was the logistic activation function a key ingredient in training the first MLPs?
+
+    Ans-2:
+        The logistic activation function introduces non-linearity into the model, allowing MLPs to learn complex patterns. Additionally, its output range (0 to 1) facilitates gradient descent optimization during training, helping the network converge more effectively.
+
+3. Name three popular activation functions. Can you draw them?
+
+    Ans-3:
+        Popular Activation Functions:
+            ReLU (Rectified Linear Unit): f(x)=max⁡(0,x)f(x)=max(0,x)
+            Sigmoid: f(x)=11+e−xf(x)=1+e−x1​
+            Tanh (Hyperbolic Tangent): f(x)=tanh⁡(x)=ex−e−xex+e−xf(x)=tanh(x)=ex+e−xex−e−x​
+        Drawing: Visual representations typically show the linear rise of ReLU, the S-shaped curve of Sigmoid, and the S-shaped curve of Tanh centered around zero.
+
+4. Suppose you have an MLP composed of one input layer with 10 passthrough neurons, one hidden layer with 50 artificial neurons, and one output layer with 3 artificial neurons.
+
+    Ans-4:
+        Shapes:
+            Input matrix XX: Shape (n,10)(n,10), where nn is the number of samples.
+            Hidden layer weight vector WhWh​: Shape (10,50)(10,50), and bias vector bhbh​: Shape (1,50)(1,50).
+            Output layer weight vector WoWo​: Shape (50,3)(50,3), and bias vector bobo​: Shape (1,3)(1,3).
+            Network output matrix YY: Shape (n,3)(n,3).
+        Equation for Output Matrix YY:
+        Y=ReLU(X⋅Wh+bh)⋅Wo+bo
+        Y=ReLU(X⋅Wh​+bh​)⋅Wo​+bo​
+
+5. How many neurons do you need in the output layer for classifying email into spam or ham, and what activation function should you use? What about MNIST?
+
+    Ans-5:
+        For Email Classification (Spam or Ham):
+            Neurons: 1 (output value indicating spam probability).
+            Activation Function: Sigmoid.
+        For MNIST Classification:
+            Neurons: 10 (one for each digit).
+            Activation Function: Softmax (for multi-class probabilities).
+
+6. What is backpropagation and how does it work? What is the difference between backpropagation and reverse-mode autodiff?
+
+    Ans-6:
+        Backpropagation:
+            It’s an algorithm for training neural networks by computing gradients of the loss function with respect to weights using the chain rule.
+        Difference from Reverse-Mode Autodiff:
+            Backpropagation is a specific application of reverse-mode autodiff tailored for neural networks, where the focus is on optimizing weights across multiple layers.
+
+7. Can you list all the hyperparameters you can tweak in an MLP? If the MLP overfits the training data, how could you tweak these hyperparameters?
+
+    Ans-7:
+        Hyperparameters:
+            Learning rate
+            Number of hidden layers and neurons
+            Activation functions
+            Batch size
+            Epochs
+            Regularization techniques (L1, L2, dropout)
+            Optimizers (SGD, Adam, etc.)
+        To Mitigate Overfitting:
+            Increase regularization strength.
+            Reduce the number of neurons or layers.
+            Increase dropout rate.
+            Use early stopping during training.
+
+8. Train a deep MLP on the MNIST dataset and see if you can get over 98% precision. Try adding all the bells and whistles.
+
+    Ans-8:
+        Steps:
+            Load and preprocess the MNIST dataset.
+            Build a deep MLP architecture with multiple hidden layers.
+            Implement techniques such as dropout, batch normalization, and data augmentation.
+            Train the model and monitor performance using validation data.
+            Save model checkpoints and restore the last checkpoint if needed.
+            Use TensorBoard for visualizing learning curves and model metrics.
+        Expected Result: A well-tuned model can achieve over 98% precision on the MNIST dataset.

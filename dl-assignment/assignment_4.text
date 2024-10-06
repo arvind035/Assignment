@@ -1,0 +1,58 @@
+1. How would you describe TensorFlow in a short sentence? What are its main features? Can you name other popular Deep Learning libraries?
+
+    Ans-1: TensorFlow is an open-source deep learning framework that allows for building, training, and deploying machine learning models at scale. Its main features include automatic differentiation, GPU/TPU support, and TensorFlow Extended for production deployment. Other popular libraries: PyTorch, Keras, Theano, MXNet, and CNTK.
+
+2. Is TensorFlow a drop-in replacement for NumPy? What are the main differences between the two?
+
+    Ans-2: No, TensorFlow is not a drop-in replacement for NumPy. TensorFlow operates on tensors, supports automatic differentiation, and can leverage hardware acceleration (GPUs/TPUs). NumPy focuses on array operations and is primarily for CPU-based computations.
+
+3. Do you get the same result with tf.range(10) and tf.constant(np.arange(10))?
+
+    Ans-3: Yes, both create tensors with values from 0 to 9, but tf.range(10) is a native TensorFlow operation, while tf.constant(np.arange(10)) converts a NumPy array into a TensorFlow tensor.
+
+4. Can you name six other data structures available in TensorFlow, beyond regular tensors?
+
+    Ans-4:
+        SparseTensor
+        RaggedTensor
+        Dataset
+        TensorArray
+        StringTensor
+        Queues (like FIFOQueue)
+
+5. A custom loss function can be defined by writing a function or by subclassing the keras.losses.Loss class. When would you use each option?
+
+    Ans-5:
+        Use a function for simple loss functions.
+        Subclass keras.losses.Loss for more complex loss functions that require internal state or additional methods.
+
+6. Similarly, a custom metric can be defined in a function or a subclass of keras.metrics.Metric. When would you use each option?
+
+    Ans-6:
+        Use a function for simple metrics that just compare predictions with labels.
+        Subclass keras.metrics.Metric if the metric requires internal state (e.g., accuracy over batches).
+
+7. When should you create a custom layer versus a custom model?
+
+    Ans-7:
+        Create a custom layer when you need a new operation that can be reused in various models.
+        Create a custom model if you need to define the entire architecture, including how layers interact.
+
+8. What are some use cases that require writing your own custom training loop?
+
+    Ans-8: Use a custom training loop when you need more control over the training process, such as implementing advanced reinforcement learning algorithms, fine-tuning a specific part of the model, or incorporating complex loss functions.
+
+9. Can custom Keras components contain arbitrary Python code, or must they be convertible to TF Functions?
+
+    Ans-9: Custom Keras components must be convertible to TF Functions if you want them to be optimized by TensorFlow's graph execution for better performance.
+
+10. What are the main rules to respect if you want a function to be convertible to a TF Function?
+
+    Ans-10:
+        Avoid Python control flow (use TensorFlow operations instead).
+        Avoid side effects like print statements or variable reassignments.
+        Ensure it works with TensorFlow’s autograph system.
+
+11. When would you need to create a dynamic Keras model? How do you do that? Why not make all your models dynamic?
+
+    Ans-11: Use dynamic models (subclass keras.Model) when you need flexibility in forward passes, such as in models with conditional operations or varying computation graphs. Dynamic models are slower and less optimized than static models, so they should be used only when necessary.

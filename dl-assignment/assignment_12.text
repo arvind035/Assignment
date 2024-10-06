@@ -1,0 +1,73 @@
+1. How does unsqueeze help us to solve certain broadcasting problems?
+
+    Ans-1:
+        The unsqueeze function adds a dimension of size 1 to a tensor, enabling it to match the shape of another tensor for broadcasting. This is particularly useful when you want to perform operations between tensors of different shapes.
+
+2. How can we use indexing to do the same operation as unsqueeze?
+
+    Ans-2:
+        Indexing can achieve similar results by using None (or np.newaxis in NumPy) to create a new axis. For example, tensor[:, np.newaxis] effectively unsqueezes the tensor.
+
+3. How do we show the actual contents of the memory used for a tensor?
+
+    Ans-3:
+        In PyTorch, you can use the .data_ptr() method to obtain the pointer to the first element in the tensor, or use .numpy() to convert the tensor to a NumPy array and view its contents.
+
+4. When adding a vector of size 3 to a matrix of size 3×3, are the elements of the vector added to each row or each column of the matrix?
+
+    Ans-4:
+        The elements of the vector are added to each row of the matrix. You can confirm this by running the following code:
+    import torch
+
+    matrix = torch.tensor([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    vector = torch.tensor([10, 20, 30])
+    result = matrix + vector
+    print(result)
+
+5. Do broadcasting and expand_as result in increased memory use? Why or why not?
+
+    Ans-5:
+        Broadcasting does not increase memory usage since it does not create new copies of data; it operates on the original tensors. However, expand_as can increase memory use if it physically creates a larger tensor rather than simply creating a view.
+
+6. Implement matmul using Einstein summation.
+
+    Ans-6:
+    import numpy as np
+
+    A = np.random.rand(3, 2)
+    B = np.random.rand(2, 3)
+    C = np.einsum('ij,jk->ik', A, B)  # Matrix multiplication using einsum
+
+7. What does a repeated index letter represent on the left-hand side of einsum?
+
+    Ans-7:
+        A repeated index letter on the left-hand side of einsum represents summation over that index, indicating a contraction of dimensions between tensors.
+
+8. What are the three rules of Einstein summation notation? Why?
+
+    Ans-8:
+        Contraction: Repeat indices imply summation over that dimension.
+        Free indices: Indices that appear only once are retained in the output.
+        Index labeling: Each dimension of the tensor should be labeled distinctly to avoid ambiguity.
+        These rules facilitate compact representation of tensor operations and clarify the operations performed.
+
+9. What are the forward pass and backward pass of a neural network?
+
+    Ans-9:
+        The forward pass involves inputting data into the network to generate predictions.
+        The backward pass uses these predictions to compute gradients through backpropagation, updating weights based on the loss.
+
+10. Why do we need to store some of the activations calculated for intermediate layers in the forward pass?
+
+    Ans-10:
+        Storing activations is essential for the backward pass, as they are needed to compute gradients with respect to weights during backpropagation.
+
+11. What is the downside of having activations with a standard deviation too far away from 1?
+
+    Ans-11:
+        If activations have a standard deviation too far from 1, it can lead to issues like vanishing gradients (where gradients become too small to update weights effectively) or exploding gradients (where gradients become too large, causing instability).
+
+12. How can weight initialization help avoid this problem?
+
+    Ans-12:
+        Proper weight initialization (like Xavier or He initialization) helps keep activations within a desirable range, mitigating issues with gradients during training and promoting stable convergence.

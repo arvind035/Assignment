@@ -1,0 +1,90 @@
+1. Deep Learning
+
+a. Build a DNN with five hidden layers of 100 neurons each, He initialization, and the ELU activation function.
+
+    Ans-1:
+        Use a framework like TensorFlow or PyTorch to create a sequential model.
+        Define five hidden layers using Dense(100, activation='elu', kernel_initializer='he_normal').
+
+b. Using Adam optimization and early stopping, try training it on MNIST but only on digits 0 to 4.
+
+    Ans-2:
+        Compile the model using optimizer='adam'.
+        Implement early stopping with a patience parameter to monitor validation loss.
+        Use a softmax output layer with 5 neurons and save checkpoints during training.
+
+c. Tune the hyperparameters using cross-validation and see what precision you can achieve.
+
+    Ans-3:
+        Utilize GridSearchCV or RandomizedSearchCV to find optimal hyperparameters.
+        Measure precision using metrics from sklearn.
+
+d. Now try adding Batch Normalization and compare the learning curves.
+
+    Ans-4:
+        Insert BatchNormalization() after each hidden layer.
+        Compare training and validation loss curves to assess convergence speed and model performance.
+
+e. Is the model overfitting the training set? Try adding dropout to every layer and try again.
+
+    Ans-5:
+        Introduce Dropout(rate) layers to combat overfitting.
+        Assess the impact on training vs. validation accuracy.
+
+2. Transfer Learning
+
+a. Create a new DNN that reuses all the pretrained hidden layers of the previous model, freezes them, and replaces the softmax output layer with a new one.
+
+    Ans-6:
+        Load the pretrained model and freeze the layers using model.trainable = False.
+        Add a new softmax output layer for digits 5 to 9.
+
+b. Train this new DNN on digits 5 to 9, using only 100 images per digit.
+
+    Ans-7:
+        Compile the model and fit it on the small dataset.
+        Monitor precision throughout training to evaluate performance.
+
+c. Try caching the frozen layers, and train the model again. How much faster is it now?
+
+    Ans-8:
+        Cache the frozen layers using model checkpoints to speed up training.
+        Measure the training time and compare it to the previous run.
+
+d. Try again reusing just four hidden layers instead of five. Can you achieve a higher precision?
+
+    Ans-9:
+        Modify the model to reuse only four hidden layers.
+        Evaluate the new model’s performance to see if precision improves.
+
+e. Now unfreeze the top two hidden layers and continue training. Can you get the model to perform even better?
+
+    Ans-10:
+        Unfreeze the top two layers to fine-tune them.
+        Train again and observe if the model’s precision increases.
+
+3. Pretraining on an Auxiliary Task
+
+a. Build a DNN that compares two MNIST digit images and predicts whether they represent the same digit or not.
+
+    Ans-11:
+        Construct two DNNs with five hidden layers each.
+        Concatenate their outputs and add an additional layer before the output layer.
+
+b. Split the MNIST training set into two sets. Create a function that generates a training batch of pairs of images.
+
+    Ans-12:
+        Split the dataset into 55,000 images for training and 5,000 for validation.
+        Create a function to generate pairs of images for training with the specified labels.
+
+c. Train the DNN on this training set.
+
+    Ans-13:
+        Train the DNN using the image pairs generated.
+        Monitor accuracy to evaluate the model's ability to distinguish between classes.
+
+d. Create a new DNN by reusing and freezing the hidden layers of DNN A and adding a softmax output layer.
+
+    Ans-14:
+        Reuse DNN A’s frozen layers and append a softmax layer with 10 neurons.
+        Train this new model on split #2 and check for performance.

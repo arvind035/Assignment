@@ -1,0 +1,70 @@
+	1. What are the advantages of a CNN over a fully connected DNN for image classification?
+
+    Ans-1:
+        Local receptive fields: CNNs can focus on small regions, preserving spatial structure.
+        Weight sharing: Reduces the number of parameters, improving efficiency.
+        Translation invariance: CNNs are better at detecting features regardless of their position.
+
+2. What is the total number of parameters in the CNN? How much RAM will this network require?
+
+    Ans-2:
+        Total parameters calculation: The number of parameters depends on filter size, stride, and the number of feature maps in each layer.
+        Conv Layer 1: (3x3x3x100) + 100 biases = 2800
+        Conv Layer 2: (3x3x100x200) + 200 biases = 180200
+        Conv Layer 3: (3x3x200x400) + 400 biases = 720400
+        Total: ~903,400 parameters.
+        RAM for single prediction: ~3.45 MB.
+        RAM for training batch of 50 images: ~172.5 MB.
+
+3. If your GPU runs out of memory while training a CNN, what are five things you could try to solve the problem?
+
+    Ans-3:
+        Reduce batch size.
+        Use gradient checkpointing.
+        Reduce the number of filters.
+        Use mixed precision training.
+        Switch to a smaller model architecture.
+
+4. Why would you want to add a max pooling layer rather than a convolutional layer with the same stride?
+
+    Ans-4: Max pooling reduces dimensionality and computation while maintaining important features, improving generalization and reducing overfitting.
+
+5. When would you want to add a local response normalization layer?
+
+    Ans-5:
+        When you need to normalize the activations across multiple channels.
+        Often used in early CNN architectures like AlexNet to promote generalization.
+
+6. Can you name the main innovations in AlexNet, GoogLeNet, ResNet, SENet, and Xception?
+
+    Ans-6:
+        AlexNet: ReLU activation, dropout, GPU usage, data augmentation.
+        GoogLeNet: Inception modules.
+        ResNet: Skip (residual) connections.
+        SENet: Squeeze-and-Excitation blocks.
+        Xception: Depthwise separable convolutions.
+
+7. What is a fully convolutional network? How can you convert a dense layer into a convolutional layer?
+
+    Ans-7:
+        A fully convolutional network (FCN) replaces dense layers with convolutions, allowing variable input size.
+        Convert a dense layer into a convolutional layer by reshaping weights and applying them across spatial dimensions.
+
+8. What is the main technical difficulty of semantic segmentation?
+
+    Ans-8: Precise pixel-wise labeling and managing scale variance across image features.
+
+9. Build your own CNN from scratch and try to achieve the highest possible accuracy on MNIST.
+
+    Ans-9:
+        Create a CNN with multiple convolutional layers, max pooling, and dense layers.
+        Apply techniques like dropout, batch normalization, and data augmentation.
+        Fine-tune hyperparameters and use early stopping.
+
+10. Use transfer learning for large image classification:
+
+    Ans-10:
+        Create a dataset with at least 100 images per class, split into training, validation, and test sets.
+        Build an input pipeline with preprocessing and data augmentation.
+        Fine-tune a pretrained model (e.g., ResNet) using a softmax output for classification.
+        Experiment with batch normalization and SELU activations to improve accuracy.
