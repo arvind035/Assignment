@@ -1,0 +1,65 @@
+Answers
+
+1. What exactly is a feature?
+
+    Ans-1:
+        A feature is a measurable property or characteristic used in machine learning and computer vision to describe aspects of the data.
+        In the context of images, features can include edges, textures, shapes, or specific patterns that are detected using various techniques (e.g., edge detection, corner detection).
+
+2. For a top edge detector, write out the convolutional kernel matrix.
+
+    Ans-2:
+        A common convolutional kernel for detecting top edges is:
+        [−1−1−1000111]
+
+​−101​−101​−101​
+
+        ​
+
+3. Describe the mathematical operation that a 3x3 kernel performs on a single pixel in an image.
+
+    Ans-3:
+        The 3x3 kernel performs a convolution operation on a single pixel by sliding over the image and calculating a weighted sum of the pixel values covered by the kernel.
+        The operation involves multiplying each element of the kernel with the corresponding pixel value in the image and summing these products to produce a single output value.
+
+4. What is the significance of a convolutional kernel added to a 3x3 matrix of zeroes?
+
+    Ans-4:
+        Adding a convolutional kernel to a 3x3 matrix of zeroes signifies the initial state of the convolution operation.
+        It allows the kernel to be trained to detect specific patterns in the input data, and by starting from zeroes, the kernel learns features during training without any initial bias.
+
+5. What exactly is padding?
+
+    Ans-5:
+        Padding refers to adding extra pixels (typically zeros) around the border of an image before applying convolution.
+        This technique helps maintain the spatial dimensions of the output feature map and ensures that edge pixels are processed equally as those in the center of the image.
+
+6. What is the concept of stride?
+
+    Ans-6:
+        Stride is the number of pixels by which the convolutional kernel moves over the image during the convolution operation.
+        A larger stride results in a smaller output size, as the kernel skips more pixels between applications, while a stride of 1 ensures that the kernel covers every pixel.
+
+7. What are the shapes of PyTorch's 2D convolution's input and weight parameters?
+
+    Ans-7:
+        In PyTorch, the input shape for a 2D convolution is typically represented as (N,C,H,W)(N,C,H,W), where:
+            NN is the batch size,
+            CC is the number of channels,
+            HH is the height,
+            WW is the width.
+        The weight parameters (kernel) shape is usually (F,C,KH,KW)(F,C,KH​,KW​), where:
+            FF is the number of filters (output channels),
+            KHKH​ and KWKW​ are the height and width of the kernel.
+
+8. What exactly is a channel?
+
+    Ans-8:
+        In the context of image processing, a channel refers to a single dimension of an image that represents a specific aspect of the image's color or intensity.
+        For example, an RGB image has three channels (Red, Green, Blue), while a grayscale image has one channel representing intensity.
+
+9. Explain the relationship between matrix multiplication and a convolution.
+
+    Ans-9:
+        Convolution can be viewed as a specialized form of matrix multiplication, where the convolution operation involves sliding the kernel across the image and performing element-wise multiplication followed by summation.
+        In deep learning, especially in the context of neural networks, this relationship allows for the use of efficient linear algebra techniques to compute convolutions as matrix multiplications, which can speed up computations.
