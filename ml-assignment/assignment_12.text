@@ -1,0 +1,53 @@
+1. What is prior probability? Give an example.
+
+    Definition: Prior probability is the probability of an event before any evidence or data is taken into account.
+    Example: If a coin is flipped, the prior probability of it being heads is P(H)=0.5P(H)=0.5.
+
+2. What is posterior probability? Give an example.
+
+    Definition: Posterior probability is the probability of an event after considering new evidence. It is calculated using Bayes' theorem.
+    Example: If you know a patient has a cough (evidence), the probability they have the flu (posterior) can be updated from the prior probability of having the flu based on new test results.
+
+3. What is likelihood probability? Give an example.
+
+    Definition: Likelihood probability refers to the probability of observing the given data under a specific hypothesis.
+    Example: If a die is rolled, the likelihood of observing a 4 given that the die is fair is P(4∣fair)=16P(4∣fair)=61​.
+
+4. What is Naïve Bayes classifier? Why is it named so?
+
+    Definition: The Naïve Bayes classifier is a probabilistic model based on applying Bayes' theorem with strong (naïve) independence assumptions between the features.
+    Reason for Name: It is called "naïve" because it assumes that the presence of a particular feature in a class is independent of the presence of any other feature.
+
+5. What is the optimal Bayes classifier?
+
+    Definition: The optimal Bayes classifier is a decision rule that minimizes the expected risk (or error) based on the posterior probabilities of the classes. It assigns a class to an observation based on the highest posterior probability.
+
+6. Write any two features of Bayesian learning methods.
+
+    Feature 1: Bayesian methods incorporate prior knowledge and update beliefs with new evidence.
+    Feature 2: They provide a probabilistic framework for reasoning under uncertainty, allowing for quantification of uncertainty in predictions.
+
+7. Define the concept of consistent learners.
+
+    Definition: Consistent learners are learning algorithms that converge to the true underlying distribution as the sample size increases, ensuring that their predictions improve with more data.
+
+8. Write any two strengths of the Bayes classifier.
+
+    Strength 1: It performs well with small training datasets and can handle missing values effectively.
+    Strength 2: It is computationally efficient, requiring less memory and time compared to other classifiers.
+
+9. Write any two weaknesses of the Bayes classifier.
+
+    Weakness 1: The assumption of feature independence (naivety) can lead to poor performance in cases where features are correlated.
+    Weakness 2: It may struggle with zero probabilities in the case of unseen features in the training data (the zero-frequency problem).
+
+10. Explain how Naïve Bayes classifier is used for:
+
+    Text Classification:
+        It assigns categories to documents based on the frequency of words, treating the presence of each word as independent given the class.
+
+    Spam Filtering:
+        It analyzes emails based on the likelihood of certain words appearing in spam versus non-spam emails, classifying new emails based on word probabilities.
+
+    Market Sentiment Analysis:
+        It classifies sentiments in text (positive, negative, neutral) by analyzing word frequencies and their probabilities in sentiment-labeled data.
