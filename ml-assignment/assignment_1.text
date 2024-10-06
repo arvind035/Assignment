@@ -1,0 +1,96 @@
+Answers
+
+1. What does one mean by the term "machine learning"?
+
+    Definition: Machine learning is a subset of artificial intelligence (AI) that involves training algorithms to learn from data, enabling them to make predictions or decisions without being explicitly programmed for specific tasks.
+
+2. Can you think of 4 distinct types of issues where it shines?
+
+    1. Image Recognition: Identifying and classifying objects within images.
+    2. Natural Language Processing: Understanding and generating human language, such as in chatbots.
+    3. Fraud Detection: Identifying fraudulent activities in transactions.
+    4. Recommendation Systems: Providing personalized recommendations based on user preferences and behavior.
+
+3. What is a labeled training set, and how does it work?
+
+    Definition: A labeled training set is a dataset where each input example is paired with the correct output label.
+    Function: The model learns to associate inputs with outputs, allowing it to make predictions on unseen data by generalizing from the examples in the training set.
+
+4. What are the two most important tasks that are supervised?
+
+    1. Classification: Assigning input data to predefined categories.
+    2. Regression: Predicting a continuous value based on input data.
+
+5. Can you think of four examples of unsupervised tasks?
+
+    1. Clustering: Grouping similar data points together.
+    2. Anomaly Detection: Identifying outliers or unusual data points.
+    3. Dimensionality Reduction: Reducing the number of features in a dataset while retaining important information.
+    4. Association Rule Learning: Discovering interesting relations between variables in large databases.
+
+6. State the machine learning model that would be best to make a robot walk through various unfamiliar terrains?
+
+    Reinforcement Learning: This model enables the robot to learn optimal walking strategies through trial and error in dynamic environments, adapting to new terrains over time.
+
+7. Which algorithm will you use to divide your customers into different groups?
+
+    Clustering Algorithms: Algorithms like K-means or hierarchical clustering can be used to segment customers into distinct groups based on their characteristics or behaviors.
+
+8. Will you consider the problem of spam detection to be a supervised or unsupervised learning problem?
+
+    Supervised Learning: Spam detection is typically considered a supervised learning problem, as it relies on labeled examples of emails (spam vs. non-spam) to train the model.
+
+9. What is the concept of an online learning system?
+
+    Definition: An online learning system is a model that updates itself incrementally as new data becomes available, allowing it to adapt to changes in the data distribution in real-time.
+
+10. What is out-of-core learning, and how does it differ from core learning?
+
+    Out-of-Core Learning: Refers to learning algorithms that handle datasets too large to fit into memory by processing data in chunks.
+    Difference: In-core learning processes data that fits entirely in memory, while out-of-core learning efficiently manages larger datasets.
+
+11. What kind of learning algorithm makes predictions using a similarity measure?
+
+    Instance-Based Learning Algorithms: Such algorithms, like K-Nearest Neighbors (KNN), make predictions based on the similarity of new instances to instances in the training set.
+
+12. What's the difference between a model parameter and a hyperparameter in a learning algorithm?
+
+    Model Parameter: Internal configurations learned from training data, such as weights in a neural network.
+    Hyperparameter: External configurations set before training, such as learning rate or the number of layers in a model.
+
+13. What are the criteria that model-based learning algorithms look for? What is the most popular method they use to achieve success? What method do they use to make predictions?
+
+    Criteria: They typically look for patterns or relationships in the data.
+    Popular Method: Maximum likelihood estimation is commonly used.
+    Prediction Method: Predictions are made based on the learned model's parameters and the input features.
+
+14. Can you name four of the most important Machine Learning challenges?
+
+    1. Overfitting: The model performs well on training data but poorly on unseen data.
+    2. Data Quality: Inconsistent or noisy data can lead to inaccurate models.
+    3. Computational Resources: High computational demand for training complex models.
+    4. Interpretability: Difficulty in understanding and explaining model decisions, especially with complex models.
+
+15. What happens if the model performs well on the training data but fails to generalize the results to new situations? Can you think of three different options?
+
+    1. Regularization: Apply techniques like L1 or L2 regularization to prevent overfitting.
+    2. Cross-Validation: Use cross-validation to assess model performance on unseen data during training.
+    3. More Data: Increase the size of the training dataset to enhance generalization.
+
+16. What exactly is a test set, and why would you need one?
+
+    Definition: A test set is a separate portion of the dataset not used during training, meant to evaluate the model's performance.
+    Purpose: It helps assess the model's ability to generalize to new, unseen data.
+
+17. What is a validation set's purpose?
+
+    Purpose: A validation set is used to tune hyperparameters and evaluate model performance during training, helping to avoid overfitting by providing feedback on model performance.
+
+18. What precisely is the train-dev kit, when will you need it, how do you put it to use?
+
+    Definition: The train-dev kit typically includes separate training and development (validation) datasets.
+    Usage: It is used to train models and fine-tune hyperparameters, ensuring that the model's performance is robust before evaluation on the test set.
+
+19. What could go wrong if you use the test set to tune hyperparameters?
+
+    Overfitting Risk: Using the test set for tuning can lead to overfitting, as the model may perform well on the test set but poorly on new, unseen data, resulting in a lack of generalization.
