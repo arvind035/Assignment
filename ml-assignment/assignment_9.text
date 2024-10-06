@@ -1,0 +1,132 @@
+Answers
+
+1. What is feature engineering, and how does it work? Explain the various aspects of feature engineering in depth.
+
+    Definition:
+        Feature engineering is the process of using domain knowledge to select, modify, or create new features from raw data to improve model performance.
+    How It Works:
+        It involves transforming data into a format that is suitable for machine learning algorithms. This can include normalization, encoding categorical variables, or creating interaction terms.
+    Aspects of Feature Engineering:
+        Feature Creation: Generating new features based on existing data (e.g., polynomial features).
+        Feature Transformation: Applying mathematical operations to change the distribution of data (e.g., log transformation).
+        Feature Encoding: Converting categorical variables into numerical formats (e.g., one-hot encoding).
+        Feature Scaling: Normalizing or standardizing features to bring them onto a similar scale.
+        Handling Missing Values: Imputing or removing missing data points to maintain data integrity .
+
+2. What is feature selection, and how does it work? What is the aim of it? What are the various methods of function selection?
+
+    Definition:
+        Feature selection is the process of identifying and selecting a subset of relevant features for use in model construction.
+    How It Works:
+        It analyzes the importance of each feature relative to the target variable, allowing irrelevant or redundant features to be removed.
+    Aim:
+        To enhance model performance, reduce overfitting, improve interpretability, and decrease computational cost.
+    Methods of Feature Selection:
+        Filter Methods: Evaluate features based on statistical tests (e.g., chi-square test).
+        Wrapper Methods: Use a predictive model to evaluate feature subsets (e.g., recursive feature elimination).
+        Embedded Methods: Perform feature selection during the model training process (e.g., LASSO, decision trees) .
+
+3. Describe the function selection filter and wrapper approaches. State the pros and cons of each approach.
+
+    Filter Approach:
+        Uses statistical tests to evaluate feature relevance independently of any model.
+        Pros:
+            Fast and scalable for large datasets.
+            Simple to implement and understand.
+        Cons:
+            Ignores feature dependencies and interactions.
+            May miss relevant features that are not statistically significant individually.
+    Wrapper Approach:
+        Evaluates subsets of features by training a model and assessing its performance.
+        Pros:
+            Considers feature interactions and dependencies.
+            Can lead to better model performance as it directly optimizes for the model.
+        Cons:
+            Computationally expensive, especially for large feature sets.
+            Prone to overfitting as it relies heavily on the specific model used for evaluation .
+
+4. i. Describe the overall feature selection process.
+
+    Overall Process:
+        Identify the target variable and features.
+        Preprocess the data (handle missing values, normalize, etc.).
+        Apply feature selection techniques (filter, wrapper, or embedded methods).
+        Evaluate the selected features using a validation dataset.
+        Iterate as necessary to optimize feature selection for the model .
+
+ii. Explain the key underlying principle of feature extraction using an example. What are the most widely used function extraction algorithms?
+
+    Key Principle:
+        Feature extraction involves transforming input data into a reduced set of features that capture the most important information.
+    Example:
+        In image processing, converting images to edge maps or color histograms reduces the complexity while retaining essential information.
+    Widely Used Algorithms:
+        Principal Component Analysis (PCA): Reduces dimensionality by transforming to a new set of uncorrelated features (principal components).
+        Linear Discriminant Analysis (LDA): Focuses on maximizing the separability among known categories.
+        t-Distributed Stochastic Neighbor Embedding (t-SNE): Useful for visualizing high-dimensional data in lower dimensions .
+
+5. Describe the feature engineering process in the sense of a text categorization issue.
+
+    Feature Engineering in Text Categorization:
+        Text Preprocessing: Remove stop words, punctuation, and convert to lowercase.
+        Tokenization: Break text into words or tokens.
+        Feature Extraction: Use techniques like bag-of-words, TF-IDF (Term Frequency-Inverse Document Frequency), or word embeddings (e.g., Word2Vec) to represent text as numerical vectors.
+        Dimensionality Reduction: Apply methods like PCA to reduce feature size if necessary.
+        Model Training: Use the processed features to train classification models (e.g., Naive Bayes, SVM) .
+
+6. What makes cosine similarity a good metric for text categorization? A document-term matrix has two rows with values of (2, 3, 2, 0, 2, 3, 3, 0, 1) and (2, 1, 0, 0, 3, 2, 1, 3, 1). Find the resemblance in cosine.
+
+    Cosine Similarity Benefits:
+        Measures the cosine of the angle between two vectors, providing a metric for their orientation rather than magnitude.
+        Effective in high-dimensional spaces, like text data, where the absolute values of the vectors can be less informative.
+    Cosine Similarity Calculation:
+        Given two vectors A and B:
+        A=(2,3,2,0,2,3,3,0,1),B=(2,1,0,0,3,2,1,3,1)
+        A=(2,3,2,0,2,3,3,0,1),B=(2,1,0,0,3,2,1,3,1)
+        Calculate the dot product:
+        A⋅B=2∗2+3∗1+2∗0+0∗0+2∗3+3∗2+3∗1+0∗3+1∗1=4+3+0+0+6+6+3+0+1=23
+        A⋅B=2∗2+3∗1+2∗0+0∗0+2∗3+3∗2+3∗1+0∗3+1∗1=4+3+0+0+6+6+3+0+1=23
+        Calculate the magnitudes:
+        ∣∣A∣∣=22+32+22+0+22+32+32+0+12=4+9+4+0+4+9+9+0+1=40
+        ∣∣A∣∣=22+32+22+0+22+32+32+0+12
+
+​=4+9+4+0+4+9+9+0+1
+​=40
+​
+∣∣B∣∣=22+12+0+0+32+22+12+32+12=4+1+0+0+9+4+1+9+1=29
+∣∣B∣∣=22+12+0+0+32+22+12+32+12
+​=4+1+0+0+9+4+1+9+1
+​=29
+​
+Cosine Similarity:
+Cosine Similarity=A⋅B∣∣A∣∣∣∣B∣∣=2340⋅29≈0.194 (cosine similarity value)
+Cosine Similarity=∣∣A∣∣∣∣B∣∣A⋅B​=40
+​⋅29
+
+        ​23​≈0.194 (cosine similarity value)
+
+7. i. What is the formula for calculating Hamming distance? Between 10001011 and 11001111, calculate the Hamming gap.
+
+    Hamming Distance Formula:
+        Hamming distance is calculated as the number of positions at which the corresponding symbols are different between two strings of equal length.
+    Hamming Gap Calculation:
+        Comparing 10001011 and 11001111:
+            Positions of difference: 1st, 2nd, 5th, and 6th positions.
+            Hamming Distance = 4.
+
+ii. Compare the Jaccard index and similarity matching coefficient of two features with values (1, 1, 0, 0, 1, 0, 1, 1) and (1, 1, 0, 0, 0, 1, 1, 1), respectively (1, 0, 0, 1, 1, 0, 0, 1).
+
+    Jaccard Index:
+        Measures similarity between finite sample sets, calculated as the size of the intersection divided by the size of the union.
+    Similarity Matching Coefficient:
+        Measures the similarity of two sets by comparing the number of matches.
+    Calculations:
+        For vectors (A) and (B):
+        A=(1,1,0,0,1,0,1,1),B=(1,1,0,0,0,1,1,1)
+        A=(1,1,0,0,1,0,1,1),B=(1,1,0,0,0,1,1,1)
+            Jaccard Index = ∣A∩B∣∣A∪B∣=57≈0.714∣A∪B∣∣A∩B∣​=75​≈0.714
+        For vectors (C):
+        C=(1,0,0,1
+        C=(1,0,0,1
+
+

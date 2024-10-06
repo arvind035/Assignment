@@ -1,0 +1,111 @@
+Answers
+
+1. Define the Bayesian interpretation of probability.
+
+    Bayesian Interpretation:
+        Probability is defined as a measure of belief or certainty regarding the occurrence of an event, expressed as a degree of belief that can be updated as new evidence is acquired. This approach contrasts with classical interpretations that define probability in terms of long-term frequency of events.
+
+2. Define probability of a union of two events with equation.
+
+    Probability of a Union:
+        The probability of the union of two events AA and BB is defined as:
+    P(A∪B)=P(A)+P(B)−P(A∩B)
+    P(A∪B)=P(A)+P(B)−P(A∩B)
+        This equation accounts for the overlap between the two events.
+
+3. What is joint probability? What is its formula?
+
+    Joint Probability:
+        Joint probability is the probability of two events AA and BB occurring simultaneously.
+        Formula:
+    P(A∩B)=P(A∣B)⋅P(B)
+    P(A∩B)=P(A∣B)⋅P(B)
+        Here, P(A∣B)P(A∣B) is the conditional probability of AA given BB.
+
+4. What is chain rule of probability?
+
+    Chain Rule of Probability:
+        The chain rule expresses the joint probability of a series of events as a product of conditional probabilities:
+    P(A1,A2,…,An)=P(A1)⋅P(A2∣A1)⋅P(A3∣A1,A2)⋯P(An∣A1,A2,…,An−1)
+    P(A1​,A2​,…,An​)=P(A1​)⋅P(A2​∣A1​)⋅P(A3​∣A1​,A2​)⋯P(An​∣A1​,A2​,…,An−1​)
+
+5. What does conditional probability mean? What is the formula for it?
+
+    Conditional Probability:
+        Conditional probability is the probability of an event AA occurring given that another event BB has occurred.
+        Formula:
+    P(A∣B)=P(A∩B)P(B)for P(B)>0
+    P(A∣B)=P(B)P(A∩B)​for P(B)>0
+
+6. What are continuous random variables?
+
+    Continuous Random Variables:
+        These are variables that can take any value within a given range or interval. Their outcomes are not countable and are represented by a probability density function (PDF). Examples include heights, weights, and temperature.
+
+7. What are Bernoulli distributions? What is the formula for it?
+
+    Bernoulli Distribution:
+        A Bernoulli distribution models a random experiment with exactly two possible outcomes (success or failure).
+        Formula:
+    P(X=1)=p,P(X=0)=1−p
+    P(X=1)=p,P(X=0)=1−p
+        Here, pp is the probability of success.
+
+8. What is binomial distribution? What is the formula?
+
+    Binomial Distribution:
+        This distribution represents the number of successes in nn independent Bernoulli trials.
+        Formula:
+    P(X=k)=(nk)pk(1−p)n−k
+    P(X=k)=(kn​)pk(1−p)n−k
+        Where kk is the number of successes, nn is the number of trials, and pp is the probability of success.
+
+9. What is Poisson distribution? What is the formula?
+
+    Poisson Distribution:
+        This distribution models the number of events occurring within a fixed interval of time or space, given a known average rate of occurrence.
+        Formula:
+    P(X=k)=λke−λk!
+    P(X=k)=k!λke−λ​
+        Where λλ is the average rate of occurrence and kk is the number of events.
+
+10. Define covariance.
+
+    Covariance:
+        Covariance is a measure of how much two random variables change together. A positive covariance indicates that the variables tend to increase together, while a negative covariance indicates that one variable tends to increase when the other decreases.
+        Formula:
+    Cov(X,Y)=E[(X−μX)(Y−μY)]
+    Cov(X,Y)=E[(X−μX​)(Y−μY​)]
+        Where μXμX​ and μYμY​ are the means of XX and YY, respectively.
+
+11. Define correlation.
+
+    Correlation:
+        Correlation is a statistical measure that describes the degree and direction of the linear relationship between two variables. It is standardized and ranges from -1 to 1.
+        Formula:
+    r=Cov(X,Y)σXσY
+    r=σX​σY​Cov(X,Y)​
+        Where σXσX​ and σYσY​ are the standard deviations of XX and YY.
+
+12. Define sampling with replacement. Give an example.
+
+    Sampling with Replacement:
+        In this method, each selected item is "replaced" back into the population before the next selection, allowing for the same item to be chosen multiple times.
+        Example:
+        Drawing cards from a deck where, after each draw, the card is placed back into the deck.
+
+13. What is sampling without replacement? Give an example.
+
+    Sampling without Replacement:
+        In this method, selected items are not returned to the population, ensuring that each item can only be selected once.
+        Example:
+        Drawing lottery tickets from a bowl where each ticket is not returned after it is drawn.
+
+14. What is a hypothesis? Give an example.
+
+    Hypothesis:
+        A hypothesis is a testable statement or prediction about the relationship between two or more variables.
+        Example:
+        "Increasing the amount of sunlight a plant receives will increase its growth rate."
+
+

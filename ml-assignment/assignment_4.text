@@ -1,0 +1,81 @@
+Answers
+
+1. What are the key tasks involved in getting ready to work with machine learning modeling?
+
+    a. Define the Problem: Clearly articulate the problem to be solved and the goals of the machine learning project.
+    b. Data Collection: Gather relevant data from various sources, ensuring it aligns with the problem requirements.
+    c. Data Preprocessing: Clean and prepare the data by handling missing values, outliers, and normalizing or scaling features.
+    d. Feature Engineering: Create new features or modify existing ones to improve model performance.
+    e. Model Selection: Choose appropriate algorithms based on the nature of the problem (classification, regression, etc.).
+    f. Model Evaluation: Split data into training and testing sets, and use metrics to assess the model’s performance.
+    g. Hyperparameter Tuning: Optimize model parameters to enhance accuracy.
+    h. Deployment: Implement the model in a production environment for practical use.
+
+2. What are the different forms of data used in machine learning? Give a specific example for each of them.
+
+    a. Structured Data: Organized data in a predefined format, typically in rows and columns.
+        Example: A spreadsheet containing customer details (name, age, purchase history).
+    b. Unstructured Data: Data that doesn’t follow a specific format and is often text-heavy.
+        Example: Emails, social media posts, and images.
+    c. Semi-structured Data: Contains elements of both structured and unstructured data, with tags or markers.
+        Example: JSON files or XML documents.
+
+3. Distinguish:
+
+    1. Numeric vs. Categorical Attributes:
+        Numeric Attributes: Quantitative data that can be measured and expressed in numbers (e.g., age, salary).
+        Categorical Attributes: Qualitative data that represent categories or groups (e.g., gender, nationality).
+
+    2. Feature Selection vs. Dimensionality Reduction:
+        Feature Selection: The process of selecting a subset of relevant features for model training.
+        Dimensionality Reduction: Reducing the number of input variables by transforming the data into a lower-dimensional space while retaining important information (e.g., PCA).
+
+4. Make quick notes on any two of the following:
+
+    1. The Histogram:
+        A graphical representation of the distribution of numerical data, showing the frequency of data points within specified ranges (bins). It helps in understanding the underlying frequency distribution.
+    2. Use a Scatter Plot:
+        A scatter plot is used to visualize the relationship between two continuous variables, displaying data points in a Cartesian plane. It can help identify trends, correlations, and potential outliers.
+
+5. Why is it necessary to investigate data? Is there a discrepancy in how qualitative and quantitative data are explored?
+
+    Necessity: Investigating data is crucial for understanding its structure, identifying anomalies, and assessing its quality. This informs data preprocessing steps and model selection.
+    Discrepancy:
+        Qualitative Data Exploration: Often involves text analysis, thematic coding, and categorization.
+        Quantitative Data Exploration: Focuses on statistical analysis, visualizations (like histograms), and summary statistics (mean, median).
+
+6. What are the various histogram shapes? What exactly are ‘bins’?
+
+    Histogram Shapes:
+        Uniform: Data is evenly distributed across bins.
+        Normal: Bell-shaped distribution where most data points are near the mean.
+        Skewed: Asymmetrical distribution (left or right).
+        Bimodal: Two distinct peaks in the data.
+    Bins: The intervals into which the data range is divided for creating the histogram; they determine how data is grouped for visualization.
+
+7. How do we deal with data outliers?
+
+    Methods to Handle Outliers:
+        a. Removal: Exclude outliers if they are errors or not relevant to the analysis.
+        b. Transformation: Apply mathematical transformations (e.g., log transformation) to reduce the impact of outliers.
+        c. Imputation: Replace outliers with more representative values (e.g., mean or median).
+        d. Robust Methods: Use algorithms that are less sensitive to outliers, such as tree-based models.
+
+8. What are the various central inclination measures? Why does mean vary too much from median in certain data sets?
+
+    Central Inclination Measures:
+        Mean: The average of all data points.
+        Median: The middle value when data points are arranged in order.
+        Mode: The most frequently occurring value.
+    Variation of Mean and Median: The mean can be significantly affected by extreme values (outliers), while the median remains stable, leading to disparities in their values, especially in skewed distributions.
+
+9. Describe how a scatter plot can be used to investigate bivariate relationships. Is it possible to find outliers using a scatter plot?
+
+    Investigating Bivariate Relationships: Scatter plots show the relationship between two continuous variables, indicating trends, correlations, and patterns in data.
+    Outlier Detection: Outliers can be identified as points that lie far away from the main cluster of data in the scatter plot, indicating anomalies or unusual observations.
+
+10. Describe how cross-tabs can be used to figure out how two variables are related.
+
+    Cross-Tabs (Cross-tabulations):
+        A table used to summarize the relationship between two categorical variables, showing frequency counts for each combination of categories.
+        Usage: It helps to analyze interactions, identify patterns, and uncover potential associations between variables (e.g., the relationship between gender and product preference).

@@ -1,0 +1,143 @@
+Answers
+
+1. What are the key tasks that machine learning entails? What does data pre-processing imply?
+
+    Key Tasks in Machine Learning:
+        Problem Definition: Identify the objective and type of problem (classification, regression, etc.).
+        Data Collection: Gather relevant data from various sources.
+        Data Preprocessing: Clean and transform data to make it suitable for modeling, which includes handling missing values, outliers, and normalizing features.
+        Feature Engineering: Create and select the most relevant features for training the model.
+        Model Training: Train the model using training data.
+        Model Evaluation: Assess model performance using validation and test sets.
+        Deployment: Implement the model in a production environment.
+
+    Data Preprocessing:
+        It implies preparing raw data for analysis by cleaning, transforming, and organizing it to improve model accuracy and efficiency.
+
+2. Describe quantitative and qualitative data in depth. Make a distinction between the two.
+
+    Quantitative Data:
+        Definition: Numerical data that can be measured and expressed mathematically.
+        Examples: Height, weight, temperature, and sales revenue.
+        Types: Discrete (countable values) and continuous (infinitely possible values).
+        Analysis Methods: Statistical analysis, mean, median, mode, and standard deviation.
+
+    Qualitative Data:
+        Definition: Descriptive data that characterizes qualities or characteristics and cannot be measured numerically.
+        Examples: Gender, nationality, and opinions.
+        Types: Nominal (categories without order) and ordinal (categories with a meaningful order).
+        Analysis Methods: Thematic analysis, frequency counts, and cross-tabulation.
+
+    Distinction:
+        Quantitative data is numerical and suitable for statistical analysis, while qualitative data is categorical and descriptive.
+
+3. Create a basic data collection that includes some sample records. Have at least one attribute from each of the machine learning data types.
+ID	Name	Age	Salary	Gender	Purchase History	Product Rating
+1	Alice	30	70000	Female	["Laptop", "Phone"]	4.5
+2	Bob	24	50000	Male	["Tablet", "Charger"]	4.0
+3	Charlie	35	80000	Male	["Phone", "Headphones"]	5.0
+4	Dana	28	60000	Female	["Laptop"]	4.2
+
+    Attributes:
+        Numeric: Age, Salary
+        Categorical: Gender, Purchase History
+        Ordinal: Product Rating (scale of 1-5)
+
+4. What are the various causes of machine learning data issues? What are the ramifications?
+
+    Causes of Data Issues:
+        Missing Values: Incomplete records can lead to biased models.
+        Outliers: Extreme values can skew results and mislead predictions.
+        Inconsistent Data: Variability in data formats can cause confusion during analysis.
+        Noise: Irrelevant or erroneous data can reduce model performance.
+        Imbalanced Data: Disproportionate classes can lead to poor model training.
+
+    Ramifications:
+        Reduced model accuracy and reliability.
+        Increased computational cost and time.
+        Misleading insights and conclusions.
+
+5. Demonstrate various approaches to categorical data exploration with appropriate examples.
+
+    Approaches to Explore Categorical Data:
+        Frequency Distribution: Count occurrences of each category.
+            Example: Gender distribution in a dataset showing 60% female and 40% male.
+        Cross-Tabulation: Analyze relationships between two categorical variables.
+            Example: Analyzing product preferences by gender.
+        Bar Charts: Visualize the frequency of categories.
+            Example: A bar chart showing sales of different product categories.
+        Chi-Square Test: Assess independence between categorical variables.
+            Example: Testing if there is a relationship between age group and product preference.
+
+6. How would the learning activity be affected if certain variables have missing values? Having said that, what can be done about it?
+
+    Impact of Missing Values:
+        Can lead to biased results, reduced dataset size, and loss of information.
+        May cause algorithms to fail or produce inaccurate predictions.
+
+    Solutions:
+        Data Imputation: Fill in missing values with the mean, median, or mode.
+        Removing Missing Data: Exclude records with missing values.
+        Using Algorithms that Handle Missing Values: Some models (like decision trees) can handle missing data inherently.
+
+7. Describe the various methods for dealing with missing data values in depth.
+
+    a. Deletion:
+        Listwise Deletion: Remove entire records with missing values.
+        Pairwise Deletion: Use available data points for calculations while ignoring missing values in specific analyses.
+    b. Imputation:
+        Mean/Median/Mode Imputation: Replace missing values with the mean, median, or mode of the feature.
+        K-Nearest Neighbors (KNN) Imputation: Use similar instances to estimate missing values based on feature similarity.
+        Multiple Imputation: Create multiple datasets with different imputed values, analyze each, and combine results.
+    c. Prediction Models:
+        Use regression or classification models to predict missing values based on other variables in the dataset.
+
+8. What are the various data pre-processing techniques? Explain dimensionality reduction and feature selection in a few words.
+
+    Data Preprocessing Techniques:
+        Data Cleaning: Handle missing values, outliers, and noise.
+        Data Transformation: Normalize or standardize data.
+        Data Encoding: Convert categorical variables into numerical form (e.g., one-hot encoding).
+        Dimensionality Reduction:
+            Definition: Reduce the number of features while retaining essential information.
+            Example: Principal Component Analysis (PCA) transforms data into a lower-dimensional space.
+        Feature Selection:
+            Definition: Identify and select the most relevant features for model training.
+            Example: Using techniques like Recursive Feature Elimination (RFE) to determine important variables.
+
+9.
+
+    i. What is the IQR? What criteria are used to assess it?
+        IQR (Interquartile Range): The range between the first quartile (Q1) and the third quartile (Q3) that measures the spread of the middle 50% of data.
+        Criteria: IQR = Q3 - Q1; used to identify outliers as values falling below Q1−1.5×IQRQ1−1.5×IQR or above Q3+1.5×IQRQ3+1.5×IQR.
+
+    ii. Describe the various components of a box plot in detail. When will the lower whisker surpass the upper whisker in length? How can box plots be used to identify outliers?
+        Components of a Box Plot:
+            Box: Represents the IQR.
+            Median Line: Shows the median value within the box.
+            Whiskers: Extend from the box to the highest and lowest values within 1.5 * IQR.
+            Outliers: Points outside the whiskers are considered outliers.
+        Lower Whisker Surpassing Upper Whisker: This occurs in negatively skewed distributions where more values fall below the median.
+        Outlier Identification: Box plots display outliers clearly as individual points beyond the whiskers.
+
+10. Make brief notes on any two of the following:
+
+    1. Data Collected at Regular Intervals:
+        Data gathered at consistent time intervals (e.g., daily, weekly) allows for trend analysis and time series forecasting.
+    2. The Gap Between the Quartiles:
+        The gap between Q1 and Q3 indicates the IQR, providing insight into data dispersion. A larger gap signifies greater variability, while a smaller gap indicates data concentration.
+
+11. Make a comparison between:
+
+    1. Data with Nominal and Ordinal Values:
+        Nominal Data: Categorical data without inherent order (e.g., colors, names).
+        Ordinal Data: Categorical data with a defined order (e.g., rankings, education levels).
+
+    2. Histogram and Box Plot:
+        Histogram: Displays the frequency distribution of numerical data.
+        Box Plot: Summarizes data distribution and highlights outliers.
+
+    3. The Average and Median:
+        Average (Mean): The sum of values divided by the count; sensitive to outliers.
+        Median: The middle value when sorted; robust to outliers, providing a better central tendency measure in skewed distributions.
+

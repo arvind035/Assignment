@@ -1,0 +1,118 @@
+Answers
+
+1. What is the definition of a target function? In the sense of a real-life example, express the target function. How is a target function's fitness assessed?
+
+    Definition of Target Function:
+        The target function is a mapping from input features to output predictions in a machine learning model. It represents the relationship we want the model to learn.
+    Real-life Example:
+        In predicting house prices, the target function could map features like size, location, and number of bedrooms to the price of the house.
+    Fitness Assessment:
+        The fitness of a target function is assessed using performance metrics such as accuracy, precision, recall, or mean squared error, depending on the type of model (classification or regression) used to evaluate its performance .
+
+2. What are predictive models, and how do they work? What are descriptive types, and how do you use them? Examples of both types of models should be provided. Distinguish between these two forms of models.
+
+    Predictive Models:
+        Predictive models forecast future outcomes based on historical data. They work by identifying patterns and relationships in the data to make predictions.
+        Example: Linear regression predicts future sales based on past sales data.
+    Descriptive Models:
+        Descriptive models summarize and describe the characteristics of data without making predictions. They are used for data exploration and insights.
+        Example: Cluster analysis identifies groups of similar customers based on purchasing behavior.
+    Distinction:
+        Predictive models are forward-looking and used for forecasting, while descriptive models focus on understanding data and providing insights .
+
+3. Describe the method of assessing a classification model's efficiency in detail. Describe the various measurement parameters.
+
+    Assessing Classification Model Efficiency:
+        Efficiency is assessed using a confusion matrix that summarizes the model's predictions.
+        Measurement Parameters:
+            Accuracy: Proportion of correctly predicted instances out of total instances.
+            Precision: Proportion of true positive predictions to total positive predictions.
+            Recall (Sensitivity): Proportion of true positive predictions to actual positives.
+            F1 Score: Harmonic mean of precision and recall, providing a balance between the two.
+            ROC-AUC: Area under the ROC curve, measuring the model's ability to discriminate between classes .
+
+4. i. In the sense of machine learning models, what is underfitting? What is the most common reason for underfitting?
+
+    Underfitting:
+        Underfitting occurs when a model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and test data.
+    Common Reason:
+        The most common reason for underfitting is using a model with insufficient complexity (e.g., linear model for non-linear data) .
+
+ii. What does it mean to overfit? When is it going to happen?
+
+    Overfitting:
+        Overfitting occurs when a model learns the training data too well, capturing noise and outliers rather than the underlying distribution.
+    When It Happens:
+        This typically happens when the model is too complex relative to the amount of training data or when training continues for too long without validation .
+
+iii. In the sense of model fitting, explain the bias-variance trade-off.
+
+    Bias-Variance Trade-off:
+        The trade-off between bias (error due to overly simplistic assumptions in the learning algorithm) and variance (error due to excessive complexity in the model) is crucial in model fitting. A high-bias model tends to underfit, while a high-variance model tends to overfit. The goal is to find a balance where both bias and variance are minimized, leading to better generalization .
+
+5. Is it possible to boost the efficiency of a learning model? If so, please clarify how.
+
+    Boosting Model Efficiency:
+        Yes, several techniques can boost model efficiency, including:
+            Feature Engineering: Improving input features for better model performance.
+            Hyperparameter Tuning: Adjusting model parameters to optimize performance.
+            Ensemble Methods: Combining multiple models (e.g., bagging, boosting) to enhance accuracy.
+            Regularization: Adding penalties for complexity to prevent overfitting .
+
+6. How would you rate an unsupervised learning model's success? What are the most common success indicators for an unsupervised learning model?
+
+    Rating Unsupervised Learning Model's Success:
+        Success is often rated qualitatively or quantitatively based on how well the model captures the underlying structure of the data.
+    Common Success Indicators:
+        Silhouette Score: Measures how similar an object is to its own cluster compared to other clusters.
+        Dunn Index: Ratio of the minimum inter-cluster distance to the maximum intra-cluster distance.
+        Elbow Method: Visual inspection of the explained variance to determine the optimal number of clusters .
+
+7. Is it possible to use a classification model for numerical data or a regression model for categorical data with a classification model? Explain your answer.
+
+    Using Classification Model for Numerical Data:
+        Yes, classification models can be applied to numerical data by defining appropriate classes or bins (e.g., categorizing continuous variables into discrete classes).
+    Using Regression Model for Categorical Data:
+        No, regression models are designed to predict continuous outcomes and are not suitable for categorical data without transformation (e.g., using techniques like one-hot encoding) .
+
+8. Describe the predictive modeling method for numerical values. What distinguishes it from categorical predictive modeling?
+
+    Predictive Modeling Method for Numerical Values:
+        This method involves using algorithms like linear regression to predict a continuous target variable based on numerical features.
+    Distinction from Categorical Predictive Modeling:
+        Categorical predictive modeling focuses on predicting discrete outcomes (e.g., class labels) using methods such as logistic regression or decision trees. Numerical modeling targets continuous outcomes, while categorical modeling targets classes .
+
+9. The following data were collected when using a classification model to predict the malignancy of a group of patients' tumors:
+
+    Accurate Estimates: 15 cancerous, 75 benign
+
+    Wrong Predictions: 3 cancerous, 7 benign
+
+    Calculating Metrics:
+        Total Samples: 15 + 75 + 3 + 7 = 100
+        Error Rate: \text{Error Rate} = \frac{\text{False Positives + False Negatives}}{\text{Total Samples}} = \frac{3 + 7}{100} = 0.1 \text{ (10%)}
+        Kappa Value:
+        Po=(15+75)100=0.9,Pe=((15+3)(15+7)+(75+7)(75+3)10000)=(18)(22)+(82)(78)10000=0.734
+        Po​=100(15+75)​=0.9,Pe​=(10000(15+3)(15+7)+(75+7)(75+3)​)=10000(18)(22)+(82)(78)​=0.734
+        Kappa=(0.9−0.734)(1−0.734)=0.612
+        Kappa=(1−0.734)(0.9−0.734)​=0.612
+        Sensitivity: \text{Sensitivity} = \frac{TP}{TP + FN} = \frac{15}{15 + 3} = 0.833 \text{ (83.3%)}
+        Precision: \text{Precision} = \frac{TP}{TP + FP} = \frac{15}{15 + 3} = 0.833 \text{ (83.3%)}
+        F-measure: F1 = 2 \times \frac{\text{Precision} \times \text{Sensitivity}}{\text{Precision} + \text{Sensitivity}} = 2 \times \frac{0.833 \times 0.833}{0.833 + 0.833} = 0.833 \text{ (83.3%)}
+
+10. Make quick notes on:
+
+    1. The Process of Holding Out:
+        A method to evaluate model performance by splitting data into training and test sets, where the test set is held out from the training phase to validate model predictions.
+    2. Cross-Validation by Tenfold:
+        A technique where the data is divided into ten subsets (folds). The model is trained on nine folds and validated on the remaining one, repeated ten times, with each fold serving as the validation set once.
+    3. Adjusting the Parameters:
+        Refers to tuning hyperparameters in a model to improve performance and prevent overfitting or underfitting by finding the optimal settings through methods like grid search or random search .
+
+11. Define the following terms:
+
+    1. Purity vs. Silhouette Width:
+        Purity: A measure of the extent to which clusters contain only members of a single class, indicating cluster quality.
+        Silhouette Width: A metric assessing how well each data point fits into its cluster compared to other clusters, with values closer to 1 indicating good clustering.
+    2. Boosting vs. Bagging:
+        Boosting: An ensemble method that combines weak learners to create

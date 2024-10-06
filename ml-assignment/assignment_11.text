@@ -1,0 +1,140 @@
+1. Given XX be a discrete random variable with the following PMF.
+
+    Range RXRX​ of the random variable XX:
+        The range RXRX​ is the set of all possible values that XX can take, as defined by its probability mass function (PMF).
+
+    Find P(X≤0.5)P(X≤0.5):
+        Sum the probabilities of all values of XX that are less than or equal to 0.5 according to the PMF.
+
+    Find P(0.25<X<0.75)P(0.25<X<0.75):
+        Sum the probabilities for values of XX strictly between 0.25 and 0.75.
+
+    Find P(X=0.2∣X<0.6)P(X=0.2∣X<0.6):
+        Use the conditional probability formula:
+    P(X=0.2∣X<0.6)=P(X=0.2)P(X<0.6)
+    P(X=0.2∣X<0.6)=P(X<0.6)P(X=0.2)​
+
+2. Two equal and fair dice are rolled, and we observed two numbers XX and YY.
+
+    Find RX,RYRX​,RY​, and the PMFs of XX and YY:
+        Both RXRX​ and RYRY​ are {1, 2, 3, 4, 5, 6}.
+        The PMF for each die is P(X=k)=P(Y=k)=16P(X=k)=P(Y=k)=61​ for k=1,2,3,4,5,6k=1,2,3,4,5,6.
+
+    Find P(X=2,Y=6)P(X=2,Y=6):
+        P(X=2,Y=6)=P(X=2)⋅P(Y=6)=136P(X=2,Y=6)=P(X=2)⋅P(Y=6)=361​.
+
+    Find P(X>3∣Y=2)P(X>3∣Y=2):
+        Since YY does not affect XX, calculate P(X>3)=36=12P(X>3)=63​=21​.
+
+    If Z=X+YZ=X+Y. Find the range and PMF of ZZ:
+        RZ={2,3,4,...,12}RZ​={2,3,4,...,12}.
+        Calculate PMF by summing probabilities of combinations leading to each possible sum.
+
+    Find P(X=4∣Z=8)P(X=4∣Z=8):
+        Calculate using conditional probability:
+    P(X=4∣Z=8)=P(X=4,Z=8)P(Z=8)
+    P(X=4∣Z=8)=P(Z=8)P(X=4,Z=8)​
+
+3. In an exam, there were 20 multiple-choice questions. Each question had 4 possible options.
+
+    Find the PMF of XX:
+        The student knows 10 answers and guesses the other 10. Use the binomial distribution for guessing:
+    P(X=k)=(10k)(14)k(34)10−kfor k=0,1,...,10
+    P(X=k)=(k10​)(41​)k(43​)10−kfor k=0,1,...,10
+
+    What is P(X>15)P(X>15):
+        This probability is zero since the maximum score is 20. Hence P(X>15)=0P(X>15)=0.
+
+4. The number of students arriving at a college between a time interval is a Poisson random variable.
+
+    Find P(10<Y≤15)P(10<Y≤15):
+        For Y∼Poisson(15)Y∼Poisson(15), use the formula:
+    P(10<Y≤15)=P(Y≤15)−P(Y≤10)
+    P(10<Y≤15)=P(Y≤15)−P(Y≤10)
+        Calculate using cumulative distribution function (CDF) for Poisson.
+
+5. Two independent random variables, XX and YY, are given such that X∼Poisson(α)X∼Poisson(α) and Y∼Poisson(β)Y∼Poisson(β).
+
+    State a new random variable Z=X+YZ=X+Y.
+        The PMF of ZZ is:
+    Z∼Poisson(α+β)
+    Z∼Poisson(α+β)
+
+6. There is a discrete random variable XX with the PMF.
+
+    Find the range of YY:
+        If Y=(X+1)2Y=(X+1)2, calculate based on the possible values of XX.
+
+    Find the PMF of YY:
+        Transform the PMF of XX accordingly.
+
+7. Assuming XX is a continuous random variable with PDF.
+
+    Find E(X)E(X) and Var(X)Var(X):
+        Use the formulas for expectation and variance based on the given PDF.
+
+    Find P(X≥c)P(X≥c):
+        Calculate using the cumulative distribution function (CDF).
+
+    If XX is a continuous random variable with PDF:
+        Analyze the relationship between XX and Y=sin⁡(X)Y=sin(X) for uniform distribution.
+
+    If XX is a random variable with CDF:
+        Type of Random Variable:
+            Identify if XX is discrete, continuous, or mixed based on its CDF.
+        Find the PDF of X,fX(x)X,fX​(x):
+            Derive it from the CDF.
+        Find E(eX)E(eX):
+            Use moment-generating functions or integration.
+        Find P(X=0∣X≤0.5)P(X=0∣X≤0.5):
+            Calculate conditional probability.
+
+8. There are two random variables XX and YY with joint PMF given in Table below.
+
+    Find P(X≤2,Y≤4)P(X≤2,Y≤4):
+        Sum probabilities from the joint PMF table for the given ranges.
+
+    Find the marginal PMFs of XX and YY:
+        Marginalize by summing over the respective other variable.
+
+    Find P(Y=2∣X=1)P(Y=2∣X=1):
+        Use the conditional probability formula based on the joint PMF.
+
+    Are XX and YY independent?
+        Check if P(X,Y)=P(X)P(Y)P(X,Y)=P(X)P(Y) holds for all combinations.
+
+9. A box containing 40 white shirts and 60 black shirts.
+
+    Find the joint PMF of XX and YY:
+        Use hypergeometric distribution:
+    P(X=k,Y=10−k)=(40k)(6010−k)(10010)
+    P(X=k,Y=10−k)=(10100​)(k40​)(10−k60​)​
+
+10. If AA and BB are two jointly continuous random variables with joint PDF.
+
+    Find fX(a)fX​(a) and fY(b)fY​(b):
+        Marginalize the joint PDF.
+
+    Are AA and BB independent of each other?
+        Check if the joint PDF factorizes into marginal PDFs.
+
+    Find the conditional PDF of AA given B=b,fA∣B(a∣b)B=b,fA∣B​(a∣b):
+        Use the formula:
+    fA∣B(a∣b)=fA,B(a,b)fY(b)
+    fA∣B​(a∣b)=fY​(b)fA,B​(a,b)​
+
+    Find E[A∣B=b]E[A∣B=b], for 0≤y≤10≤y≤1:
+        Integrate a⋅fA∣B(a∣b)a⋅fA∣B​(a∣b).
+
+    Find Var(A∣B=b)Var(A∣B=b), for 0≤y≤10≤y≤1:
+        Use the formula:
+    Var(A∣B=b)=E[A2∣B=b]−(E[A∣B=b])2
+    Var(A∣B=b)=E[A2∣B=b]−(E[A∣B=b])2
+
+11. There are 100 men on a ship.
+
+    Find the probability that the men's total weight on the ship exceeds 18,000:
+        Calculate using the Central Limit Theorem, where n=100,μ=170,σ=30n=100,μ=170,σ=30:
+    Z = \frac{18000 - n\mu}{\sigma
+
+
