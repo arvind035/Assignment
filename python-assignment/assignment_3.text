@@ -1,0 +1,57 @@
+Answers
+
+1. Why are functions advantageous to have in your programs?
+
+    Ans-1: Functions reduce repetition, improve modularity, and enhance readability.
+
+2. When does the code in a function run: when it's specified or when it's called?
+
+    Ans-2: A function runs when it is called, not when it's specified.
+
+3. What statement creates a function?
+
+    Ans-3: The def statement creates a function.
+
+4. What is the difference between a function and a function call?
+
+    Ans-4: A function is the code block itself, while a function call executes the function.
+
+5. How many global scopes are there in a Python program? How many local scopes?
+
+    Ans-5: There is one global scope and multiple local scopes (one per function).
+
+6. What happens to variables in a local scope when the function call returns?
+
+    Ans-6: Local variables are destroyed after the function returns.
+
+7. What is the concept of a return value? Is it possible to have a return value in an expression?
+
+    Ans-7: A return value is the result a function gives back. Yes, it can be used in expressions.
+
+8. If a function does not have a return statement, what is the return value of a call to that function?
+
+    Ans-8: The return value is None.
+
+9. How do you make a function variable refer to the global variable?
+
+    Ans-9: Use the global keyword.
+
+10. What is the data type of None?
+
+    Ans-10: The data type of None is NoneType.
+
+11. What does the sentence import areallyourpetsnamederic do?
+
+    Ans-11: It imports a module named areallyourpetsnamederic (if it exists).
+
+12. If you had a bacon() feature in a spam module, what would you call it after importing spam?
+
+    Ans-12: Call it as spam.bacon().
+
+13. What can you do to save a programme from crashing if it encounters an error?
+
+    Ans-13: Use try-except blocks.
+
+14. What is the purpose of the try clause? What is the purpose of the except clause?
+
+    Ans-14: The try clause runs code that might cause an error, and the except clause handles the error if one occurs.

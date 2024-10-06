@@ -1,0 +1,69 @@
+Answers
+
+1. What exactly is []?
+
+    Ans-1: It is an empty list.
+
+2. In a list of values stored in a variable called spam, how would you assign the value 'hello' as the third value?
+
+    Ans-2: spam[2] = 'hello'
+
+3. What is the value of spam[int(int('3' * 2) / 11)]?
+
+    Ans-3: 'd'
+
+4. What is the value of spam[-1]?
+
+    Ans-4: 'd'
+
+5. What is the value of spam[:2]?
+
+    Ans-5: ['a', 'b']
+
+6. What is the value of bacon.index('cat')?
+
+    Ans-6: 1
+
+7. How does bacon.append(99) change the look of the list value in bacon?
+
+    Ans-7: [3.14, 'cat', 11, 'cat', True, 99]
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+
+    Ans-8: [3.14, 11, 'cat', True]
+
+9. What are the list concatenation and list replication operators?
+
+    Ans-9: Concatenation: +, Replication: *
+
+10. What is difference between the list methods append() and insert()?
+
+    Ans-10: append() adds to the end; insert() adds at a specified index.
+
+11. What are the two methods for removing items from a list?
+
+    Ans-11: remove() and pop()
+
+12. Describe how list values and string values are identical.
+
+    Ans-12: Both are sequences; elements can be indexed and sliced.
+
+13. What's the difference between tuples and lists?
+
+    Ans-13: Lists are mutable; tuples are immutable.
+
+14. How do you type a tuple value that only contains the integer 42?
+
+    Ans-14: (42,)
+
+15. How do you get a list value's tuple form? How do you get a tuple value's list form?
+
+    Ans-15: tuple(list_name) and list(tuple_name)
+
+16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+
+    Ans-16: They contain references to the list objects.
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+
+    Ans-17: copy.copy() makes a shallow copy; copy.deepcopy() makes a deep copy (copies nested objects).
