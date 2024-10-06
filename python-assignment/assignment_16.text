@@ -1,0 +1,113 @@
+Answers
+
+1. Create a list called years_list, starting with the year of your birth, and each year thereafter until the year of your fifth birthday.
+
+    Ans-1: If born in 1990, the list would be:
+
+    years_list = [1990, 1991, 1992, 1993, 1994, 1995]
+
+2. In which year in years_list was your third birthday?
+
+    Ans-2: The year of the third birthday would be 1993 (the third index in the list corresponds to age 3).
+
+3. In the years list, which year were you the oldest?
+
+    Ans-3: You were the oldest in 1995, which is the last year in the list.
+
+4. Make a list called things with these three strings as elements: "mozzarella", "cinderella", "salmonella".
+
+    Ans-4: You can create the list as follows:
+
+    things = ["mozzarella", "cinderella", "salmonella"]
+
+5. Capitalize the element in things that refers to a person and then print the list. Did it change the element in the list?
+
+    Ans-5: Capitalizing "cinderella":
+
+    python
+
+    things[1] = things[1].capitalize()  # Capitalizes "cinderella"
+    print(things)  # Output: ["mozzarella", "Cinderella", "salmonella"]
+
+    Yes, it changes the element in the list.
+
+6. Make a surprise list with the elements "Groucho," "Chico," and "Harpo."
+
+    Ans-6: Create the list as follows:
+
+    surprise = ["Groucho", "Chico", "Harpo"]
+
+7. Lowercase the last element of the surprise list, reverse it, and then capitalize it.
+
+    Ans-7: You can perform these operations as follows:
+
+    surprise[-1] = surprise[-1].lower()  # "harpo"
+    surprise[-1] = surprise[-1][::-1].capitalize()  # "Oraph"
+
+8. Make an English-to-French dictionary called e2f and print it.
+
+    Ans-8: Create the dictionary:
+
+    e2f = {
+        "dog": "chien",
+        "cat": "chat",
+        "walrus": "morse"
+    }
+    print(e2f)
+
+9. Write the French word for walrus in your three-word dictionary e2f.
+
+    Ans-9: The French word for walrus is "morse", which is already in the dictionary.
+
+10. Make a French-to-English dictionary called f2e from e2f. Use the items method.
+
+    Ans-10: You can create it as follows:
+
+    f2e = {value: key for key, value in e2f.items()}
+
+11. Print the English version of the French word chien using f2e.
+
+    Ans-11: The English version of "chien" is:
+
+    print(f2e["chien"])  # Output: "dog"
+
+12. Make and print a set of English words from the keys in e2f.
+
+    Ans-12: Create and print the set:
+
+    english_words = set(e2f.keys())
+    print(english_words)  # Output: {"dog", "cat", "walrus"}
+
+13. Make a multilevel dictionary called life.
+
+    Ans-13: Create the multilevel dictionary:
+
+    life = {
+        "animals": {
+            "cats": ["Henri", "Grumpy", "Lucy"],
+            "octopi": {},
+            "emus": {}
+        },
+        "plants": {},
+        "other": {}
+    }
+
+14. Print the top-level keys of life.
+
+    Ans-14: You can print the top-level keys:
+
+    print(life.keys())  # Output: dict_keys(['animals', 'plants', 'other'])
+
+15. Print the keys for life['animals'].
+
+    Ans-15: Print the keys of the 'animals' dictionary:
+
+    print(life['animals'].keys())  # Output: dict_keys(['cats', 'octopi', 'emus'])
+
+16. Print the values for life['animals']['cats'].
+
+    Ans-16: Print the values for the 'cats' key:
+
+    print(life['animals']['cats'])  # Output: ['Henri', 'Grumpy', 'Lucy']
+
+

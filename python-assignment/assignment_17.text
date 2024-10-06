@@ -1,0 +1,105 @@
+Answers
+
+1. Assign the value 7 to the variable guess_me. Then, write the conditional tests.
+
+    Ans-1:
+	guess_me = 7
+	if guess_me < 7:
+	    print('too low')
+	elif guess_me > 7:
+	    print('too high')
+	else:
+	    print('just right')
+
+2. Assign the value 7 to guess_me and 1 to start, then write a while loop.
+
+    Ans-2:
+	guess_me = 7
+	start = 1
+	while True:
+	    if start < guess_me:
+		print('too low')
+	    elif start == guess_me:
+		print('found it!')
+		break
+	    else:
+		print('oops')
+		break
+	    start += 1
+
+3. Print the values of the list [3, 2, 1, 0] using a for loop.
+
+    Ans-3:
+
+	for num in [3, 2, 1, 0]:
+	    print(num)
+
+4. Use a list comprehension to make a list of the even numbers in range(10).
+
+    Ans-4:
+
+	even_numbers = [x for x in range(10) if x % 2 == 0]
+
+5. Use a dictionary comprehension to create the dictionary squares.
+
+    Ans-5:
+    
+	squares = {x: x ** 2 for x in range(10)}
+
+6. Construct the set odd from the odd numbers in the range using a set comprehension.
+
+    Ans-6:
+
+	odd = {x for x in range(10) if x % 2 != 0}
+
+7. Use a generator comprehension to return 'Got ' and a number for the numbers in range(10).
+
+    Ans-7:
+
+	got_numbers = ('Got ' + str(x) for x in range(10))
+	for item in got_numbers:
+	    print(item)
+
+8. Define a function called good that returns the list ['Harry', 'Ron', 'Hermione'].
+
+    Ans-8:
+
+	def good():
+	    return ['Harry', 'Ron', 'Hermione']
+
+9. Define a generator function called get_odds that returns the odd numbers from range(10).
+
+    Ans-9:
+	def get_odds():
+	    for x in range(10):
+		if x % 2 != 0:
+		    yield x
+
+	odd_gen = get_odds()
+	third_value = None
+	for i in range(3):
+	    third_value = next(odd_gen)
+	print(third_value)  # Output: 5
+
+10. Define an exception called OopsException and catch it.
+
+    Ans-10:
+
+	class OopsException(Exception):
+	    pass
+
+	try:
+	    raise OopsException
+	except OopsException:
+	    print('Caught an oops')
+
+11. Use zip() to make a dictionary called movies.
+
+    Ans-11:
+
+	titles = ['Creature of Habit', 'Crewel Fate']
+	plots = ['A nun turns into a monster', 'A haunted yarn shop']
+	movies = dict(zip(titles, plots))
+
+
+

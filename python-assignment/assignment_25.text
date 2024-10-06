@@ -1,0 +1,49 @@
+Answers
+
+1) What is the difference between enclosing a list comprehension in square brackets and parentheses?
+
+    Ans-1:
+        Square Brackets ([]): Creates a list comprehension that generates a list.
+            Example: [x**2 for x in range(5)] results in [0, 1, 4, 9, 16].
+        Parentheses (()): Creates a generator expression that generates a generator object, which yields items one at a time and is more memory efficient.
+            Example: (x**2 for x in range(5)) creates a generator that can be iterated over.
+
+2) What is the relationship between generators and iterators?
+
+    Ans-2:
+        Generators are a type of iterator created using functions that use the yield statement. They can be iterated over just like other iterators but provide values on-the-fly without storing them in memory.
+        Iterators are objects that implement the iterator protocol, which includes the __iter__() and __next__() methods. Generators automatically implement this protocol.
+
+3) What are the signs that a function is a generator function?
+
+    Ans-3:
+        A function is a generator function if:
+            It contains one or more yield statements.
+            It does not have a return statement that returns a value; instead, it yields values.
+            When called, it returns a generator object rather than executing the function immediately.
+
+4) What is the purpose of a yield statement?
+
+    Ans-4:
+        The yield statement allows a function to pause its execution and return a value to the caller, while retaining its state for subsequent calls.
+        This enables the function to produce a series of values over time, rather than computing them all at once and returning them in a list, leading to more efficient memory usage.
+
+5) What is the relationship between map calls and list comprehensions? Make a comparison and contrast between the two.
+
+    Ans-5:
+
+        Similarities:
+            Both map() and list comprehensions can apply a function to each item in an iterable and produce a new iterable.
+            Both are used for transforming data.
+
+        Differences:
+            Syntax:
+                map(func, iterable) uses a functional programming style.
+                [func(x) for x in iterable] uses a more Pythonic, readable syntax.
+            Return Type:
+                map() returns a map object (an iterator in Python 3), which can be converted to a list.
+                List comprehensions directly return a list.
+
+        Performance:
+            List comprehensions are generally more Pythonic and can be faster in some cases due to internal optimizations.
+            map() can be more readable when applying simple functions without additional logic.

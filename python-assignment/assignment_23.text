@@ -1,0 +1,31 @@
+Answers
+
+1. What is the result of the code, and why?
+
+    Ans-1:
+    The code prints 1 2 8. The function func() is called with arguments 1 and 2. Here, a takes the value 1, b takes the value 2, and since c has a default value of 8, it retains that value.
+
+2. What is the result of this code, and why?
+
+    Ans-2:
+    The code prints 1 2 3. The function func() is called with 1 for a, 3 for c (using a keyword argument), and 2 for b (also using a keyword argument). The arguments are matched correctly based on their names.
+
+3. How about this code: what is its result, and why?
+
+    Ans-3:
+    The code prints 1 (2, 3). The function func() takes a required argument a and any number of positional arguments captured in pargs. Here, 1 is assigned to a, and the remaining values 2 and 3 are packed into the tuple pargs.
+
+4. What does this code print, and why?
+
+    Ans-4:
+    The code prints 1 {'c': 3, 'b': 2}. The function func() takes a required argument a and any number of keyword arguments stored in kargs. The function is called with a=1, b=2, and c=3, which are stored in the dictionary kargs.
+
+5. What gets printed by this, and explain?
+
+    Ans-5:
+    The code prints 1 5 6 8. The function func() takes a, b, c, and d as parameters. When calling func(1, *(5, 6)), 1 is assigned to a, 5 to b, 6 to c, and the default value 8 to d. The unpacking operator * allows 5 and 6 to be passed as individual arguments.
+
+6. What is the result of this, and explain?
+
+    Ans-6:
+    The code prints (1, ['x'], {'a': 'y'}). In the function func(), a is set to 2 but does not affect l since it is an integer (immutable). The list m is modified to ['x'], and the dictionary n is modified to {'a': 'y'}. After the function call, l remains 1, m becomes ['x'], and n becomes {'a': 'y'}. Thus, the output is l, m, n.

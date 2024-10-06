@@ -1,0 +1,31 @@
+Answers
+
+1. What is the result of the code, and explain?
+
+    Ans-1:
+    The code prints iNeuron. The variable X is defined in the global scope, and the function func() prints the value of X. Since X is accessible within the function, it retrieves the global value.
+
+2. What is the result of the code, and explain?
+
+    Ans-2:
+    The code prints iNeuron. Inside func(), X is assigned a new value NI!, but this does not affect the global X. After calling func(), when print(X) is executed, it still refers to the global variable, which remains iNeuron.
+
+3. What does this code print, and why?
+
+    Ans-3:
+    The code prints NI and then iNeuron. Inside func(), X is assigned NI, which is a local variable. The first print statement within the function displays NI. The second print(X) accesses the global variable, which is still iNeuron.
+
+4. What output does this code produce? Why?
+
+    Ans-4:
+    The code prints NI. The function func() declares X as a global variable, modifying the global X to NI. Thus, after calling func(), when print(X) is executed, it retrieves the modified global value NI.
+
+5. What about this code—what’s the output, and why?
+
+    Ans-5:
+    The code prints NI and then iNeuron. The function func() defines a local variable X, but when nested() is called, it prints the value of the global X, which remains iNeuron. After func() execution, X is still iNeuron in the global scope.
+
+6. How about this code: what is its output in Python 3, and explain?
+
+    Ans-6:
+    The code raises an error. The variable X is defined inside func(), and nonlocal tries to modify X. However, since X has not been defined in an enclosing scope of nested(), it leads to a SyntaxError in Python 3. The nonlocal keyword is used to refer to variables in an enclosing scope, but since X was never assigned in an enclosing function (outside nested()), it cannot be modified this way.
