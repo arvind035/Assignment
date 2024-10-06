@@ -1,0 +1,59 @@
+Answers
+
+1. Create an assert statement that throws an AssertionError if the variable spam is a negative integer.
+
+    Ans-1: assert spam >= 0, "spam should not be a negative integer"
+
+2. Write an assert statement that triggers an AssertionError if the variables eggs and bacon contain strings that are the same as each other, even if their cases are different.
+
+    Ans-2: assert eggs.lower() != bacon.lower(), "eggs and bacon should not be the same (case-insensitive)"
+
+3. Create an assert statement that throws an AssertionError every time.
+
+    Ans-3: assert False, "This will always trigger an AssertionError"
+
+4. What are the two lines that must be present in your software in order to call logging.debug()?
+
+    Ans-4:
+
+    python
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+
+5. What are the two lines that your program must have in order to have logging.debug() send a logging message to a file named programLog.txt?
+
+    Ans-5:
+
+    import logging
+    logging.basicConfig(filename='programLog.txt', level=logging.DEBUG)
+
+6. What are the five levels of logging?
+
+    Ans-6: DEBUG, INFO, WARNING, ERROR, and CRITICAL
+
+7. What line of code would you add to your software to disable all logging messages?
+
+    Ans-7: logging.disable(logging.CRITICAL)
+
+8. Why is using logging messages better than using print() to display the same message?
+
+    Ans-8:
+        Logging allows for different log levels (e.g., DEBUG, ERROR), making it easier to manage the output.
+        Logging can write to files, display timestamps, and differentiate message severities.
+        It’s more flexible and scalable for production environments.
+
+9. What are the differences between the Step Over, Step In, and Step Out buttons in the debugger?
+
+    Ans-9:
+        Step Over: Executes the current line but steps over function calls.
+        Step In: Steps into any function calls on the current line.
+        Step Out: Runs the rest of the current function and pauses once it's complete.
+
+10. After you click Continue, when will the debugger stop?
+
+    Ans-10: The debugger will stop when it hits the next breakpoint or encounters an unhandled exception.
+
+11. What is the concept of a breakpoint?
+
+    Ans-11: A breakpoint is a marker set in code to pause execution at a specific point, allowing developers to inspect the state of the program during debugging.

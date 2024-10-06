@@ -1,0 +1,33 @@
+Answers
+
+1. What does RGBA stand for?
+
+    Ans-1: RGBA stands for Red, Green, Blue, and Alpha, where the Alpha channel represents the opacity of the color.
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+
+    Ans-2: You can get the RGBA value of an image using the Image.getpixel() method from the Pillow module, passing in the coordinates of the pixel.
+
+3. What is a box tuple, and how does it work?
+
+    Ans-3: A box tuple in Pillow is a tuple of four integers that defines a rectangular region in an image, usually formatted as (left, upper, right, lower), which can be used to crop or define areas for processing.
+
+4. How can you find out the width and height of an Image object?
+
+    Ans-4: You can find the width and height of an Image object by accessing the width and height attributes, respectively, like this: image.width and image.height.
+
+5. What method would you call to get an Image object for a 100×100 image, excluding the lower-left quarter of it?
+
+    Ans-5: You would call the crop() method on the Image object with a box tuple that specifies the area to keep. For a 100×100 image excluding the lower-left quarter, the box would be (0, 50, 100, 100).
+
+6. After making changes to an Image object, how could you save it as an image file?
+
+    Ans-6: You can save an Image object as an image file using the save() method, providing the filename and format (if needed), like this: image.save('filename.png').
+
+7. What module contains Pillow’s shape-drawing code?
+
+    Ans-7: Pillow's shape-drawing code is contained in the ImageDraw module.
+
+8. What kind of object does not have drawing methods, and how do you get this kind of object?
+
+    Ans-8: Image objects do not have drawing methods. To draw on an image, you get a Draw object by calling ImageDraw.Draw(image), where image is the Image object you want to draw on.

@@ -1,0 +1,56 @@
+Answers
+
+1. How many seconds are in an hour?
+
+    Ans-1: There are 3,600 seconds in an hour, calculated by multiplying 60 seconds per minute by 60 minutes per hour.
+
+2. Assign the result from the previous task to a variable called seconds_per_hour.
+
+    Ans-2: You can assign this result in Python like this:
+
+    seconds_per_hour = 60 * 60  # or seconds_per_hour = 3600
+
+3. How many seconds do you think there are in a day?
+
+    Ans-3: There are 86,400 seconds in a day, calculated as follows:
+
+    seconds_per_day = seconds_per_hour * 24
+
+4. Calculate seconds per day again, but this time save the result in a variable called seconds_per_day.
+
+    Ans-4: You can calculate it as:
+
+    seconds_per_day = seconds_per_hour * 24  # seconds_per_day = 3600 * 24
+
+5. Divide seconds_per_day by seconds_per_hour. Use floating-point (/) division.
+
+    Ans-5: The result of the division is:
+
+    result_float = seconds_per_day / seconds_per_hour  # result_float = 86400 / 3600 = 24.0
+
+6. Divide seconds_per_day by seconds_per_hour, using integer (//) division. Did this number agree with the floating-point value from the previous question, aside from the final .0?
+
+    Ans-6: Using integer division:
+
+    result_int = seconds_per_day // seconds_per_hour  # result_int = 86400 // 3600 = 24
+
+    Yes, this result agrees with the floating-point value of 24.0, aside from the decimal.
+
+7. Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ...
+
+    Ans-7: Here's a simple implementation of the generator:
+
+	def genPrimes():
+	    D = {}
+	    q = 2  # Starting with the first prime number
+	    while True:
+		if q not in D:
+		    # Found a new prime number
+		    yield q
+		    D[q * q] = [q]  # Mark the first multiple
+		else:
+		    for p in D[q]:
+		        D.setdefault(p + q, []).append(p)
+		    del D[q]  # Remove the entry
+		q += 1
+

@@ -1,0 +1,52 @@
+Answers
+
+1. In what modes should the PdfFileReader() and PdfFileWriter() File objects be opened?
+
+    Ans-1: PdfFileReader() should be opened in read mode ('rb'), and PdfFileWriter() should be opened in write mode ('wb').
+
+2. From a PdfFileReader object, how do you get a Page object for page 5?
+
+    Ans-2: Use pdf_reader.getPage(4) (since page indexing starts at 0).
+
+3. What PdfFileReader variable stores the number of pages in the PDF document?
+
+    Ans-3: The variable is numPages.
+
+4. If a PdfFileReader object’s PDF is encrypted with the password swordfish, what must you do before you can obtain Page objects from it?
+
+    Ans-4: You must call pdf_reader.decrypt('swordfish') to unlock the PDF.
+
+5. What methods do you use to rotate a page?
+
+    Ans-5: Use the rotateClockwise(degrees) or rotateCounterClockwise(degrees) methods on a Page object.
+
+6. What is the difference between a Run object and a Paragraph object?
+
+    Ans-6: A Paragraph object represents a block of text, while a Run object represents a contiguous run of text with the same style within a paragraph.
+
+7. How do you obtain a list of Paragraph objects for a Document object that’s stored in a variable named doc?
+
+    Ans-7: Use doc.paragraphs.
+
+8. What type of object has bold, underline, italic, strike, and outline variables?
+
+    Ans-8: These variables are part of a Run object.
+
+9. What is the difference between False, True, and None for the bold variable?
+
+    Ans-9:
+        False means the text is not bold.
+        True means the text is bold.
+        None means that the bold setting is not explicitly defined.
+
+10. How do you create a Document object for a new Word document?
+
+    Ans-10: Use from docx import Document followed by doc = Document().
+
+11. How do you add a paragraph with the text 'Hello, there!' to a Document object stored in a variable named doc?
+
+    Ans-11: Use doc.add_paragraph('Hello, there!').
+
+12. What integers represent the levels of headings available in Word documents?
+
+    Ans-12: The levels of headings are represented by integers 1 through 9, with 1 being the highest level (Title) and 9 being the lowest level.
