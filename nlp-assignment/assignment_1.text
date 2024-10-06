@@ -1,0 +1,66 @@
+Answers
+
+1. Explain One-Hot Encoding
+
+    Ans-1:
+        One-Hot Encoding is a method for converting categorical variables into a binary vector representation.
+        Each category is represented by a unique vector where only one element is set to 1 (hot) and all other elements are set to 0.
+        This allows machine learning algorithms to interpret categorical data effectively while avoiding the assumption of ordinal relationships.
+
+2. Explain Bag of Words
+
+    Ans-2:
+        The Bag of Words (BoW) model represents text data by counting the frequency of each word in a document.
+        It disregards grammar and word order but retains multiplicity. Each document is represented as a vector in a feature space defined by unique words from the entire corpus.
+        It is often used in text classification and sentiment analysis.
+
+3. Explain Bag of N-Grams
+
+    Ans-3:
+        The Bag of N-Grams model extends the Bag of Words by considering sequences of 'n' words (n-grams) instead of individual words.
+        It captures contextual information by accounting for adjacent words, which helps in tasks like language modeling and text generation.
+        Common n-grams include unigrams (1 word), bigrams (2 words), and trigrams (3 words).
+
+4. Explain TF-IDF
+
+    Ans-4:
+        TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used to evaluate the importance of a word in a document relative to a corpus.
+        It combines two metrics:
+            Term Frequency (TF): Measures how frequently a term appears in a document.
+            Inverse Document Frequency (IDF): Measures how unique or rare a term is across the entire corpus.
+        The product of TF and IDF helps highlight important terms while down-weighting common terms.
+
+5. What is the OOV problem?
+
+    Ans-5:
+        OOV (Out-Of-Vocabulary) refers to words that are not included in the vocabulary of a language model or text processing system.
+        This can occur in tasks like text classification, machine translation, or word embeddings when the model encounters new or rare words.
+        Handling OOV words can involve techniques like word segmentation, subword units, or using embeddings that can accommodate unknown words.
+
+6. What are word embeddings?
+
+    Ans-6:
+        Word embeddings are dense vector representations of words in a continuous vector space, capturing semantic relationships and contextual meanings.
+        They are trained to place semantically similar words closer together in the vector space, improving the performance of natural language processing (NLP) tasks.
+        Popular models for generating word embeddings include Word2Vec, GloVe, and FastText.
+
+7. Explain Continuous Bag of Words (CBOW)
+
+    Ans-7:
+        CBOW is a word embedding model that predicts a target word based on its surrounding context words (context window).
+        It takes the context words as input and uses them to predict the center word.
+        This model is efficient for generating embeddings for words, leveraging the context information for better accuracy.
+
+8. Explain SkipGram
+
+    Ans-8:
+        SkipGram is another word embedding model that works oppositely to CBOW; it predicts surrounding context words given a target word.
+        It aims to maximize the probability of context words given the center word, allowing it to learn more about the relationships between words.
+        SkipGram is particularly effective for infrequent words.
+
+9. Explain GloVe Embeddings
+
+    Ans-9:
+        GloVe (Global Vectors for Word Representation) is an unsupervised learning algorithm for obtaining vector representations of words.
+        It uses word co-occurrence statistics from a corpus to build a word vector space where the distance between vectors reflects semantic similarities.
+        GloVe is trained on the global statistical information of a corpus, unlike local context-based models like CBOW and SkipGram.
