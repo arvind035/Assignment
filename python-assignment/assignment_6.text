@@ -1,0 +1,53 @@
+Answers
+
+1. What are escape characters, and how do you use them?
+
+    Ans-1: Escape characters allow you to use special characters in strings that would otherwise cause issues. They are represented by a backslash (\) followed by the character you want to escape.
+
+2. What do the escape characters \n and \t stand for?
+
+    Ans-2: \n is a newline, and \t is a tab.
+
+3. What is the way to include backslash characters in a string?
+
+    Ans-3: Use a double backslash \\ to include a literal backslash in a string.
+
+4. The string "Howl's Moving Castle" is a correct value. Why isn’t the single quote character in the word Howl's not escaped a problem?
+
+    Ans-4: The string is enclosed in double quotes (" "), so the single quote (') does not need to be escaped.
+
+5. How do you write a string of newlines if you don’t want to use the \n character?
+
+    Ans-5: You can use triple quotes (""" """) to create a multiline string.
+
+6. What are the values of the given expressions?
+
+    Ans-6:
+        'Hello, world!'[1] → 'e'
+        'Hello, world!'[0:5] → 'Hello'
+        'Hello, world!'[:5] → 'Hello'
+        'Hello, world!'[3:] → 'lo, world!'
+
+7. What are the values of the following expressions?
+
+    Ans-7:
+        'Hello'.upper() → 'HELLO'
+        'Hello'.upper().isupper() → True
+        'Hello'.upper().lower() → 'hello'
+
+8. What are the values of the following expressions?
+
+    Ans-8:
+        'Remember, remember, the fifth of July.'.split() → ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+        '-'.join('There can only one.'.split()) → 'There-can-only-one.'
+
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+
+    Ans-9:
+        right-justify → .rjust()
+        left-justify → .ljust()
+        center → .center()
+
+10. What is the best way to remove whitespace characters from the start or end?
+
+    Ans-10: Use the .strip() method to remove whitespace from both the start and end of a string.

@@ -1,0 +1,95 @@
+Answers
+
+1. What is the name of the feature responsible for generating Regex objects?
+
+    Ans-1: The re module in Python is responsible for generating Regex objects.
+
+2. Why do raw strings often appear in Regex objects?
+
+    Ans-2: Raw strings (r'') are used to prevent escape characters (like \) from being interpreted by Python, allowing the regular expression to be processed as intended.
+
+3. What is the return value of the search() method?
+
+    Ans-3: It returns a Match object if a match is found; otherwise, it returns None.
+
+4. From a Match item, how do you get the actual strings that match the pattern?
+
+    Ans-4: Use the group() method on the Match object to get the matched string.
+
+5. In the regex created from r'(\d\d\d)-(\d\d\d-\d\d\d\d)', what does group zero cover? Group 2? Group 1?
+
+    Ans-5: Group 0 covers the entire match, group 1 covers the first set of digits (\d\d\d), and group 2 covers the second set (\d\d\d-\d\d\d\d).
+
+6. In standard expression syntax, parentheses and intervals have distinct meanings. How can you tell a regex that you want it to fit real parentheses and periods?
+
+    Ans-6: Use backslashes to escape them: \(, \) for parentheses and \. for a period.
+
+7. The findall() method returns a string list or a list of string tuples. What causes it to return one of the two options?
+
+    Ans-7: If the regex has groups (parentheses), findall() returns a list of tuples; otherwise, it returns a list of strings.
+
+8. In standard expressions, what does the | character mean?
+
+    Ans-8: It represents the logical OR operator, allowing you to match one pattern or another.
+
+9. In regular expressions, what does the . character stand for?
+
+    Ans-9: It matches any character except for a newline.
+
+10. In regular expressions, what is the difference between the + and * characters?
+
+    Ans-10: + matches one or more occurrences of the preceding element, while * matches zero or more occurrences.
+
+11. What is the difference between {4} and {4,5} in regular expression?
+
+    Ans-11: {4} matches exactly four occurrences of the preceding element, while {4,5} matches between four and five occurrences.
+
+12. What do the \d, \w, and \s shorthand character classes signify in regular expressions?
+
+    Ans-12:
+        \d matches any digit (0-9).
+        \w matches any word character (letters, digits, and underscores).
+        \s matches any whitespace character (spaces, tabs, newlines).
+
+13. What do \D, \W, and \S shorthand character classes signify in regular expressions?
+
+    Ans-13:
+        \D matches any non-digit character.
+        \W matches any non-word character.
+        \S matches any non-whitespace character.
+
+14. What is the difference between .*? and .*?
+
+    Ans-14: .*? is a non-greedy match, matching as little as possible, while .* is a greedy match, matching as much as possible.
+
+15. What is the syntax for matching both numbers and lowercase letters with a character class?
+
+    Ans-15: Use [a-z0-9].
+
+16. What is the procedure for making a normal expression case insensitive in regex?
+
+    Ans-16: Pass re.IGNORECASE or re.I as the second argument to re.compile().
+
+17. What does the . character normally match? What does it match if re.DOTALL is passed as 2nd argument in re.compile()?
+
+    Ans-17: Normally, . matches any character except a newline. With re.DOTALL, it matches all characters, including newlines.
+
+18. If numReg = re.compile(r'\d+'), what will numReg.sub('X', '11 drummers, 10 pipers, five rings, 4 hen') return?
+
+    Ans-18: 'X drummers, X pipers, five rings, X hen'.
+
+19. What does passing re.VERBOSE as the 2nd argument to re.compile() allow to do?
+
+    Ans-19: It allows you to write more readable regex by ignoring whitespace and adding comments.
+
+20. How would you write a regex that matches a number with commas for every three digits?
+
+    Ans-20: Use ^\d{1,3}(,\d{3})*$ to match numbers like '42', '1,234', and '6,368,745'.
+
+21. How would you write a regex that matches the full name of someone whose last name is Watanabe?
+
+    Ans-21: Use ^[A-Z][a-z]*\sWatanabe$ to match names like 'Haruto Watanabe', 'Alice Watanabe', but not 'haruto Watanabe' or 'Mr. Watanabe'.
+
+22. How would you write a regex that matches a sentence where the first word is either Alice, Bob, or Carol; the second word is either eats, pets, or throws; and the sentence ends with a period?
+
+    Ans-22: Use ^(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\.$ with the re.IGNORECASE flag to match sentences like 'Alice eats apples.' and 'BOB EATS CATS.'

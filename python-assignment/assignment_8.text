@@ -1,0 +1,30 @@
+Answers
+
+1. Is the Python Standard Library included with PyInputPlus?
+
+    Ans-1: No, PyInputPlus is not part of the Python Standard Library; it needs to be installed separately.
+
+2. Why is PyInputPlus commonly imported with import pyinputplus as pypi?
+
+    Ans-2: This is done to give it a shorter alias, making the code cleaner and easier to write.
+
+3. How do you distinguish between inputInt() and inputFloat()?
+
+    Ans-3: inputInt() ensures the user enters an integer, while inputFloat() accepts a floating-point number.
+
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+
+    Ans-4: You can set the min and max keyword arguments in inputInt() like this:
+    pyinputplus.inputInt(min=0, max=99)
+
+5. What is transferred to the keyword arguments allowRegexes and blockRegexes?
+
+    Ans-5: Regular expressions (regex patterns) are passed to allowRegexes to allow matching specific patterns and to blockRegexes to block certain patterns.
+
+6. If a blank input is entered three times, what does inputStr(limit=3) do?
+
+    Ans-6: It raises a RetryLimitException after the user exceeds the input limit of three tries.
+
+7. If blank input is entered three times, what does inputStr(limit=3, default='hello') do?
+
+    Ans-7: After three blank inputs, it returns the default value 'hello' instead of raising an exception.
