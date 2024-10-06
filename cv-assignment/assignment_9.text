@@ -1,0 +1,83 @@
+Answers
+
+1. What are the advantages of a CNN for image classification over a completely linked DNN?
+
+    Parameter Efficiency: CNNs have significantly fewer parameters due to shared weights in convolutional layers, making them less prone to overfitting.
+    Spatial Hierarchy: CNNs can capture spatial hierarchies in images through local receptive fields and pooling layers.
+    Translation Invariance: The structure of CNNs allows for better recognition of objects in images regardless of their location.
+    Automatic Feature Learning: CNNs can automatically learn hierarchical features from raw pixel data without manual feature extraction.
+
+2. CNN with three convolutional layers: Total parameters and RAM requirement
+
+    Total Parameters Calculation:
+        Convolutional layers generate function maps:
+            Layer 1: 100 maps x 3 kernels
+            Layer 2: 200 maps x 3 kernels
+            Layer 3: 400 maps x 3 kernels
+        Total parameters = (100 x 3) + (200 x 3) + (400 x 3) = 1800 filters + biases = 1803 parameters.
+    RAM Requirement for Single Instance Prediction:
+        Each parameter uses 32 bits (4 bytes).
+        Total RAM = 1803 parameters x 4 bytes = 7212 bytes (approximately 7.2 KB).
+    RAM Requirement for Batch of 50 Images:
+        For batch processing: 7212 bytes x 50 images = 360,600 bytes (approximately 360.6 KB).
+
+3. Five things to fix GPU memory issues during CNN training
+
+    Reduce Batch Size: Decrease the number of images processed simultaneously.
+    Optimize Model Architecture: Simplify the model by reducing the number of layers or filters.
+    Use Gradient Accumulation: Process multiple smaller batches and accumulate gradients.
+    Enable Mixed Precision Training: Use lower-precision data types (e.g., FP16) to reduce memory usage.
+    Clear Cache Regularly: Use functions to free up unused GPU memory during training.
+
+4. Why would you use a max pooling layer instead of a convolutional layer of the same stride?
+
+    Dimensionality Reduction: Max pooling reduces the spatial dimensions of the feature maps, minimizing computation and memory usage.
+    Translation Invariance: It helps the network become invariant to small translations in the input image.
+    Feature Extraction: Max pooling emphasizes the most significant features (maximum values) in the feature map.
+
+5. When would a local response normalization layer be useful?
+
+    Useful in Early Layers: It can be beneficial in the early layers of a CNN to normalize the output of a neuron across neighboring neurons, helping to enhance generalization and improve convergence during training.
+
+6. Main innovations in AlexNet, GoogLeNet, and ResNet compared to LeNet-5
+
+    AlexNet:
+        Introduced ReLU activation functions to speed up training.
+        Used dropout for regularization.
+        Employed data augmentation to improve generalization.
+
+    GoogLeNet:
+        Introduced the Inception module for multi-scale feature extraction.
+        Used global average pooling instead of fully connected layers to reduce overfitting.
+
+    ResNet:
+        Introduced skip connections (residual learning) to address the vanishing gradient problem, allowing for very deep networks.
+
+7. On MNIST, build your own CNN and strive for the best accuracy.
+
+    Model Structure:
+        Use convolutional layers followed by max pooling and dropout.
+        Compile the model using the Adam optimizer and categorical cross-entropy loss.
+        Train on the MNIST dataset and validate using a test set, aiming for tuning hyperparameters to improve accuracy.
+
+8. Using Inception v3 to classify broad images:
+
+    Image Loading and Preprocessing:
+        Load images using libraries such as matplotlib or scipy.
+        Resize images to 299x299 pixels and ensure they have three RGB channels.
+        Normalize pixel values to the range [-1, 1] for compatibility with the Inception v3 model.
+
+9. Large-scale image recognition using transfer learning:
+
+    Training Set Creation:
+        Gather a dataset of at least 100 images for each class (e.g., beaches, mountains).
+
+    Preprocessing Phase:
+        Resize and crop images to 299x299 pixels while applying random transformations for data augmentation.
+
+    Model Adjustment:
+        Freeze all layers of the pre-trained Inception v3 model up to the bottleneck layer.
+        Replace the output layer with a softmax layer appropriate for the number of classes.
+
+    Data Separation:
+        Split the dataset into training and test sets for training the model and evaluating its performance.

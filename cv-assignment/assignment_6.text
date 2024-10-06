@@ -1,0 +1,42 @@
+Answers
+
+1. What is the difference between TRAINABLE and NON-TRAINABLE PARAMETERS?
+
+    Trainable Parameters: These are the parameters in a model that are updated during training, such as weights and biases. They adapt based on the learning process.
+    Non-Trainable Parameters: These are fixed parameters that do not change during training, such as certain configuration settings in layers (e.g., Batch Normalization's moving averages).
+
+2. In the CNN architecture, where does the DROPOUT LAYER go?
+
+    The Dropout layer is typically placed after activation functions in fully connected layers or before the final output layer to reduce overfitting by randomly deactivating neurons during training.
+
+3. What is the optimal number of hidden layers to stack?
+
+    There is no one-size-fits-all answer. It varies based on the complexity of the task. Generally, starting with 1-3 hidden layers is recommended for simpler problems, while deeper networks may be necessary for complex tasks.
+
+4. In each layer, how many secret units or filters should there be?
+
+    The number of units or filters depends on the specific task and data. For CNNs, starting with 32 or 64 filters in the first layer and gradually increasing (e.g., 128, 256) in deeper layers is common.
+
+5. What should your initial learning rate be?
+
+    A common starting point for the initial learning rate is between 0.001 to 0.01. However, using techniques like learning rate scheduling or experimentation can help determine the best rate for your specific model.
+
+6. What do you do with the activation function?
+
+    The activation function introduces non-linearity into the model, enabling it to learn complex patterns. Common choices include ReLU, Sigmoid, and Tanh, depending on the layer and task.
+
+7. What is NORMALIZATION OF DATA?
+
+    Normalization is the process of scaling input features to a similar range (e.g., [0, 1] or [-1, 1]). It improves convergence during training and can be achieved using methods like Min-Max scaling or Z-score normalization.
+
+8. What is IMAGE AUGMENTATION and how does it work?
+
+    Image augmentation involves creating variations of training images to increase the diversity of the dataset. Techniques include rotation, flipping, zooming, and adding noise, which help improve model generalization.
+
+9. What is DECLINE IN LEARNING RATE?
+
+    Decline in learning rate refers to reducing the learning rate during training, often through scheduled decay. It helps in fine-tuning the model as it approaches convergence, allowing for more precise updates.
+
+10. What does EARLY STOPPING CRITERIA mean?
+
+    Early stopping criteria prevent overfitting by halting training when the model's performance on a validation set begins to degrade. It is often based on a specific number of epochs without improvement in validation loss.

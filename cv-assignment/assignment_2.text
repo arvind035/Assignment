@@ -1,0 +1,70 @@
+Answers
+
+1. Explain convolutional neural network, and how does it work?
+
+    Ans-1:
+        A Convolutional Neural Network (CNN) is a deep learning model specifically designed for processing structured grid data, like images.
+        Working:
+            Convolutional Layers: These layers apply convolutional filters (kernels) to the input image, extracting features like edges and textures.
+            Activation Functions: Non-linear functions (like ReLU) are applied after convolutions to introduce non-linearity.
+            Pooling Layers: Down-sampling operations (like max pooling) reduce dimensionality, retaining essential features while decreasing computational load.
+            Fully Connected Layers: At the end, flattened outputs are connected to dense layers to classify or regress based on the extracted features.
+
+2. How does refactoring parts of your neural network definition favor you?
+
+    Ans-2:
+        Refactoring makes the code more modular and easier to understand, enhancing maintainability.
+        It allows for reusability of components (like layers and architectures) across different projects.
+        Facilitates debugging and testing by isolating issues to specific sections of the network definition.
+
+3. What does it mean to flatten? Is it necessary to include it in the MNIST CNN? What is the reason for this?
+
+    Ans-3:
+        Flattening converts the multi-dimensional output from the convolutional layers into a one-dimensional array.
+        Necessity: In the MNIST CNN, it is necessary before passing the data to fully connected layers for classification because these layers require input in a flattened form.
+        This step ensures that the spatial structure is preserved up until the classification stage.
+
+4. What exactly does NCHW stand for?
+
+    Ans-4:
+        NCHW stands for the format of tensor representation in deep learning:
+            N: Number of samples (batch size)
+            C: Number of channels (color depth)
+            H: Height of the image
+            W: Width of the image.
+
+5. Why are there 77(1168-16) multiplications in the MNIST CNN's third layer?
+
+    Ans-5:
+        The formula arises from the convolution operation:
+            The kernel size is 7×77×7.
+            The calculation involves the number of output features (1168) minus the number of filters (16) applied, multiplied by the kernel size.
+            This represents the total number of multiplications performed during the convolution in that layer.
+
+6. Explain definition of receptive field?
+
+    Ans-6:
+        The receptive field of a neuron in a CNN refers to the area of the input image that affects the neuron's activation.
+        It indicates how much context the neuron considers when making a prediction, crucial for capturing spatial hierarchies in images.
+
+7. What is the scale of an activation's receptive field after two stride-2 convolutions? What is the reason for this?
+
+    Ans-7:
+        After two stride-2 convolutions, the receptive field increases in size exponentially.
+        The scale can be calculated as 2n2n (where nn is the number of stride-2 convolutions), resulting in a receptive field that can encompass a broader area of the original input image.
+        This is because each convolution skips pixels, effectively aggregating information from larger portions of the image.
+
+8. What is the tensor representation of a color image?
+
+    Ans-8:
+        A color image is typically represented as a 3D tensor in the format C×H×WC×H×W (Channels, Height, Width), where:
+            CC represents color channels (e.g., RGB),
+            HH is the height,
+            WW is the width of the image.
+
+9. How does a color input interact with a convolution?
+
+    Ans-9:
+        In a convolution, each color channel of the input interacts with its corresponding filter.
+        The filters slide across each channel independently, performing element-wise multiplications and summations to produce feature maps for each channel.
+        The resulting feature maps are then combined to form the final output, capturing complex patterns from the original color input.

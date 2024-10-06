@@ -1,0 +1,59 @@
+Answers
+
+1. After each stride-2 conv, why do we double the number of filters?
+
+    Ans-1:
+        Doubling the number of filters helps to capture more complex features at each layer, enhancing the model's ability to learn different patterns.
+        It compensates for the reduced spatial dimensions resulting from the stride-2 operation, ensuring that enough feature maps are available for the subsequent layers.
+
+2. Why do we use a larger kernel with MNIST (with simple CNN) in the first conv?
+
+    Ans-2:
+        A larger kernel helps to capture more spatial information and contextual features from the input images.
+        In the case of MNIST, which consists of handwritten digits, a larger kernel can effectively recognize features such as strokes and edges that define the characters.
+
+3. What data is saved by ActivationStats for each layer?
+
+    Ans-3:
+        ActivationStats typically saves data on the mean and variance of activations for each layer.
+        This information is useful for monitoring layer performance and diagnosing issues like dead neurons or ineffective training.
+
+4. How do we get a learner's callback after they’ve completed training?
+
+    Ans-4:
+        Callbacks can be implemented by defining a custom function or using existing callback classes in frameworks like TensorFlow or PyTorch.
+        These callbacks are triggered after training epochs or upon reaching specific training milestones, allowing for additional operations like logging or model saving.
+
+5. What are the drawbacks of activations above zero?
+
+    Ans-5:
+        Activations above zero can lead to issues like dying ReLUs, where neurons become inactive and stop learning entirely.
+        They may also cause gradient saturation, where gradients become too small to update weights effectively, leading to slow convergence.
+
+6. Draw up the benefits and drawbacks of practicing in larger batches?
+
+    Ans-6:
+        Benefits:
+            Faster training due to parallel processing.
+            More stable gradient estimates, leading to smoother convergence.
+        Drawbacks:
+            Higher memory consumption, limiting the size of the model or input data.
+            Potential for overfitting as the model might not generalize well to unseen data.
+
+7. Why should we avoid starting training with a high learning rate?
+
+    Ans-7:
+        A high learning rate can lead to unstable training, causing loss to diverge rather than converge.
+        It may result in overshooting optimal weight values, preventing the model from finding a good local minimum.
+
+8. What are the pros of studying with a high rate of learning?
+
+    Ans-8:
+        A high learning rate can accelerate training by allowing rapid updates of weights, helping the model escape local minima.
+        It may lead to faster convergence in the initial phases of training, making it beneficial in specific scenarios or with certain architectures.
+
+9. Why do we want to end the training with a low learning rate?
+
+    Ans-9:
+        Ending with a low learning rate allows for fine-tuning the model, leading to more precise adjustments to the weights.
+        It helps stabilize training as the model approaches convergence, reducing the risk of overshooting the optimal parameters.

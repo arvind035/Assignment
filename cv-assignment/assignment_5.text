@@ -1,0 +1,42 @@
+Answers
+
+1. How can each of these parameters be fine-tuned?
+
+    Number of Hidden Layers:
+        Experiment with adding or removing layers. Cross-validation can help determine the optimal number for better performance without overfitting.
+
+    Network Architecture (Network Depth):
+        Utilize architectures such as ResNet or DenseNet for deeper networks. Use grid search or random search to find the best architecture for the task.
+
+    Each Layer's Number of Neurons (Layer Width):
+        Vary the number of neurons in hidden layers based on complexity. More neurons may capture more features, but risk overfitting.
+
+    Form of Activation:
+        Test various activation functions like ReLU, sigmoid, or tanh. Consider using Leaky ReLU or ELU to mitigate vanishing gradient problems.
+
+    Optimization and Learning:
+        Choose optimization algorithms like Adam, SGD, or RMSprop based on convergence speed and stability. Hyperparameter tuning is essential.
+
+    Learning Rate and Decay Schedule:
+        Use learning rate schedulers (e.g., StepLR, ReduceLROnPlateau) to adjust learning rates based on training progress to avoid overshooting minima.
+
+    Mini Batch Size:
+        Experiment with different batch sizes to find a trade-off between convergence speed and stability. Smaller sizes can introduce more noise.
+
+    Algorithms for Optimization:
+        Evaluate various optimization algorithms based on your model architecture and data size, such as Adam, Nadam, or AdaGrad.
+
+    The Number of Epochs (and Early Stopping Criteria):
+        Monitor training and validation loss to decide the number of epochs. Implement early stopping to prevent overfitting when validation performance degrades.
+
+    Overfitting that Can Be Avoided by Using Regularization Techniques:
+        Incorporate dropout, L2 regularization, or early stopping to control overfitting by constraining the model complexity.
+
+    L2 Normalization:
+        Apply L2 regularization by adding a penalty to the loss function to discourage overly complex models.
+
+    Dropout Layers:
+        Introduce dropout layers in the network to randomly deactivate neurons during training, reducing overfitting.
+
+    Data Augmentation:
+        Use techniques like rotation, scaling, and flipping to artificially increase the diversity of training data, improving model robustness.

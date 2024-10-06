@@ -1,0 +1,73 @@
+Answers
+
+1. What is the concept of cyclical momentum?
+
+    Ans-1:
+        Cyclical momentum involves adjusting the momentum term in optimization dynamically during training.
+        It helps in navigating the loss landscape more effectively by oscillating between high and low momentum values, potentially leading to faster convergence and better exploration of the parameter space.
+
+2. What callback keeps track of hyperparameter values (along with other data) during training?
+
+    Ans-2:
+        The TensorBoard callback is commonly used to track hyperparameter values and other training metrics in real-time.
+        This enables visualization of various metrics such as loss, accuracy, and learning rate, aiding in monitoring and debugging the training process.
+
+3. In the color dim plot, what does one column of pixels represent?
+
+    Ans-3:
+        Each column in the color dim plot typically represents the output of a specific filter or neuron in a neural network layer, visualizing how different features are activated for the corresponding inputs.
+        This can help in understanding the feature extraction capabilities of the model.
+
+4. In color dim, what does "poor teaching" look like? What is the reason for this?
+
+    Ans-4:
+        "Poor teaching" may appear as random or inconsistent activations across the columns in a color dim plot, indicating that the model has not learned meaningful features.
+        This usually results from inadequate training data, improper learning rate settings, or insufficient training time.
+
+5. Does a batch normalization layer have any trainable parameters?
+
+    Ans-5:
+        Yes, a batch normalization layer has trainable parameters, specifically the scale (gamma) and shift (beta) parameters that are learned during training to adjust the normalized output.
+
+6. In batch normalization during preparation, what statistics are used to normalize? What about during the validation process?
+
+    Ans-6:
+        During preparation (training), the mean and variance are computed from the mini-batch statistics to normalize the input.
+        During validation, fixed statistics (running estimates of mean and variance collected during training) are used for normalization.
+
+7. Why do batch normalization layers help models generalize better?
+
+    Ans-7:
+        Batch normalization reduces internal covariate shift, stabilizing the distribution of layer inputs during training.
+        This leads to faster convergence, improved learning rates, and can act as a form of regularization, thus enhancing generalization.
+
+8. Explain the difference between MAX POOLING and AVERAGE POOLING.
+
+    Ans-8:
+        Max Pooling: Selects the maximum value from a patch of the feature map, preserving the most prominent features.
+        Average Pooling: Computes the average of values in the patch, smoothing out the feature map, which can lead to loss of important spatial information.
+
+9. What is the purpose of the POOLING LAYER?
+
+    Ans-9:
+        The pooling layer reduces the spatial dimensions of the input feature maps, decreasing the number of parameters and computation in the network.
+        It helps in maintaining the most salient features while also making the representation invariant to small translations.
+
+10. Why do we end up with Completely CONNECTED LAYERS?
+
+    Ans-10:
+        Fully connected layers are used to combine features learned in previous layers, allowing the model to make final predictions.
+        They connect every neuron from the previous layer to every neuron in the current layer, enabling complex decision boundaries.
+
+11. What do you mean by PARAMETERS?
+
+    Ans-11:
+        Parameters in a neural network are the weights and biases that the model learns during training.
+        They determine how inputs are transformed to outputs, directly affecting the model's performance.
+
+12. What formulas are used to measure these PARAMETERS?
+
+    Ans-12:
+        Parameters are typically measured using:
+            Weights Update Formula: w←w−η∂L∂ww←w−η∂w∂L​, where ww is the weight, ηη is the learning rate, and LL is the loss function.
+            Bias Update Formula: Similar to weights, biases are updated using the gradient of the loss with respect to the biases.

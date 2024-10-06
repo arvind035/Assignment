@@ -1,0 +1,51 @@
+Answers
+
+1. Why don't we start all of the weights with zeros?
+
+    Symmetry Breaking: Starting all weights at zero causes symmetry in the model, meaning all neurons would learn the same features, leading to ineffective training.
+    Diversity in Learning: Randomly initializing weights introduces diversity, allowing different neurons to learn different features and enhancing model performance.
+
+2. Why is it beneficial to start weights with a mean zero distribution?
+
+    Preventing Bias: Initializing weights with a mean of zero helps prevent biases during the early stages of training, ensuring a balanced start for learning.
+    Facilitating Gradient Descent: It aids in maintaining a steady flow of gradients during backpropagation, promoting effective learning and convergence.
+
+3. What is dilated convolution, and how does it work?
+
+    Definition: Dilated convolution involves skipping certain input values by introducing gaps (dilations) between the kernel elements.
+    Functionality: This allows the network to have a larger receptive field without increasing the number of parameters or the amount of computation, making it useful for tasks requiring broader context, such as semantic segmentation.
+
+4. What is transposed convolution, and how does it work?
+
+    Definition: Transposed convolution (also known as deconvolution) is used to upsample feature maps.
+    Functionality: It reverses the operation of regular convolution, effectively "spreading" the input values over a larger space to produce higher-dimensional outputs, commonly used in generative models and segmentation tasks.
+
+5. Explain separable convolution.
+
+    Definition: Separable convolution decomposes a standard convolution operation into two smaller operations: depthwise convolution and pointwise convolution.
+    Functionality: This reduces computational complexity and model size while maintaining performance, making it suitable for mobile and resource-constrained environments.
+
+6. What is depthwise convolution, and how does it work?
+
+    Definition: Depthwise convolution applies a single filter per input channel, processing each channel independently.
+    Functionality: It significantly reduces the number of parameters and computations compared to standard convolution, leading to efficient model architectures, especially in mobile applications.
+
+7. What is depthwise separable convolution, and how does it work?
+
+    Definition: Depthwise separable convolution consists of a depthwise convolution followed by a pointwise convolution.
+    Functionality: This combination allows for efficient processing while capturing spatial information, making it a popular choice in lightweight architectures like MobileNets.
+
+8. Capsule networks are what they sound like.
+
+    Definition: Capsule networks are a type of neural network that groups neurons into capsules, which are small, specialized units designed to capture specific features and their spatial relationships.
+    Functionality: They help overcome limitations of traditional CNNs, such as sensitivity to input variations and poor generalization across viewpoints.
+
+9. Why is pooling such an important operation in CNNs?
+
+    Dimensionality Reduction: Pooling reduces the spatial dimensions of feature maps, decreasing computational load and memory usage.
+    Feature Extraction: It helps in extracting dominant features and makes the model invariant to small translations, contributing to better generalization.
+
+10. What are receptive fields and how do they work?
+
+    Definition: The receptive field of a neuron refers to the specific area of the input that affects its activation.
+    Functionality: Understanding receptive fields is crucial in CNNs as they determine how much context a neuron considers, impacting the model's ability to recognize patterns and features at various scales.
