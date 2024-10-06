@@ -1,0 +1,58 @@
+Answers
+1. Values and Expressions:
+
+    Values:
+        'hello' (string)
+        -87.8 (float)
+        6 (integer)
+    Expressions:
+        - (subtraction operator)
+        / (division operator)
+        + (addition operator)
+
+2. Difference Between String and Variable:
+
+    String: A sequence of characters enclosed in quotes (e.g., 'hello').
+    Variable: A named storage location in memory that can hold data values and be referenced (e.g., spam).
+
+3. Three Different Data Types:
+
+    Integer: Whole numbers without decimal points (e.g., 5, -3).
+    Float: Numbers that contain decimal points (e.g., 3.14, -0.001).
+    String: A sequence of characters, either single-quoted or double-quoted (e.g., 'text', "123").
+
+4. Components of an Expression:
+
+    An expression is made up of values, variables, and operators (e.g., a + b).
+    All expressions compute a value or result.
+
+5. Difference Between Expression and Statement:
+
+    Expression: A combination of values and operators that evaluates to a value (e.g., 5 + 3).
+    Statement: A line of code that performs an action but does not return a value (e.g., spam = 10).
+
+6. Value of bacon After Running the Code:
+
+    After the code bacon = 22 followed by bacon + 1, the variable bacon still contains 22 because the expression is not assigned back to bacon.
+
+7. Values of the Two Terms:
+
+    'spam' + 'spamspam' results in 'spamspamspam' (string concatenation).
+    'spam' * 3 results in 'spamspamspam' (string repetition).
+
+8. Validity of Variable Name:
+
+    eggs is valid because it starts with a letter and contains only letters and underscores.
+    100 is invalid because variable names cannot start with a digit.
+
+9. Functions to Convert Values:
+
+    int() for converting to an integer.
+    float() for converting to a floating-point number.
+    str() for converting to a string.
+
+10. Error in Expression and Fix:
+
+    The expression 'I have eaten ' + 99 + ' burritos.' causes an error because you cannot concatenate a string and an integer directly.
+    Fix: Convert the integer to a string using str():
+    'I have eaten ' + str(99) + ' burritos.'
